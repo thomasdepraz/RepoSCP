@@ -1,19 +1,25 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using TMPro;
 using SCP.Ressources.Helper;
+using UnityEngine.Events;
 
 namespace SCP.Ressources.Display
 {
     public class RessourcesDisplay : MonoBehaviour
     {
         public static RessourcesManager manager;
-        public RessourcesManager nonStaticManager;
 
         [Header("RessourceDisplays")]
         public TextMeshProUGUI moneyDisplayObject;
         public TextMeshProUGUI workerDisplayObject;
         private static TextMeshProUGUI moneyDisplay;
         private static TextMeshProUGUI workerDisplay;
+
+        [Header("Testing")]
+        public TurnManager turnManager;
+        public GameObject reportPlaceholder;
+        public TextMeshProUGUI dayNumberReport;
 
         public void Start()
         {
@@ -25,6 +31,10 @@ namespace SCP.Ressources.Display
 
             moneyDisplay = moneyDisplayObject;
             workerDisplay = workerDisplayObject;
+
+            turnManager.callNextTurn.AddListener(TurnIncomeTrigger);
+
+            reportPlaceholder.SetActive(false);
         }
 
         //For Testing Only
@@ -64,6 +74,21 @@ namespace SCP.Ressources.Display
         public static void UpdateMoneyDisplay()
         {
             moneyDisplay.text = manager.Money + " k";
+        }
+
+        private void TurnIncomeTrigger()
+        {
+            StartCoroutine(TurnIncome());
+        }
+
+        private IEnumerator TurnIncome()
+        {
+            reportPlaceholder.SetActive(true);
+            manager.AddMoney(10);
+            UpdateMoneyDisplay();
+            dayNumberReport.text = "Jour : " + turnManager.dayCount;
+            yield return new WaitForSeconds(2f);
+            reportPlaceholder.SetActive(false);
         }
     }
 }
