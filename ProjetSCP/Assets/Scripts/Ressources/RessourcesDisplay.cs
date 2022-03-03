@@ -58,7 +58,7 @@ namespace SCP.Ressources.Display
 
         public static void UpdateHumanRessourcesDisplay()
         {
-            workerDisplay.text = RessourcesHelper.GetAvailableWorkersCount(manager.HumanRessources) + " / " + manager.HumanRessources.Count;
+            workerDisplay.text = RessourcesHelper.GetAvailableWorkersCount(manager.HumanRessources) + "/" + manager.HumanRessources.Count;
         }
 
         public static void UpdateMoneyDisplay()
