@@ -2,7 +2,6 @@
 using UnityEngine;
 using TMPro;
 using SCP.Ressources.Helper;
-using UnityEngine.Events;
 
 namespace SCP.Ressources.Display
 {
@@ -19,7 +18,6 @@ namespace SCP.Ressources.Display
         [Header("Testing")]
         public TurnManager turnManager;
         public GameObject reportPlaceholder;
-        public TextMeshProUGUI dayNumberReport;
 
         public void Start()
         {
@@ -78,17 +76,10 @@ namespace SCP.Ressources.Display
 
         private void TurnIncomeTrigger()
         {
-            StartCoroutine(TurnIncome());
-        }
-
-        private IEnumerator TurnIncome()
-        {
             reportPlaceholder.SetActive(true);
+            reportPlaceholder.GetComponent<TurnReport>().UpdateReport();  
             manager.AddMoney(10);
             UpdateMoneyDisplay();
-            dayNumberReport.text = "Jour : " + turnManager.dayCount;
-            yield return new WaitForSeconds(2f);
-            reportPlaceholder.SetActive(false);
         }
     }
 }
