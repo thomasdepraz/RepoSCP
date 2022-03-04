@@ -19,3 +19,8 @@ MonoBehaviour:
   type: 2
   rarity: 1
   size: 8
+  missionIncident: {fileID: 11400000, guid: cdb3385bfe80c0749afe127118b83c6f, type: 2}
+  descriptionShort: "SCP-150-FR-J est une escouade compos\xE9e de dix membres du
+    SWAT faisant son apparition dans la commune de Villemoirieu lorsqu'un d\xE9lit
+    quelconque est commis. Lorsque cela se produit, SCP-150-FR-J d\xE9bute son intervention
+    qui se d\xE9compose en trois \xE9tapes : le d\xE9ploiement, l'action, et l'extraction."

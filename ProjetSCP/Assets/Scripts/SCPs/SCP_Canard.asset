@@ -19,3 +19,9 @@ MonoBehaviour:
   type: 0
   rarity: 0
   size: 2
+  missionIncident: {fileID: 11400000, guid: e3208867506d537409057fc832139fb7, type: 2}
+  descriptionShort: "Le SCP-1356 ressemble \xE0 un canard en caoutchouc, semblable
+    \xE0 tous les autres, poss\xE8de la capacit\xE9 de faire dispara\xEEtre l\u2019eau
+    autour de lui lorsqu\u2019un sujet humain le tient. Si cet humain rentre dans
+    une piscine, l\u2019eau autour de lui dispara\xEEtra dans un certain rayon autour
+    du corps.\r"

@@ -10,14 +10,16 @@ public class Mission : IHumanTask
     public int RareRarity { get; private set; }
     public int EpicRarity { get; private set; }
 
+    public int WorkersLossProbability { get; private set; }
 
-    public Mission(int humanNumber, int commonRarity, int rareRarity, int epicRarity)
+
+    public Mission(int humanNumber, int commonRarity, int rareRarity, int epicRarity, int workersLossProbability)
     {
         HumanNumber = humanNumber;
         CommonRarity = commonRarity;
         RareRarity = rareRarity;
         EpicRarity = epicRarity;
-        
+        WorkersLossProbability = workersLossProbability;
     }
 
     public void EngageWorkers(IEnumerable<Worker> humanRessources)

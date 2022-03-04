@@ -19,3 +19,9 @@ MonoBehaviour:
   type: 1
   rarity: 1
   size: 8
+  missionIncident: {fileID: 11400000, guid: ae07320d7bd0b3d4f84ecdef1356817a, type: 2}
+  descriptionShort: "Le SCP-039-FR-J est un trouble comportemental r\xE9current observ\xE9
+    parmi les populations de Sus scrofa (sanglier d'Europe) de Savoie. Ces derniers
+    pratiquent r\xE9guli\xE8rement le VTT sur tout le territoire. Leurs capacit\xE9s
+    avec un v\xE9lo sont impressionnantes, bien qu\u2019on ne sache pas comment c\u2019est
+    possible."

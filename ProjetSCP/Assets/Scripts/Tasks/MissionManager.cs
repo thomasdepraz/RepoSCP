@@ -13,7 +13,9 @@ public class MissionManager : MonoBehaviour
     public int commonRarity1;
     public int rareRarity1;
     public int epicRarity1;
-    
+
+    public int workerLossProbability1;
+
     public Text humanNumberText1;
     public Button launchMissionButton1;
 
@@ -25,6 +27,8 @@ public class MissionManager : MonoBehaviour
     public int commonRarity2;
     public int rareRarity2;
     public int epicRarity2;
+
+    public int workerLossProbability2;
 
     public Text humanNumberText2;
     public Button launchMissionButton2;
@@ -38,6 +42,8 @@ public class MissionManager : MonoBehaviour
     public int rareRarity3;
     public int epicRarity3;
 
+    public int workerLossProbability3;
+
     public Text humanNumberText3;
     public Button launchMissionButton3;
     public SCPStatue SCPStatue3;
@@ -48,7 +54,17 @@ public class MissionManager : MonoBehaviour
 
     public GameObject missionSelectionPanel;
     public GameObject SCPSelectionPanel;
+    public TextMeshProUGUI numberOfDeadWorkersText;
+    public GameObject workersLossPanel;
+    public TextMeshProUGUI deadWorkersDescription;
+    RessourcesManager ressourceManager;
 
+    SCPData temporarySelectedSCP;
+    SCPData drawnSCP1;
+    SCPData drawnSCP2;
+    SCPData drawnSCP3;
+    SCPData chosenSCP; //SCP à récupérer pour placer dans le stockage
+    int numberOfDeadWorkers;
 
     public SCPData[] allSCP;
     List<SCPData> commonSCP = new List<SCPData>();
@@ -57,7 +73,7 @@ public class MissionManager : MonoBehaviour
 
     void Start()
     {
-        var manager = new RessourcesManager();
+        ressourceManager = new RessourcesManager();
         new Registry().Register< MissionManager > (this);
         humanNumberText1.text = humanNumber1.ToString();
         humanNumberText2.text = humanNumber2.ToString();
@@ -81,17 +97,17 @@ public class MissionManager : MonoBehaviour
 
     void Update()
     {
+        //debug
         if(Input.GetKeyDown("a"))
         {
-            Debug.Log("initialise panel");
             OpenMissionPanel();
         }
     }
     public void CreateMission()
     {
-       mission1 = new Mission(humanNumber1, commonRarity1,rareRarity1,epicRarity1);
-       mission2 = new Mission(humanNumber2, commonRarity2, rareRarity2, epicRarity2);
-       mission3 = new Mission(humanNumber3, commonRarity3, rareRarity3, epicRarity3);
+       mission1 = new Mission(humanNumber1, commonRarity1,rareRarity1,epicRarity1, workerLossProbability1);
+       mission2 = new Mission(humanNumber2, commonRarity2, rareRarity2, epicRarity2, workerLossProbability2);
+       mission3 = new Mission(humanNumber3, commonRarity3, rareRarity3, epicRarity3, workerLossProbability3);
     }
 
     public void IsMissionPerformable()
@@ -115,7 +131,6 @@ public class MissionManager : MonoBehaviour
         if(missionNumber == 1)
         {
             selectedMission = mission1;
-
         } 
         else if(missionNumber == 2)
         {
@@ -125,16 +140,17 @@ public class MissionManager : MonoBehaviour
         {
             selectedMission = mission3;
         }
-        //Workers en off selon la mission
-        //calculs probabilité ==> 3 tirage
 
-        SCPData SCP1 = DrawSCP(selectedMission.CommonRarity, selectedMission.RareRarity, selectedMission.EpicRarity);
-        SCPData SCP2 = DrawSCP(selectedMission.CommonRarity, selectedMission.RareRarity, selectedMission.EpicRarity);
-        SCPData SCP3 = DrawSCP(selectedMission.CommonRarity, selectedMission.RareRarity, selectedMission.EpicRarity);
+        drawnSCP1 = DrawSCP(selectedMission.CommonRarity, selectedMission.RareRarity, selectedMission.EpicRarity);
+        drawnSCP2 = DrawSCP(selectedMission.CommonRarity, selectedMission.RareRarity, selectedMission.EpicRarity);
+        drawnSCP3 = DrawSCP(selectedMission.CommonRarity, selectedMission.RareRarity, selectedMission.EpicRarity);
 
-        SCPStatue1.UpdateData(SCP1);
-        SCPStatue2.UpdateData(SCP2);
-        SCPStatue3.UpdateData(SCP3);
+        SCPStatue1.UpdateData(drawnSCP1);
+        SCPStatue2.UpdateData(drawnSCP2);
+        SCPStatue3.UpdateData(drawnSCP3);
+
+        numberOfDeadWorkers = WorkersLoss(selectedMission);
+        numberOfDeadWorkersText.text = numberOfDeadWorkers.ToString();
 
         missionSelectionPanel.SetActive(false);
         SCPSelectionPanel.SetActive(true);
@@ -145,36 +161,94 @@ public class MissionManager : MonoBehaviour
         CreateMission();
         IsMissionPerformable();
         missionSelectionPanel.SetActive(true);
-
+        chosenSCP = null;
     }
 
     SCPData DrawSCP(int commonRarity, int rareRarity, int epicRarity)
     {
 
         int rarityScore = Random.Range(0, 99);
-        Debug.Log(rarityScore);
         SCPData foundSCP;
 
         if (rarityScore <= commonRarity)
         {
-            Debug.Log("commonRarity");
             foundSCP = commonSCP[(int)Random.Range(0, commonSCP.Count)];
-           
         }
         else if (commonRarity < rarityScore && rarityScore <= commonRarity + rareRarity)
         {
-            Debug.Log("RareRarity");
             foundSCP = rareSCP[(int)Random.Range(0, rareSCP.Count)];
-            
         }
         else 
         {
-            Debug.Log("EpicRarity");
             foundSCP = epicSCP[(int)Random.Range(0, epicSCP.Count)];
-            
         }
 
         return foundSCP;
     }
 
+    public void SelectSCP(int statueNumber)
+    {
+        if(statueNumber == 1)
+        {
+            temporarySelectedSCP = drawnSCP1;
+        }
+        else if (statueNumber == 2)
+        {
+            temporarySelectedSCP = drawnSCP2;
+        }
+        else
+        {
+            temporarySelectedSCP = drawnSCP3;
+        }
+    }
+
+    public void ValidateSelectedSCP()
+    {
+        chosenSCP = temporarySelectedSCP;
+        if (chosenSCP != null)
+        {
+            WorkersLossUpdateDescription();
+            SCPSelectionPanel.SetActive(false);
+            workersLossPanel.SetActive(true);
+        }
+    }
+
+    int WorkersLoss(Mission mission)
+    {
+        int numberofdeadworkers = 0;
+        for (int i = 0; i < mission.HumanNumber; i++)
+        {
+            if ( Random.Range(0, 100) > 100 - mission.WorkersLossProbability)
+            {
+                ressourceManager.RemoveWorker();
+                numberofdeadworkers++;
+                //Ici remove uniquement les workers qui sont partis dans la mission
+            }
+        }
+        return numberofdeadworkers;
+    }
+
+    void WorkersLossUpdateDescription() 
+    {
+        if (numberOfDeadWorkers == 0)
+        {
+            deadWorkersDescription.text = chosenSCP.missionIncident.lowWorkersDeathIncident;
+
+        }
+        else if (numberOfDeadWorkers >= 1 && numberOfDeadWorkers <= 6)
+        {
+            deadWorkersDescription.text = chosenSCP.missionIncident.mediumWorkersDeathIncident;
+        }
+        else
+        {
+            deadWorkersDescription.text = chosenSCP.missionIncident.highWorkersDeathIncident;
+        }
+
+    }
+
+    public void MissionOver()
+    {
+        workersLossPanel.SetActive(false);
+        numberOfDeadWorkers = 0;
+    }
 }
