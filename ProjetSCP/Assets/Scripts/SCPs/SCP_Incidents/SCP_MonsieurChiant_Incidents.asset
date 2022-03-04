@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37876e31ec9bfbe40a901d3b0b8fc34a, type: 3}
+  m_Name: SCP_MonsieurChiant_Incidents
+  m_EditorClassIdentifier: 
+  damage: 1
+  incident1Title: Incident 015-FR-J-I-1
+  incident1Description: "L\u2019incident s\u2019est produit hier \xE0 14h03. Une
+    l\xE9g\xE8re baisse de tension \xE9lectrique a fait d\xE9faillir l\u2019isolation
+    sonore de la salle de SCP-015-FR-J. Le garde qui se trouvait post\xE9 \xE0 l'entr\xE9e
+    a donc entendu le Dr Boss parler tout seul de son chat \u201CMinet\u201D. Le
+    temps qu\u2019il essaie de mettre ces boules quies, il \xE9tait d\xE9j\xE0 trop
+    tard. L\u2019ennui \xE9tant trop fort \xE0 supporter, le garde a essay\xE9 de
+    se fracasser le cr\xE2ne contre le mur le plus proche. Le choc f\xFBt tel, qu\u2019il
+    a perdu suffisamment de capacit\xE9 c\xE9r\xE9brale pour \xEAtre d\xE9clar\xE9
+    inapte \xE0 assurer ses fonctions de garde.\r\n\nNOTE : \xE0 l'avenir, faire
+    en sorte que l\u2019aile o\xF9 se trouve SCP-015-FR-J soit vide de tout objet,
+    structure et autres \xE9l\xE9ments pouvant provoquer la mort ou de graves l\xE9sions
+    \xE0 nos agents.\r"
+  incident2Title: Incident 015-FR-J-I-2
+  incident2Description: "L\u2019incident s\u2019est produit hier \xE0 15h02 lors
+    d\u2019un nouveau test sur la capacit\xE9 ennuyante de SCP-015-FR-J. Pour ce
+    test, un de nos agents \xE9tait \xE9quip\xE9 d\u2019un casque audio diffusant
+    en continu de la Dubstep. Il devait entrer dans la salle et \xE9couter parler
+    Dr Boss pendant 10 minutes. Nous avons d\xFB intervenir au bout de 8 minutes
+    et 9 secondes car notre agent a essay\xE9 de se fracasser le cr\xE2ne contre
+    un des murs de la pi\xE8ce. Il est maintenant dans un \xE9tat v\xE9g\xE9tatif
+    et n\u2019est plus apte \xE0 assurer sa fonction d\u2019agent.\r\n\nNOTE : la
+    capacit\xE9 ennuyeuse de SCP-015-FR-J semble pouvoir \xEAtre contenu seulement
+    par le silence total. Il faudrait peut-\xEAtre songer \xE0 concevoir un dispositif
+    emp\xEAchant le Dr Boss de parler, d\xE9finitivement.\r"
+  incident3Title: Incident 015-FR-J-I-3
+  incident3Description: "L\u2019incident s\u2019est produit hier \xE0 17h37. Un agent
+    avait pour mission de regarder une vid\xE9o o\xF9 SCP-015-FR-J prenait la parole
+    afin de voir si sa voix \xE9tait aussi ennuyante \xE0 travers un enregistrement
+    qu\u2019en \xE9coute directe. Apr\xE8s 5 minutes et 2 secondes de vid\xE9o, l\u2019agent
+    s\u2019est pr\xE9cipit\xE9 sur l\u2019\xE9cran et l\u2019a frapp\xE9 violemment
+    avec sa t\xEAte. Il a \xE9t\xE9 arr\xEAt\xE9 avant de commettre l\u2019irr\xE9parable,
+    mais a quand m\xEAme eu le temps de s\u2019entailler violemment le visage. Il
+    est d\xE9sormais inapte \xE0 assurer sa fonction d\u2019agent au sein de la fondation.\r\n\nNOTE
+    : le support vid\xE9o semble ralentir le moment de craquage provoqu\xE9 par la
+    voix de SCP-015-FR-J, mais elle ne l\u2019annule pas. Il faut donc l'emp\xEAcher
+    de parler dans n\u2019importe quelle situation.\r"

@@ -8,6 +8,7 @@ public class TurnManager : MonoBehaviour
 {
     public UnityEvent callNextTurn;
     public int dayCount = 1;
+    public List<SCPIncident> incidents;
     
 
     void Start()
@@ -15,17 +16,9 @@ public class TurnManager : MonoBehaviour
         callNextTurn.AddListener(DebugNewDay);
     }
 
-    // For testing
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            NewTurn();
-        }
-    }
-
     public void NewTurn()
     {
+        incidents.Clear();
         dayCount++;
         callNextTurn.Invoke();
     }
@@ -35,8 +28,10 @@ public class TurnManager : MonoBehaviour
         Debug.Log("Day " + dayCount);
     }
 
-    public void CreateIncident(SCPData scp)
+    public void CreateIncident(SCPIncident incidentType)
     {
         Debug.Log("Incident !");
+
+        incidents.Add(incidentType);
     }
 }

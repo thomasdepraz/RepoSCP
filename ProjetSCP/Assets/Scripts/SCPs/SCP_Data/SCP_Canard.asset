@@ -25,3 +25,4 @@ MonoBehaviour:
     autour de lui lorsqu\u2019un sujet humain le tient. Si cet humain rentre dans
     une piscine, l\u2019eau autour de lui dispara\xEEtra dans un certain rayon autour
     du corps.\r"
+  incident: {fileID: 11400000, guid: 1c9138596e5a2e042a3a07490bd4b4e7, type: 2}

@@ -15,6 +15,7 @@ namespace SCP.Data
         public SCPMissionIncident missionIncident;
         [TextArea(2, 6)]
         public string descriptionShort;
+        public SCPIncident incident;
     }
 
 }

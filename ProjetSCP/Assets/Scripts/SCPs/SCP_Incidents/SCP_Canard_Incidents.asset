@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37876e31ec9bfbe40a901d3b0b8fc34a, type: 3}
+  m_Name: SCP_Canard_Incidents
+  m_EditorClassIdentifier: 
+  damage: 1
+  incident1Title: Incident 1356-I-1
+  incident1Description: "L\u2019incident s\u2019est produit hier \xE0 16h02. L\u2019agent
+    charg\xE9 de la surveillance de SCP-1356 n\u2019a rien trouv\xE9 de mieux que
+    de scotcher l\u2019objet \xE0 son corps afin de \u201Cservir d'anti-transpirant\u201D.
+    Il a \xE9t\xE9 retrouv\xE9 4 heures plus tard, au moment de la rel\xE8ve de la
+    garde, d\xE9shydrat\xE9 \xE0 mort. \r\n\nNOTE : \xE0 l'avenir, accentuer les
+    tests psychologiques sur les nouvelles recrues.\r"
+  incident2Title: Incident 1356-I-2
+  incident2Description: "L\u2019incident s\u2019est produit hier \xE0 18h00, lors
+    d\u2019une exp\xE9rimentation avec le SCP-1356. Monsieur Owen \xE9tait de garde
+    hors de la pi\xE8ce avec son poisson rouge, comme \xE0 son habitude. Il n\u2019a
+    cependant pas fait attention \xE0 la distance s\xE9parant son animal de l\u2019objet.
+    Le petit aquarium s\u2019est retrouv\xE9 vid\xE9 de son eau durant l\u2019exp\xE9rience.
+    Monsieur Owen s\u2019en est rendu compte plusieurs minutes apr\xE8s, en revenant
+    des toilettes (ce qui constitue une infraction au code de la fondation). A son
+    retour, son poisson gisait au fond de l\u2019aquarium, mort. Monsieur Owen a
+    \xE9t\xE9 boulevers\xE9 par cette perte, et a \xE9t\xE9 d\xE9clar\xE9 inapte
+    \xE0 assurer ses fonctions de garde.\r\n\nNOTE : d\xE9sormais, aucun animal n\u2019est
+    tol\xE9r\xE9 dans le complexe (sauf ceux destin\xE9s aux diff\xE9rents tests).\r"
+  incident3Title: Incident 1356-I-3
+  incident3Description: "L\u2019incident s\u2019est produit hier \xE0 15h41, lors
+    du test de l\u2019oxyg\xE8ne. Le but de ce test \xE9tait de voir \xE0 quel point
+    \u201Cl\u2019espace sec\u201D cr\xE9\xE9 par SCP-1356 est riche en oxyg\xE8ne
+    et si ce dernier en reproduit quand il n\u2019y en a plus. Pour ce faire, nous
+    avons envoy\xE9 un de nos hommes sous l\u2019eau, en tenue de plong\xE9e, et
+    avec SCP-1356 dans la main. Par mesure de pr\xE9caution, notre homme poss\xE9dait
+    \xE9galement une bouteille d\u2019oxyg\xE8ne de secours. Apr\xE8s quelques minutes,
+    il s\u2019est mis \xE0 suffoquer par manque d\u2019air. Il a donc essay\xE9 de
+    passer sur son oxyg\xE8ne de secours, mais sans succ\xE8s. Il s\u2019est \xE9vanoui
+    un peu plus tard et est mort avant que nous ayons eu le temps de le remonter.\r\n\nNOTE
+    1 : \u201Cl\u2019espace sec\u201D ne se recharge pas en oxyg\xE8ne et en contient
+    une quantit\xE9 normale (21%).\r\n\nNOTE 2 : \xE0 l\u2019avenir, penser \xE0
+    v\xE9rifier le mat\xE9riel avant toute exp\xE9rience, afin d\u2019\xE9viter tout
+    probl\xE8me. Les responsables seront sanctionn\xE9s.\r"

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8240716016530711604}
   - component: {fileID: 8425135452301521240}
   - component: {fileID: 3824635137757734515}
+  - component: {fileID: 7611469186312072301}
   m_Layer: 5
   m_Name: IncidentEntry_Button
   m_TagString: Untagged
@@ -121,6 +122,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7611469186312072301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663000936847871224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76292520fe809b4bb7809a903403b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incidentTitle: {fileID: 4297041759198672217}
 --- !u!1 &5990893475344664599
 GameObject:
   m_ObjectHideFlags: 0
