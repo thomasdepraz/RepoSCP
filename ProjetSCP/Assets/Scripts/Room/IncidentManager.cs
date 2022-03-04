@@ -79,6 +79,6 @@ public class IncidentManager : MonoBehaviour
     {
         //Put here Incident effects.
 
-        turnManager.CreateIncident(SCPDamage);
+        //turnManager.CreateIncident(SCPDamage);
     }
 }

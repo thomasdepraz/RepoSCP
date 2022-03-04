@@ -8,9 +8,9 @@ public class TurnManager : MonoBehaviour
 {
     public UnityEvent callNextTurn;
     public int dayCount = 1;
-    public List 
+    
 
-    private void Start()
+    void Start()
     {
         callNextTurn.AddListener(DebugNewDay);
     }
