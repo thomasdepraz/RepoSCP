@@ -24,3 +24,4 @@ MonoBehaviour:
     SWAT faisant son apparition dans la commune de Villemoirieu lorsqu'un d\xE9lit
     quelconque est commis. Lorsque cela se produit, SCP-150-FR-J d\xE9bute son intervention
     qui se d\xE9compose en trois \xE9tapes : le d\xE9ploiement, l'action, et l'extraction."
+  incident: {fileID: 11400000, guid: 1fda0c60e5c48b740982c864cffffd8d, type: 2}

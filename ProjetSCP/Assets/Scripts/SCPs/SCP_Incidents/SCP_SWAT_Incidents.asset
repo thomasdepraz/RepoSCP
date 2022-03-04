@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37876e31ec9bfbe40a901d3b0b8fc34a, type: 3}
+  m_Name: SCP_SWAT_Incidents
+  m_EditorClassIdentifier: 
+  damage: 12
+  incident1Title: Incident 150-FR-J-I-1
+  incident1Description: "L\u2019incident s\u2019est produit hier \xE0 18h28. Le garde
+    post\xE9 devant la porte de SCP-150-FR-J a allum\xE9 une cigarette et s\u2019est
+    mis \xE0 fumer en int\xE9rieur (ce qui constitue une infraction au code de la
+    fondation). SCP-150-FR-J a commenc\xE9 \xE0 s\u2019agiter dans la salle d\u2019isolement.
+    Apr\xE8s avoir fini sa cigarette, l\u2019agent a \xE9cras\xE9 le m\xE9got sur
+    le sol puis l\u2019a jet\xE9 dans un coin du b\xE2timent. Il semblerait que cette
+    action ait fait disjoncter SCP-150-FR-J qui a fait sauter la porte de la salle
+    avant de mettre en pratique leurs trois \xE9tapes d\u2019intervention, \xE0 savoir
+    : d\xE9ploiement, action et extraction. Le garde s\u2019est retrouv\xE9 \xE0
+    terre avec SCP-150-FR-J-1 pos\xE9 sur son dos. Les gardes d\xE9p\xEAch\xE9s pour
+    arr\xEAter l\u2019insurrection ont eu beaucoup de mal \xE0 les enfermer de nouveau.
+    Au total plusieurs morts sont \xE0 d\xE9plorer, mais SCP-150-FR-J est de nouveau
+    sous contr\xF4le.\n \r\nNOTE : il semblerait que SCP-150-FR-J ait pris le centre
+    de d\xE9tention comme lieu o\xF9 exercer son autorit\xE9. Il faudra donc \xE9viter
+    toutes infractions au r\xE8glement \xE0 proximit\xE9 de la salle o\xF9 il est
+    contenu.\r"
+  incident2Title: Incident 150-FR-J-I-2
+  incident2Description: "L\u2019incident s\u2019est produit hier \xE0 19h51. La salle
+    d\u2019isolement de SCP-150-FR-J a rencontr\xE9 un dysfonctionnement d\u2019origine
+    inconnue. SCP-150-FR-J en a profit\xE9 pour se d\xE9placer instantan\xE9ment
+    \xE0 Villemoirieu et s\u2019est mis \xE0 neutraliser toutes les personnes ayant
+    commis une infraction l\xE0-bas depuis son enfermement. Pas moins de 200 habitants
+    ont subi le jugement. Apr\xE8s un long affrontement, nos agents ont r\xE9ussi
+    \xE0 l\u2019arr\xEAter et \xE0 le ramener \xE0 l\u2019isolement, mais beaucoup
+    de pertes sont \xE0 d\xE9plorer.\r\n\nNOTE : un test sur la port\xE9e de d\xE9placement
+    de SCP-150-FR-J vers Villemoirieu doit \xEAtre effectu\xE9 dans les plus brefs
+    d\xE9lais.\r"
+  incident3Title: Incident 150-FR-J-I-3
+  incident3Description: "L\u2019incident s\u2019est produit hier \xE0 10h45 lors
+    du test de port\xE9e de d\xE9placement de SCP-150-FR-J. Pour ce faire, nous avons
+    emmen\xE9 SCP-150-FR-J \xE0 un point g\xE9ographiquement oppos\xE9 \xE0 Villemoirieu.
+    Entre temps, nos agents ont pris place dans la ville et ont fait \xE9vacuer toute
+    la population. Au moment exact o\xF9 un de nos agents a crach\xE9 par terre,
+    SCP-150-FR-J a disparu de sa position initiale et est apparu \xE0 Villemoirieu.
+    Le combat qui a fait suite a fait beaucoup de morts dans nos rangs. \r\n\nNOTE
+    : plus aucuns tests ne seront r\xE9alis\xE9s avec SCP-150-FR-J. Il sera isol\xE9
+    \xE0 vie car bien trop dangereux \xE0 contenir.\r"
