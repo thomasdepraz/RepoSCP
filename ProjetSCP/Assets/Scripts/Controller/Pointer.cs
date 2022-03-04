@@ -32,16 +32,48 @@ public class Pointer : MonoBehaviour
         }
         if(checkPosition)
         {
+            //Move code back in here
+
         }
     }
 
     public Vector2 GetGridPosition(Vector3 mousePositionOnScreen)//le truc chiant
     {
         Vector3 viewportPoint = cam.ScreenToViewportPoint(new Vector3(mousePositionOnScreen.x, mousePositionOnScreen.y, cam.nearClipPlane));
+        Vector2 viewportScaledPoint = new Vector2(Mathf.FloorToInt(viewportPoint.x * gridSize.x), Mathf.FloorToInt(viewportPoint.y * gridSize.y));
 
-        Debug.Log(new Vector2(viewportPoint.x * gridSize.x, viewportPoint.y * gridSize.y));
+        //offset point
+        Vector2 newPoint = new Vector2(viewportScaledPoint.x, gridSize.y - (viewportScaledPoint.y + 1) - 3);
 
-        return Vector2.zero;
+        return newPoint;
     }
+
+}
+
+public class Grid
+{
+    public Vector2 size { get; private set; }
+    public bool[,] gridSlots;
+
+
+    public Grid(Vector2 size)
+    {
+        gridSlots = new bool[(int)size.x, (int)size.y];
+    }
+
+
+
+    public void Build(Vector2 position, Vector2 size)
+    {
+
+    }
+
+    public bool CanBuild(Vector2 position, Vector2 size)
+    {
+        return false;
+    }
+
+
+
 
 }
