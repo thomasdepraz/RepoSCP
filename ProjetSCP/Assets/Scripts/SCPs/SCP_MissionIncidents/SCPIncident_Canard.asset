@@ -12,6 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5318daa79ae0e04aa71b1d36686a253, type: 3}
   m_Name: SCPIncident_Canard
   m_EditorClassIdentifier: 
-  lowWorkersDeathIncident: 
-  mediumWorkersDeathIncident: 
-  highWorkersDeathIncident: 
+  lowWorkersDeathIncident: "SCP-1356 se trouvait dans une boutique de \u201Cfarces
+    et attrapes\u201D \xE0 Londres. Nos agents ont r\xE9cup\xE9r\xE9 l\u2019objet
+    et ont administr\xE9 un amn\xE9sique au marchand pour qu\u2019il oublie l'existence
+    de l\u2019objet et ne se pose aucune question. Aucune perte n\u2019est \xE0 d\xE9plorer."
+  mediumWorkersDeathIncident: "SCP-1356 \xE9tait contenu dans la station d\u2019\xE9puration
+    de Detroit. Notre \xE9quipe s\u2019est d\xE9ploy\xE9e \xE0 l\u2019int\xE9rieur
+    et a rapidement trouv\xE9 l\u2019objet. Il se situait dans une petite pi\xE8ce
+    faite sur-mesure. Il s\u2019agissait en r\xE9alit\xE9 d\u2019un pi\xE8ge. Lorsqu\u2019un
+    de nos agents a saisi SCP-1356, sa capacit\xE9 s\u2019est activ\xE9e, faisant
+    dispara\xEEtre l\u2019eau autour de l\u2019\xE9quipe. Il semblerait que \xE7a
+    ait cr\xE9\xE9 un dysfonctionnement dans la station qui a fait exploser plusieurs
+    tuyaux contenant de l\u2019eau. Plusieurs membres de notre \xE9quipe en ont fait
+    les frais. Au total, nous avons perdu certains agents durant l'op\xE9ration."
+  highWorkersDeathIncident: "SCP-1356 flottait au milieu du lac L\xE9man. La mission
+    s\u2019est donc d\xE9roul\xE9e enti\xE8rement sur l\u2019eau. Nos troupes ont
+    avanc\xE9 progressivement \xE0 bord de canots motoris\xE9s. C\u2019est lorsque
+    l\u2019un de nos agents a saisi le canard \xE0 main nue que tout a d\xE9rap\xE9.
+    La capacit\xE9 de SCP-1356 s\u2019est d\xE9clench\xE9e causant un \u201Cespace
+    sec\u201D sur le lac. Nos canots \xE9taient en partie dans cet espace et ont
+    donc \xE9t\xE9 attir\xE9s vers son centre. Deux d\u2019entre eux sont entr\xE9s
+    en collision, les faisant chavirer. Certains agents pr\xE9sents \xE0 bord ne
+    savaient pas nager. SCP-1356 \xE0 quand m\xEAme pu \xEAtre r\xE9cup\xE9r\xE9
+    et contenu. Beaucoup d\u2019agents sont morts durant l'op\xE9ration."

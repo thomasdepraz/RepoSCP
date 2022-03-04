@@ -7,7 +7,7 @@ using TMPro;
 
 public class SCPStatue : MonoBehaviour
 {
-    //public MeshRenderer Mesh;
+    public Image image;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI classe;
     public TextMeshProUGUI rarity;
@@ -18,12 +18,13 @@ public class SCPStatue : MonoBehaviour
 
     public void UpdateData(SCPData scpData)
     {
-        Name.text = scpData.name;
+        Name.text = scpData.Name;
         ID.text = scpData.ID;
         classe.text = scpData.type.ToString();
         rarity.text = scpData.rarity.ToString();
         danger.text = scpData.dangerLevel.ToString();
         size.text = scpData.size.ToString();
         description.text = scpData.descriptionShort;
+        image.sprite = scpData.sprite;
     }
 }

@@ -12,6 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5318daa79ae0e04aa71b1d36686a253, type: 3}
   m_Name: SCPIncident_MonsieurChiant
   m_EditorClassIdentifier: 
-  lowWorkersDeathIncident: 
-  mediumWorkersDeathIncident: 
-  highWorkersDeathIncident: 
+  lowWorkersDeathIncident: "Notre \xE9quipe a \xE9t\xE9 exemplaire durant l\u2019op\xE9ration.
+    SCP-015-FR-J a \xE9t\xE9 pris par surprise et n\u2019a pas eu le temps de placer
+    un mot avant d\u2019\xEAtre b\xE2illonn\xE9 et confin\xE9. L'op\xE9ration a,
+    au final, dur\xE9 seulement 5 minutes et nous n\u2019avons subi aucune perte."
+  mediumWorkersDeathIncident: "Notre \xE9quipe s\u2019est d\xE9ploy\xE9e autour de
+    la maison de SCP-015-FR-J pour l'appr\xE9hender. Ce dernier \xE9tait en train
+    de chanter durant l\u2019op\xE9ration. Certains agents se sont fracass\xE9 le
+    cr\xE2ne contre les murs de la maison. Heureusement, les agents encore en \xE9tat
+    ont r\xE9ussi \xE0 le faire taire avant de l\u2019isoler phoniquement. Nous avons
+    perdu certains agents durant l'op\xE9ration."
+  highWorkersDeathIncident: "La dangerosit\xE9 de SCP-015-FR-J \xE9tait bien plus
+    \xE9lev\xE9e que pr\xE9vu. Il a eu le temps de communiquer verbalement durant
+    quelques instants, ce qui a suffi \xE0 pousser les agents \xE0 proximit\xE9 \xE0
+    commettre l\u2019irr\xE9parable. Heureusement, les agents en retrait ont pu s'\xE9quiper
+    de leurs boules quies afin de neutraliser SCP-015-FR-J. Au final beaucoup d'agents
+    ont \xE9t\xE9 \xE9limin\xE9s."

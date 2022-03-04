@@ -12,6 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5318daa79ae0e04aa71b1d36686a253, type: 3}
   m_Name: SCPIncident_SWAT
   m_EditorClassIdentifier: 
-  lowWorkersDeathIncident: 
-  mediumWorkersDeathIncident: 
-  highWorkersDeathIncident: 
+  lowWorkersDeathIncident: "L\u2019utilisation d\u2019un app\xE2t pour attirer SCP-150-FR-J
+    dans la ville de Villemoirieu fut tr\xE8s concluant. Il a d\xE9barqu\xE9 \xE0
+    un endroit, au pr\xE9alable vid\xE9 de ses civils, et a \xE9t\xE9 accueilli comme
+    pr\xE9vu par nos troupes qui l\u2019ont neutralis\xE9 au moment o\xF9 il est
+    apparu. Aucun mort n\u2019est \xE0 d\xE9plorer."
+  mediumWorkersDeathIncident: "Le plan pr\xE9vu lors de la capture \xE0 rencontrer
+    quelques impr\xE9vus. Attirer SCP-150-FR-J en int\xE9rieur n\u2019\xE9tait pas
+    tr\xE8s judicieux. Les \xE9clats de verre, quand ils sont pass\xE9s par les fen\xEAtres,
+    ont bless\xE9 plusieurs de nos agents, qui ont \xE9t\xE9 tu\xE9s par la suite.
+    Le reste de nos troupes ont d\xFB improviser une riposte sur le tas. Au final,
+    SCP-150-FR-J a pu \xEAtre appr\xE9hend\xE9 et neutralis\xE9. Nous avons perdu
+    certains agents durant l'op\xE9ration."
+  highWorkersDeathIncident: "L'op\xE9ration ne s\u2019est pas d\xE9roul\xE9e comme
+    pr\xE9vu, SCP-150-FR-J \xE9tait bien plus puissant que pr\xE9vu. Nous n\u2019avions
+    pas pr\xE9vu que la grenade fumig\xE8ne puisse sortir d\u2019un tuyau d\u2019arrosage.
+    L\u2019effet de surprise a d\xE9boussol\xE9 notre formation qui a subi leurs
+    phases de d\xE9ploiement puis d\u2019action. Fort heureusement, nous avons pu
+    les arr\xEAter avant qu\u2019ils n\u2019arrivent \xE0 l\u2019extraction. Le combat
+    fut n\xE9anmoins acharn\xE9, et beaucoup de nos agents sont tomb\xE9s au combat.
+    SCP-150-FR-J-11 alias \"Papa Poule\" a \xE9t\xE9 d\xE9truit pendant l\u2019op\xE9ration.
+    Au total nous avons perdu beaucoup d'agents durant l'op\xE9ration. "

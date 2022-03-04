@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c97d7d9406a6db468c4afc5317a63cd, type: 3}
   m_Name: SCP_ManchotMuscle
   m_EditorClassIdentifier: 
-  ID: 
+  ID: SCP-012-FR-J
   Name: "Manchot empereur muscl\xE9"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 0e104ca62f46b5347987c27cf6fa4aa4, type: 3}
   dangerLevel: 0
   type: 1
   rarity: 2

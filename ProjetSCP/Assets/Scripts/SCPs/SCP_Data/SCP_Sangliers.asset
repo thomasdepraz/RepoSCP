@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c97d7d9406a6db468c4afc5317a63cd, type: 3}
   m_Name: SCP_Sangliers
   m_EditorClassIdentifier: 
-  ID: 
+  ID: SCP-039-FR-J
   Name: "Sangliers \xE0 V\xE9lo"
   sprite: {fileID: 0}
   dangerLevel: 3
