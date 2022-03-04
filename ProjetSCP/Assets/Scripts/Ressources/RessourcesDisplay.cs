@@ -30,7 +30,7 @@ namespace SCP.Ressources.Display
             moneyDisplay = moneyDisplayObject;
             workerDisplay = workerDisplayObject;
 
-            turnManager.callNextTurn.AddListener(TurnIncomeTrigger);
+            turnManager.callNextTurnLate.AddListener(TurnIncomeTrigger);
 
             reportPlaceholder.SetActive(false);
         }

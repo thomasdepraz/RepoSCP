@@ -7,6 +7,7 @@ using SCP.Data;
 public class TurnManager : MonoBehaviour
 {
     public UnityEvent callNextTurn;
+    public UnityEvent callNextTurnLate;
     public int dayCount = 1;
     public List<SCPIncident> incidents;
     
@@ -21,6 +22,7 @@ public class TurnManager : MonoBehaviour
         incidents.Clear();
         dayCount++;
         callNextTurn.Invoke();
+        callNextTurnLate.Invoke();
     }
 
     private void DebugNewDay()

@@ -6,6 +6,7 @@ using SCP.Data;
 
 public class TurnReport : MonoBehaviour
 {
+    public GameObject incidentDetails;
     public TurnManager turnManager;
     public TextMeshProUGUI moneyGainedText;
     public TextMeshProUGUI dayCountText;
@@ -29,8 +30,9 @@ public class TurnReport : MonoBehaviour
         //Récupérer l'argent gagner et l'afficher.
 
         dayCountText.text = "Jour : " + turnManager.dayCount;
+        Debug.Log(turnManager.incidents.Count);
 
-        for(int i = 0; i < turnManager.incidents.Count; i++)
+        for (int i = 0; i < turnManager.incidents.Count; i++)
         {
             AddIncidentToReport(turnManager.incidents[i]);
         }
@@ -38,12 +40,15 @@ public class TurnReport : MonoBehaviour
 
     public void ExitReport()
     {
+        incidentDetails.SetActive(false);
         this.gameObject.SetActive(false);
     }
 
     public void AddIncidentToReport(SCPIncident incidentType)
     {
-        GameObject currentIncident = Instantiate(incidentButton, incidentsContent);
+        Debug.Log("GoButton");
+
+        /*GameObject currentIncident = Instantiate(incidentButton, incidentsContent);
 
         if (incidentsContent.childCount == 1)
         {
@@ -54,6 +59,12 @@ public class TurnReport : MonoBehaviour
             //currentIncident.GetComponent<RectTransform>().position = new Vector3(0, incidentsContent.GetChild(incidentsContent.transform.GetChildCount).position.y - 35, 0);
         }
 
-        currentIncident.GetComponent<IncidentButton>().SetupButton(incidentType);
+        currentIncident.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
+        currentIncident.GetComponent<IncidentButton>().SetupButton(incidentType);*/
+
+        Debug.Log("Bouton");
+        incidentButton.SetActive(true);
+        incidentButton.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
+        incidentButton.GetComponent<IncidentButton>().SetupButton(incidentType);
     }
 }

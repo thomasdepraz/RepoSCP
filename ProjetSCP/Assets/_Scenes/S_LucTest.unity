@@ -218,10 +218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0909617ad5f25f409ec77eab7302ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  containedSCP: {fileID: 11400000, guid: 952a82d1556c18f46bc80996505c7d3a, type: 2}
+  containedSCP: {fileID: 11400000, guid: 63036c6ff3631ce468f7a80dea400042, type: 2}
   turnManager: {fileID: 1086866940}
-  emptySlots: 0
-  activeWorkers: 0
+  emptySlots: 4
+  activeWorkers: 1
   classRequirement: 1
   SCPDamage: 6
 --- !u!4 &358960778
