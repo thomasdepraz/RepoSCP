@@ -15,6 +15,10 @@ namespace SCP.Ressources
         public RessourcesManager()
         {
             new Registry().Register<RessourcesManager>(this);
+            for (int i = 0; i < 12; i++)
+            {
+                HumanRessources.Add(new Worker());
+            }
         }
 
         public void AddWorker()
