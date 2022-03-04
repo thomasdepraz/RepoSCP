@@ -1,3 +1,4 @@
+using SCP.Building;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ public class Pointer : MonoBehaviour
     public Action UpdateGridCallback;
     private Camera cam;
 
-    public Vector2 gridSize;
+    private Vector2 gridSize;
 
     private void Awake()
     {
@@ -20,20 +21,20 @@ public class Pointer : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
+        gridSize = Registry.Get<BuildingManager>().gridSize;
     }
 
     public void Update()
     {
-        Vector2 newPos = GetGridPosition(Input.mousePosition);
-        if(newPos != currentGridPosition)
-        {
-            currentGridPosition = newPos;
-            UpdateGridCallback?.Invoke();
-        }
         if(checkPosition)
         {
             //Move code back in here
-
+            Vector2 newPos = GetGridPosition(Input.mousePosition);
+            if(newPos != currentGridPosition)
+            {
+                currentGridPosition = newPos;
+                UpdateGridCallback?.Invoke();
+            }
         }
     }
 
@@ -42,38 +43,9 @@ public class Pointer : MonoBehaviour
         Vector3 viewportPoint = cam.ScreenToViewportPoint(new Vector3(mousePositionOnScreen.x, mousePositionOnScreen.y, cam.nearClipPlane));
         Vector2 viewportScaledPoint = new Vector2(Mathf.FloorToInt(viewportPoint.x * gridSize.x), Mathf.FloorToInt(viewportPoint.y * gridSize.y));
 
-        //offset point
-        Vector2 newPoint = new Vector2(viewportScaledPoint.x, gridSize.y - (viewportScaledPoint.y + 1) - 3);
+        Vector2 newPoint = new Vector2(Mathf.Clamp(viewportScaledPoint.x, 2, 14), Mathf.Clamp(gridSize.y - (viewportScaledPoint.y + 1) - 2, 0,5));
 
         return newPoint;
     }
-
-}
-
-public class Grid
-{
-    public Vector2 size { get; private set; }
-    public bool[,] gridSlots;
-
-
-    public Grid(Vector2 size)
-    {
-        gridSlots = new bool[(int)size.x, (int)size.y];
-    }
-
-
-
-    public void Build(Vector2 position, Vector2 size)
-    {
-
-    }
-
-    public bool CanBuild(Vector2 position, Vector2 size)
-    {
-        return false;
-    }
-
-
-
 
 }
