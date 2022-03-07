@@ -1,3 +1,4 @@
+using SCP.Data;
 using SCP.Ressources.Display;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace SCP.Ressources
         public List<Worker> HumanRessources { get; private set; } = new List<Worker>();
 
         public RessourcesDisplay display;
+
+        public SCPModel selectedSCP;
 
         public RessourcesManager(int defaultWorkersCount, int defaultMoneyQuantity)
         {

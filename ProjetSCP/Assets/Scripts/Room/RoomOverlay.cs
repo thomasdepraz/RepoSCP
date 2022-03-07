@@ -5,6 +5,7 @@ using SCP.Camera;
 using SCP.Data;
 using System;
 using SCP.Building;
+using SCP.Ressources;
 
 public class RoomOverlay : MonoBehaviour,
     IPointerEnterHandler,
@@ -36,15 +37,17 @@ public class RoomOverlay : MonoBehaviour,
     {
         if (Registry.Get<GameManager>().gameState != GameState.GAME) return;
 
-        if(Time.time - lastClickTime < 0.3 && camController.camState != CameraState.TWEENING)
-        {
-            camController.ChangeState(transform.position);
-        }
-        else if(camController.camState == CameraState.FOCUSED && (Vector2)transform.position!= (Vector2)camController.transform.position)
-        {
-            camController.FocusTarget(transform.position);
-        }
-        lastClickTime = Time.time;
+        //if(Time.time - lastClickTime < 0.3 && camController.camState != CameraState.TWEENING)
+        //{
+        //    camController.ChangeState(transform.position);
+        //}
+        //else if(camController.camState == CameraState.FOCUSED && (Vector2)transform.position!= (Vector2)camController.transform.position)
+        //{
+        //    camController.FocusTarget(transform.position);
+        //}
+        //lastClickTime = Time.time;
+
+        linkedRoom.OnSelectCallback?.Invoke();
     }
 
     public void setEnabled()
@@ -68,9 +71,9 @@ public abstract class Room
 
     public readonly RoomOverlay overlay;
 
-    protected Action OnSelectCallback;
+    public Action OnSelectCallback;
 
-    protected Action OnDeselectCallback;
+    public Action OnDeselectCallback;
 
     public virtual void SetPosition(Vector2 position)
     {
@@ -130,14 +133,46 @@ public class House : Room
 
 public class Warehouse : Room
 {
-    public SCPModel occupant;
+    public SCPModel occupant { get; private set; }
 
     public Warehouse()
     {
         Size = new Vector3(3, 3);
+        OnSelectCallback += OnSelect;
+        OnDeselectCallback += OnDeselect;
     }
 
+    public void OnSelect()
+    {
+        //Select Scp if any + feedback
+        if (IsEmpty()) return;
+
+        Registry.Get<RessourcesManager>().selectedSCP = occupant;
+        //Todo feedback
+
+        occupant = null;
+        //feedback
+    }
+
+    public void OnDeselect()
+    {
+        var ressourcesManager = Registry.Get<RessourcesManager>();
+        //deselect scp if any
+        if (ressourcesManager.selectedSCP != null && IsEmpty())
+        {
+            Populate(ressourcesManager.selectedSCP);
+            ressourcesManager.selectedSCP = null;
+        }
+    }
+
+
     public bool IsEmpty() => occupant == null;
+
+    public void Populate(SCPModel ocupant)
+    {
+        this.occupant = occupant; 
+        //feedback
+    }
 }
 
 public class ScpContainer : Room
@@ -152,6 +187,10 @@ public class ScpContainer : Room
 
     public void PopulateRoom()
     {
+
+
+
+
 
     }
 }
