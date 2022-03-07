@@ -12,6 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5318daa79ae0e04aa71b1d36686a253, type: 3}
   m_Name: SCPIncident_ManchotMuscle
   m_EditorClassIdentifier: 
-  lowWorkersDeathIncident: 
-  mediumWorkersDeathIncident: 
-  highWorkersDeathIncident: 
+  lowWorkersDeathIncident: "SCP-012-FR-J n\u2019est pas fondamentalement dangereux
+    malgr\xE9 sa musculature et ces talents de boxeur. Notre \xE9quipe lui a promis
+    une merveilleuse salle de musculation ainsi qu\u2019un coaching personnel r\xE9alis\xE9
+    par Mister T en personne. Il a donc accept\xE9 de nous suivre sans provoquer
+    aucuns troubles."
+  mediumWorkersDeathIncident: "Durant l\u2019op\xE9ration en Antarctique, notre \xE9quipe
+    a rencontr\xE9 quelques difficult\xE9s li\xE9es aux conditions climatiques. Certains
+    agents sont, en effet, tomb\xE9s dans une crevasse, ce qui a complexifi\xE9 l\u2019op\xE9ration.
+    Malgr\xE9 cet accident, SCP-012-FR-J a \xE9t\xE9 r\xE9cup\xE9r\xE9 sans aucun
+    probl\xE8me. Nous avons tout de m\xEAme perdu certains agents durant l'op\xE9ration."
+  highWorkersDeathIncident: "Tout se d\xE9roulait \xE0 merveille avant que l\u2019un
+    de nos agents ne se moque des bras de SCP-012-FR-J. Ce dernier a entendu et a
+    d\xE9clench\xE9 une bagarre g\xE9n\xE9rale. Avec ces capacit\xE9s de boxeur,
+    il a \xE9limin\xE9 beaucoup d\u2019agents. Nous avons r\xE9ussi \xE0 le calmer
+    gr\xE2ce \xE0 une forte dose de s\xE9datif. Il est donc neutralis\xE9 pour un
+    bon moment."

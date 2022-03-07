@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c97d7d9406a6db468c4afc5317a63cd, type: 3}
   m_Name: SCP_SWAT
   m_EditorClassIdentifier: 
-  ID: 
+  ID: SCP-150-FR-J
   Name: Le S.W.A.T de VilleMoirieu
   sprite: {fileID: 0}
   dangerLevel: 3

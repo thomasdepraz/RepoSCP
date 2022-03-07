@@ -12,6 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5318daa79ae0e04aa71b1d36686a253, type: 3}
   m_Name: SCPIncident_Sangliers
   m_EditorClassIdentifier: 
-  lowWorkersDeathIncident: 
-  mediumWorkersDeathIncident: 
-  highWorkersDeathIncident: 
+  lowWorkersDeathIncident: "Nos troupes sont arriv\xE9es dans la for\xEAt de Rhonne
+    pendant que les individus \xE9taient en pleine course de VTT. Nous avons form\xE9
+    un cordon de s\xE9curit\xE9 autour d\u2019eux en les suivant \xE0 l\u2019aide
+    de moto-cross, puis nous les avons escort\xE9s jusqu\u2019au camion de la fondation.
+    On leur a promis une salle faite pour le VTT et ils ont accept\xE9 de nous suivre.
+    Aucune perte n\u2019est \xE0 d\xE9plorer."
+  mediumWorkersDeathIncident: "Nos troupes sont arriv\xE9es \xE0 la F\xE9claz, lieu
+    o\xF9 une partie des sangliers atteint par SCP-039-FR-J s\u2019entra\xEEnait
+    \xE0 descendre la montagne en VTT. Nos agents se sont \xE9quip\xE9s eux-m\xEAmes
+    de VTT afin de descendre avec les sangliers et les amener vers nos camions qui
+    les attendaient en contrebas. Malheureusement, les agents \xE0 VTT manquaient
+    d\u2019exp\xE9rience et ont chut\xE9 dans la descente. Les sangliers sont quand
+    m\xEAme arriv\xE9s jusqu\u2019\xE0 nous et nous avons pu les r\xE9cup\xE9rer.\r\nNous
+    avons perdu certains agents durant l'op\xE9ration et plusieurs autres ont \xE9t\xE9
+    bless\xE9s."
+  highWorkersDeathIncident: "En essayant d\u2019appr\xE9hender SCP-039-FR-J, nos
+    agents se sont retrouv\xE9s confront\xE9s \xE0 des braconniers venus tuer les
+    sangliers. Des pourparlers ont \xE9t\xE9 engag\xE9s mais un coup de feu a \xE9t\xE9
+    tir\xE9. Ce qui a men\xE9 \xE0 un affrontement entre nos agents et les braconniers.
+    Le combat a fait des ravages dans les deux rangs. Les sangliers ont \xE9t\xE9
+    r\xE9cup\xE9r\xE9s, m\xEAme si deux d\u2019entre eux ont \xE9t\xE9 tu\xE9s et
+    trois autres bless\xE9s. Les braconniers ont quasiment tous \xE9t\xE9 neutralis\xE9s.
+    Au total, nous avons perdu beaucoup d'agents durant l'op\xE9ration."

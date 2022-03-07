@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c97d7d9406a6db468c4afc5317a63cd, type: 3}
   m_Name: SCP_MonsieurChiant
   m_EditorClassIdentifier: 
-  ID: 
+  ID: SCP-015-FR-J
   Name: Monsieur Chiant
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ef04dd75f4d4f1347ae07858f642ea73, type: 3}
   dangerLevel: 1
   type: 1
   rarity: 0
