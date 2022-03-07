@@ -29,6 +29,8 @@ namespace SCP.Ressources
         {
             HumanRessources.Add(new Worker());
             RessourcesDisplay.UpdateHumanRessourcesDisplay();
+            display.StartCoroutine(display.IndicateValueChange(1, 0, false));
+            display.StartCoroutine(display.IndicateValueChange(1, 1, false));
         }
 
         public void RemoveWorker(Worker toRemove = null)
@@ -39,6 +41,8 @@ namespace SCP.Ressources
             else HumanRessources.RemoveAt(0);
 
             RessourcesDisplay.UpdateHumanRessourcesDisplay();
+            display.StartCoroutine(display.IndicateValueChange(1, 0, true));
+            display.StartCoroutine(display.IndicateValueChange(1, 1, true));
         }
 
 
@@ -46,12 +50,14 @@ namespace SCP.Ressources
         {
             Money += quantity;
             RessourcesDisplay.UpdateMoneyDisplay();
+            display.StartCoroutine(display.IndicateValueChange(quantity, 2, false));
         }
 
         public void RemoveMoney(int quantity)
         {
             Money -= quantity;
             RessourcesDisplay.UpdateMoneyDisplay();
+            display.StartCoroutine(display.IndicateValueChange(quantity, 2, true));
         }
     }
 }

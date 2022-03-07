@@ -14,6 +14,8 @@ namespace SCP.Ressources.Display
         public TextMeshProUGUI workerDisplayObject;
         private static TextMeshProUGUI moneyDisplay;
         private static TextMeshProUGUI workerDisplay;
+        public TextMeshProUGUI[] modifTexts;
+        public float feedbackDuration;
 
         [Header("Testing")]
         private TurnManager turnManager;
@@ -21,10 +23,11 @@ namespace SCP.Ressources.Display
 
         public void Start()
         {
+            var ressourcesManager = new RessourcesManager(2,2);
             //Get Manager and inject
             manager = Registry.Get<RessourcesManager>();
             turnManager = Registry.Get<TurnManager>();
-            
+
             manager.display = this;
 
             moneyDisplay = moneyDisplayObject;
@@ -80,6 +83,54 @@ namespace SCP.Ressources.Display
             reportPlaceholder.SetActive(true);
             reportPlaceholder.GetComponent<TurnReport>().UpdateReport();  
             manager.AddMoney(10);
+        }
+
+        public IEnumerator IndicateValueChange(int modificationValue, int modifType, bool negative)
+        {
+            int value = Mathf.Abs(modificationValue);
+
+            switch (modifType)
+            {
+                case 0:
+                    modifTexts[0].gameObject.SetActive(true);
+                    if (negative == true)
+                    {
+                        modifTexts[0].text = "- " + value.ToString();
+                    }
+                    else
+                    {
+                        modifTexts[0].text = "+ " + value.ToString();
+                    }
+                    break;
+
+                case 1:
+                    modifTexts[1].gameObject.SetActive(true);
+                    if (negative == true)
+                    {
+                        modifTexts[1].text = "- " + value.ToString();
+                    }
+                    else
+                    {
+                        modifTexts[1].text = "+ " + value.ToString();
+                    }
+                    break;
+
+                case 2:
+                    modifTexts[2].gameObject.SetActive(true);
+                    if (negative == true)
+                    {
+                        modifTexts[2].text = "- " + value.ToString();
+                    }
+                    else
+                    {
+                        modifTexts[2].text = "+ " + value.ToString();
+                    }
+                    break;
+            }
+
+            yield return new WaitForSeconds(feedbackDuration);
+
+            modifTexts[modifType].gameObject.SetActive(false);
         }
     }
 }
