@@ -64,6 +64,7 @@ public abstract class Room
     public Vector2 Position { get; protected set; }
     public Vector2 FocusPosition { get; protected set; }
     public Vector2 Size { get; protected set; }
+    public int MoneyCost { get; protected set; }
 
     public readonly RoomOverlay overlay;
 
@@ -116,6 +117,7 @@ public class House : Room
     {
         //recenser les maisons qqpart après leur création;
         Size = new Vector2(1, 1);
+        MoneyCost = 50;
 
     }
 
@@ -140,11 +142,12 @@ public class Warehouse : Room
 
 public class ScpContainer : Room
 {
-    public SCPModel occupent { get; private set; }
+    public SCPModel occupant { get; private set; }
 
-    public ScpContainer(Vector2 size)
+    public ScpContainer(Vector2 size, int moneyCost)
     {
         Size = size;
+        MoneyCost = moneyCost;
     }
 
     public void PopulateRoom()

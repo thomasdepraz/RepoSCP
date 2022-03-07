@@ -11,6 +11,10 @@ public class TurnManager : MonoBehaviour
     public int dayCount = 1;
     public List<SCPIncident> incidents;
     
+    public void Awake()
+    {
+        new Registry().Register<TurnManager>(this);
+    }
 
     void Start()
     {

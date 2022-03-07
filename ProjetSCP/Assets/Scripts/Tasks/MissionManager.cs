@@ -71,10 +71,14 @@ public class MissionManager : MonoBehaviour
     List<SCPData> rareSCP = new List<SCPData>();
     List<SCPData> epicSCP = new List<SCPData>();
 
+    private void Awake()
+    {
+        new Registry().Register< MissionManager > (this);
+    }
+
     void Start()
     {
-        ressourceManager = new RessourcesManager();
-        new Registry().Register< MissionManager > (this);
+        ressourceManager = Registry.Get<RessourcesManager>();
         humanNumberText1.text = humanNumber1.ToString();
         humanNumberText2.text = humanNumber2.ToString();
         humanNumberText3.text = humanNumber3.ToString();

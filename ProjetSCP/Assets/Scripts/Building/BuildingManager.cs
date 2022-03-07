@@ -1,3 +1,4 @@
+using SCP.Ressources;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -111,19 +112,19 @@ namespace SCP.Building
                     GameObject room2x1 = Instantiate(SCP2_1Prefab, Vector3.zero, SCP2_1Prefab.transform.rotation);
                     selectedObject = room2x1.GetComponent<Building>();
                     selectedObject.type = BuildingType.SCP2_1;
-                    selectedObject.room = new ScpContainer(new Vector2(2, 1));
+                    selectedObject.room = new ScpContainer(new Vector2(2, 1), 100);
                     break;
                 case "SCP2_2":
                     GameObject room2x2 = Instantiate(SCP2_2Prefab, Vector3.zero, SCP2_2Prefab.transform.rotation);
                     selectedObject = room2x2.GetComponent<Building>();
                     selectedObject.type = BuildingType.SCP2_1;
-                    selectedObject.room = new ScpContainer(new Vector2(2, 2));
+                    selectedObject.room = new ScpContainer(new Vector2(2, 2), 200);
                     break;
                 case "SCP4_2":
                     GameObject room4x2 = Instantiate(SCP4_2Prefab, Vector3.zero, SCP4_2Prefab.transform.rotation);
                     selectedObject = room4x2.GetComponent<Building>();
                     selectedObject.type = BuildingType.SCP2_1;
-                    selectedObject.room = new ScpContainer(new Vector2(4, 2));
+                    selectedObject.room = new ScpContainer(new Vector2(4, 2), 400);
                     break;
                 default:
                     break;
@@ -160,12 +161,18 @@ namespace SCP.Building
         public void PlaceObject()
         {
             Vector2 gridPos = GetRealGridPos(pointer.currentGridPosition);
-            if (grid.CanBuild(gridPos, selectedObject.room.Size))
+            if (grid.CanBuild(gridPos, selectedObject.room.Size) && EnoughMoney(selectedObject.room.MoneyCost))
             {
                 selectedObject.room.SetPosition(gridPos);
                 grid.Build(gridPos, selectedObject.room.Size);
+                Registry.Get<RessourcesManager>().RemoveMoney(selectedObject.room.MoneyCost);
                 selectedObject = null;
             }
+        }
+
+        public bool EnoughMoney(int cost)
+        {
+            return Registry.Get<RessourcesManager>().Money >= cost;
         }
 
         public Vector3 GetWorldPosition(Vector2 gridPosition)

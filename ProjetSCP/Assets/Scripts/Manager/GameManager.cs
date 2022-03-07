@@ -12,17 +12,16 @@ public class GameManager : MonoBehaviour
 {
 
     public GameState gameState = GameState.GAME;
+    private RessourcesManager ressourcesManager;
 
     private void Awake()
     {
         new Registry().Register<GameManager>(this);
-        var ressourcesManager = new RessourcesManager();
-
+        ressourcesManager = new RessourcesManager(12, 1000);
     }
 
     private void Start()
     {
-        
     }
 
 

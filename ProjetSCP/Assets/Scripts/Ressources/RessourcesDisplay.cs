@@ -16,15 +16,15 @@ namespace SCP.Ressources.Display
         private static TextMeshProUGUI workerDisplay;
 
         [Header("Testing")]
-        public TurnManager turnManager;
+        private TurnManager turnManager;
         public GameObject reportPlaceholder;
 
         public void Start()
         {
-            //Temporary
-            var ressourcesManager = new RessourcesManager();
             //Get Manager and inject
             manager = Registry.Get<RessourcesManager>();
+            turnManager = Registry.Get<TurnManager>();
+            
             manager.display = this;
 
             moneyDisplay = moneyDisplayObject;
@@ -33,6 +33,9 @@ namespace SCP.Ressources.Display
             turnManager.callNextTurnLate.AddListener(TurnIncomeTrigger);
 
             reportPlaceholder.SetActive(false);
+
+            UpdateHumanRessourcesDisplay();
+            UpdateMoneyDisplay();
         }
 
         //For Testing Only
@@ -41,36 +44,34 @@ namespace SCP.Ressources.Display
            if (Input.GetKeyDown(KeyCode.T))
            {
                 manager.AddMoney(10);
-                UpdateMoneyDisplay();
            } 
 
            if (Input.GetKeyDown(KeyCode.Y))
            {
                 manager.AddWorker();
-                UpdateHumanRessourcesDisplay();
            }
 
            if (Input.GetKeyDown(KeyCode.G))
            {
                 manager.RemoveMoney(10);
-                UpdateMoneyDisplay();
            }
 
            if (Input.GetKeyDown(KeyCode.H))
            {
                 manager.RemoveWorker();
-                UpdateHumanRessourcesDisplay();
            }
         }
 
 
         public static void UpdateHumanRessourcesDisplay()
         {
+            if (manager == null) return;
             workerDisplay.text = RessourcesHelper.GetAvailableWorkersCount(manager.HumanRessources) + "/" + manager.HumanRessources.Count;
         }
 
         public static void UpdateMoneyDisplay()
         {
+            if (manager == null) return;
             moneyDisplay.text = manager.Money + " k";
         }
 
@@ -79,7 +80,6 @@ namespace SCP.Ressources.Display
             reportPlaceholder.SetActive(true);
             reportPlaceholder.GetComponent<TurnReport>().UpdateReport();  
             manager.AddMoney(10);
-            UpdateMoneyDisplay();
         }
     }
 }

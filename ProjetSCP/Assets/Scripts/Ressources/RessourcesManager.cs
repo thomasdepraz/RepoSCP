@@ -12,18 +12,23 @@ namespace SCP.Ressources
 
         public RessourcesDisplay display;
 
-        public RessourcesManager()
+        public RessourcesManager(int defaultWorkersCount, int defaultMoneyQuantity)
         {
             new Registry().Register<RessourcesManager>(this);
-            for (int i = 0; i < 12; i++)
+
+            //Init base values
+            for (int i = 0; i < defaultWorkersCount; i++)
             {
                 HumanRessources.Add(new Worker());
             }
+
+            Money = defaultMoneyQuantity;
         }
 
         public void AddWorker()
         {
             HumanRessources.Add(new Worker());
+            RessourcesDisplay.UpdateHumanRessourcesDisplay();
         }
 
         public void RemoveWorker(Worker toRemove = null)
@@ -32,17 +37,21 @@ namespace SCP.Ressources
 
             if (toRemove == null) HumanRessources.Remove(toRemove);
             else HumanRessources.RemoveAt(0);
+
+            RessourcesDisplay.UpdateHumanRessourcesDisplay();
         }
 
 
         public void AddMoney(int quantity)
         {
             Money += quantity;
+            RessourcesDisplay.UpdateMoneyDisplay();
         }
 
         public void RemoveMoney(int quantity)
         {
             Money -= quantity;
+            RessourcesDisplay.UpdateMoneyDisplay();
         }
     }
 }
