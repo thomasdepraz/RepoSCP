@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfe635de4efc734dbc32f7d3e06b7b6, type: 3}
+  m_Name: SoundList
+  m_EditorClassIdentifier: 
+  uiSounds:
+  - name: UIMenuButton
+    clip: {fileID: 8300000, guid: f71e7783501262a47ae4397623116730, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: UIMenuButtonClick
+    clip: {fileID: 8300000, guid: f18e1bdcc7e8cf842820ba57792240e3, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: UIMenuButtonOn
+    clip: {fileID: 8300000, guid: e225af273c4bb42438b2d7ee019a1879, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: UIMenuButtonReturn
+    clip: {fileID: 8300000, guid: 6a57609e30f9dc24db90b20a189ecf3f, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: UIPCClick
+    clip: {fileID: 8300000, guid: a0a07e5cbecbb1c4fbd707d1b8bb781a, type: 3}
+    volume: 0.8
+    loop: 0
+  gameSounds:
+  - name: 
+    clip: {fileID: 8300000, guid: 9e7e7b8250077ad4e852c8051ca832a8, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 7b1693e0d84c96146b8619675a6d3f65, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 19970609e97509b4bab61bd4fbd23aa7, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: da4e61b5d1c8b8846bdf8a2a44dbc290, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 7023eba3f70f89d4299b8253b712515b, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: e305d1ec33f0bbe43894628a1e33cd10, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 4719e385499d9594898fb82ccbc5346e, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: b1ba04e7e1387c245b4f611ac0bee40e, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 8a850a1d4239b694496c57ab5b73c19b, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 9219709565083c14dbce8e52569391b8, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 6077095fd3aae9b45a42e6ec3e9272cd, type: 3}
+    volume: 0.8
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: d86e858016a48aa45a615cedbb8ab48c, type: 3}
+    volume: 0.8
+    loop: 0
+  gameMusics:
+  - name: GameMusic
+    clip: {fileID: 8300000, guid: b9c60409bcc108d48944e7e454477153, type: 3}
+    volume: 0.8
+    loop: 1
