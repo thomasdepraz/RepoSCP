@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c97d7d9406a6db468c4afc5317a63cd, type: 3}
-  m_Name: SCP_MonsieurChiant
+  m_Script: {fileID: 11500000, guid: a5318daa79ae0e04aa71b1d36686a253, type: 3}
+  m_Name: SCPIncident_Canard
   m_EditorClassIdentifier: 
-  ID: 
-  Name: Monsieur Chiant
-  sprite: {fileID: 0}
-  dangerLevel: 1
-  type: 1
-  rarity: 0
-  size: 2
+  lowWorkersDeathIncident: 
+  mediumWorkersDeathIncident: 
+  highWorkersDeathIncident: 

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37876e31ec9bfbe40a901d3b0b8fc34a, type: 3}
+  m_Name: SCP_Manchot_Incidents
+  m_EditorClassIdentifier: 
+  damage: 1
+  incident1Title: Incident 012-FR-J-I-1
+  incident1Description: "L\u2019incident s\u2019est produit hier \xE0 19h30, \xE0
+    l\u2019heure du repas de SCP-012-FR-J. Le garde charg\xE9 d\u2019apporter la
+    nourriture \xE0 ouvert la porte de la salle de sport et un moustique en a profit\xE9
+    pour entrer dans la pi\xE8ce. SCP-012-FR-J a entendu le bruit de l\u2019insecte
+    et a produit, par r\xE9flexe, un high low kick de qualit\xE9. Le moustique a
+    \xE9t\xE9 touch\xE9, mais le garde \xE9galement. En r\xE9sulte une fracture ouverte
+    de la cheville, ayant provoqu\xE9 une violente h\xE9morragie. Le garde a d\xE9pos\xE9
+    sa lettre de d\xE9mission d\xE8s sa sortie des urgences.\r\n\nNOTE : un dispositif
+    anti-moustique doit \xEAtre mis en place au niveau de la porte de la salle de
+    sport.\r"
+  incident2Title: Incident 012-FR-J-I-2
+  incident2Description: "L\u2019incident s\u2019est produit hier \xE0 06h, \xE0 l\u2019heure
+    du petit-d\xE9jeuner de SCP-012-FR-J. Le garde charg\xE9 d\u2019apporter la nourriture
+    a tr\xE9buch\xE9 et fait tomber l\u2019une des halt\xE8res de SCP-012-FR-J de
+    son meuble de rangement. Cette derni\xE8re est venue s\u2019\xE9craser sur le
+    visage de ce dernier, le tuant sur le coup. \r\n\nNOTE : il faut croire qu\u2019un
+    cr\xE2ne humain a du mal \xE0 encaisser une charge de 150kg.\r"
+  incident3Title: Incident 012-FR-J-I-3
+  incident3Description: "L\u2019incident s\u2019est produit hier \xE0 14h08, durant
+    l'entra\xEEnement de boxe anglaise de SCP-012-FR-J. Un de nos agent sp\xE9cialis\xE9
+    dans le combat rapproch\xE9 est entr\xE9 sur le ring afin de servir de sparring
+    partenaire. Le combat se d\xE9roulait bien jusqu\u2019au moment o\xF9 l'agent
+    s\u2019est moqu\xE9 des bras de SCP-012-FR-J. Ce dernier l\u2019a tr\xE8s mal
+    pris et lui a d\xE9coch\xE9 un crochet du gauche directement dans la m\xE2choire,
+    qui s\u2019est disloqu\xE9e. Le combat a par la suite \xE9t\xE9 arr\xEAt\xE9,
+    et l\u2019agent emmen\xE9 aux urgences. Il a d\xE9pos\xE9 sa lettre de d\xE9mission
+    peu apr\xE8s sa sortie.\r\n\nNOTE : d\xE9sormais, seul Mister T a le droit de
+    servir de sparring partenaire \xE0 SCP-012-FR-J.\r"

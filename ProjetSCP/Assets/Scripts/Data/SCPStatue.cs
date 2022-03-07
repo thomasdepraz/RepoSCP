@@ -23,6 +23,7 @@ public class SCPStatue : MonoBehaviour
         classe.text = scpData.type.ToString();
         rarity.text = scpData.rarity.ToString();
         danger.text = scpData.dangerLevel.ToString();
-        size.text = scpData.size.ToString(); 
+        size.text = scpData.size.ToString();
+        description.text = scpData.descriptionShort;
     }
 }

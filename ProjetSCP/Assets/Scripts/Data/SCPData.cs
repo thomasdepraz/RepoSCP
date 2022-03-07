@@ -12,6 +12,10 @@ namespace SCP.Data
         public SCPType type;
         public Rarity rarity;
         public int size;
+        public SCPMissionIncident missionIncident;
+        [TextArea(2, 6)]
+        public string descriptionShort;
+        public SCPIncident incident;
     }
 
 }

@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c97d7d9406a6db468c4afc5317a63cd, type: 3}
-  m_Name: SCP_ManchotMuscle
+  m_Script: {fileID: 11500000, guid: a5318daa79ae0e04aa71b1d36686a253, type: 3}
+  m_Name: SCPIncident_MonsieurChiant
   m_EditorClassIdentifier: 
-  ID: 
-  Name: "Manchot empereur muscl\xE9"
-  sprite: {fileID: 0}
-  dangerLevel: 0
-  type: 1
-  rarity: 2
-  size: 4
+  lowWorkersDeathIncident: 
+  mediumWorkersDeathIncident: 
+  highWorkersDeathIncident: 

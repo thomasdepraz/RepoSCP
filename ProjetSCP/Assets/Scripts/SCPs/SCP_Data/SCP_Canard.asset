@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c97d7d9406a6db468c4afc5317a63cd, type: 3}
+  m_Name: SCP_Canard
+  m_EditorClassIdentifier: 
+  ID: 
+  Name: 'Canard en caoutchouc '
+  sprite: {fileID: 0}
+  dangerLevel: 0
+  type: 0
+  rarity: 0
+  size: 2
+  missionIncident: {fileID: 11400000, guid: e3208867506d537409057fc832139fb7, type: 2}
+  descriptionShort: "Le SCP-1356 ressemble \xE0 un canard en caoutchouc, semblable
+    \xE0 tous les autres, poss\xE8de la capacit\xE9 de faire dispara\xEEtre l\u2019eau
+    autour de lui lorsqu\u2019un sujet humain le tient. Si cet humain rentre dans
+    une piscine, l\u2019eau autour de lui dispara\xEEtra dans un certain rayon autour
+    du corps.\r"
+  incident: {fileID: 11400000, guid: 1c9138596e5a2e042a3a07490bd4b4e7, type: 2}
