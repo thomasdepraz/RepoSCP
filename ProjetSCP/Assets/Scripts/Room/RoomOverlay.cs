@@ -35,19 +35,24 @@ public class RoomOverlay : MonoBehaviour,
     }
     public void OnPointerClick(PointerEventData eventData)
     {
+        
         if (Registry.Get<GameManager>().gameState != GameState.GAME) return;
 
-        //if(Time.time - lastClickTime < 0.3 && camController.camState != CameraState.TWEENING)
-        //{
-        //    camController.ChangeState(transform.position);
-        //}
-        //else if(camController.camState == CameraState.FOCUSED && (Vector2)transform.position!= (Vector2)camController.transform.position)
-        //{
-        //    camController.FocusTarget(transform.position);
-        //}
-        //lastClickTime = Time.time;
-
-        linkedRoom.OnSelectCallback?.Invoke();
+        if(Input.GetMouseButtonUp(1))
+        {
+            if (camController.camState != CameraState.TWEENING)
+            {
+                camController.ChangeState(transform.position);
+            }
+            else if (camController.camState == CameraState.FOCUSED && (Vector2)transform.position != (Vector2)camController.transform.position)
+            {
+                camController.FocusTarget(transform.position);
+            }
+        }
+        else if( Input.GetMouseButtonUp(0))
+        {
+            linkedRoom.OnSelectCallback?.Invoke();
+        }
     }
 
     public void setEnabled()
