@@ -8,18 +8,14 @@ using UnityEngine.UI;
 public class Catalog : MonoBehaviour
 {
     List<CatalogButton> catalogButtons;
-    public List<SCPData> allSCPS;
-    public RectTransform catalogButtonsPanelTransform;
-    public CatalogButton catalogButton;
-
-    public GameObject Panel;
 
     [Header("BigOverview")]
     public TextMeshProUGUI bigOverviewName;
     public TextMeshProUGUI bigOverviewID;
     public TextMeshProUGUI bigOverviewRarity;
     public Image bigOverviewVisual;
-    public GameObject ScollViewPanel;
+    public GameObject scrollViewPanel;
+    public GameObject bigOverviewPanel;
 
     [Header("FullOverview")]
     public TextMeshProUGUI SCPDangerosity;
@@ -28,6 +24,13 @@ public class Catalog : MonoBehaviour
     public TextMeshProUGUI SCPSize;
     public GameObject fullOverviewPanel;
 
+    [Header("Other")]
+    public GameObject helpPanel;
+    public List<SCPData> allSCPS;
+    public RectTransform catalogButtonsPanelTransform;
+    public CatalogButton catalogButton;
+    public GameObject Panel;
+
     private void Start()
     {
         catalogButtons = new List<CatalogButton>();
@@ -35,16 +38,23 @@ public class Catalog : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("a") == true)
+        if (Input.GetKeyDown("b") == true)
         {
             InitializeSCPCatalog();
         }
     }
     public void InitializeSCPCatalog()
     {
+        Panel.SetActive(true);
+
+        foreach (CatalogButton button in catalogButtons)
+        {
+            Destroy(button.gameObject);
+        }
+
         catalogButtons.Clear();
-        //deleteChildrens
-        for(int i = 0; i < allSCPS.Count; i++)
+
+        for (int i = 0; i < allSCPS.Count; i++)
         {
             CatalogButton newCatalogButton = Instantiate(catalogButton, catalogButtonsPanelTransform);
             newCatalogButton.UpdateDisplay(allSCPS[i]);
@@ -58,11 +68,27 @@ public class Catalog : MonoBehaviour
         if(fullOverviewPanel.activeInHierarchy == true)
         {
             fullOverviewPanel.SetActive(false);
-            ScollViewPanel.SetActive(true);
+            scrollViewPanel.SetActive(true);
+        }
+        else if(helpPanel.activeInHierarchy == true)
+        {
+            helpPanel.SetActive(false);
+            scrollViewPanel.SetActive(true);
+            bigOverviewPanel.SetActive(true);
         }
         else
         {
             Panel.SetActive(false);
         }
     }
+
+    public void OpenHelpPanel()
+    {
+        helpPanel.SetActive(true);
+        fullOverviewPanel.SetActive(false);
+        scrollViewPanel.SetActive(false);
+        bigOverviewPanel.SetActive(false);
+    }
+
+   
 }
