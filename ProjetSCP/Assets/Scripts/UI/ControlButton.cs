@@ -6,8 +6,20 @@ using UnityEngine.UI;
 public class ControlButton : MonoBehaviour
 {
     public GameObject wheel;
-    public MissionManager missionManager;
-   public void GoBuildMode()
+    private MissionManager missionManager;
+
+
+    public void Awake()
+    {
+        new Registry().Register<ControlButton>(this);
+    }
+
+    public void Start()
+    {
+        missionManager = Registry.Get<MissionManager>();
+    }
+
+    public void GoBuildMode()
     {
         wheel.SetActive(false);
     }
