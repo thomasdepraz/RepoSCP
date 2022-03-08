@@ -16,12 +16,20 @@ public class Sound
 
     public enum soundType { UI, Game, Music, Master };
 
+    [HideInInspector]
     public soundType type;
 
+    [HideInInspector]
     public AudioSource source;
+
+    [HideInInspector]
+    public AutoDestroyAudio destroyScript;
 
     public void AssignSound()
     {
+
+
+
         source.loop = loop;
 
         source.clip = clip;
@@ -42,6 +50,8 @@ public class Sound
             default:
                 break;
         }
+
+        destroyScript = source.gameObject.GetComponent<AutoDestroyAudio>();
 
         source.playOnAwake = false;
     }
