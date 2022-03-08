@@ -7,7 +7,9 @@ namespace SCP.Data
     {
         public string ID;
         public string Name;
-        public Sprite sprite; //TEMP ?
+        public Sprite sprite;
+        public Mesh mesh;
+        public Material material;
         public DangerLevel dangerLevel;
         public SCPType type;
         public Rarity rarity;

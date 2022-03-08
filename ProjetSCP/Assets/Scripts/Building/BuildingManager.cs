@@ -60,8 +60,11 @@ namespace SCP.Building
             grid = new Grid(new Vector2(13,6));
 
             //Create pre built rooms
-            var warehouse = new Warehouse();
-            var commandPost = new CommandPost();
+            var warehouse = new Warehouse(warehouseRoom);
+            var commandPost = new CommandPost(commandRoom);
+
+            warehouseRoom.room = warehouse;
+            commandRoom.room = commandPost;
 
             warehouse.SetPosition(new Vector2(0,0));
             commandPost.SetPosition(new Vector2(3,0));
@@ -75,22 +78,23 @@ namespace SCP.Building
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.B))
+            if (gameManager.gameState==GameState.BUILDING)
             {
-                ToggleBuildingMode(gameManager.gameState != GameState.BUILDING ? true : false);
-            }
-
-            if(gameManager.gameState==GameState.BUILDING && selectedObject != null)
-            {
-                if (Input.GetMouseButtonDown(0))
-                    PlaceObject();
-                else if (Input.GetMouseButtonDown(1))
+                if(selectedObject != null)
                 {
-                    Destroy(selectedObject.gameObject);
-                    ToggleBuildingMode(false);
+                    if (Input.GetMouseButtonDown(0))
+                        PlaceObject();
+                    else if (Input.GetMouseButtonDown(1))
+                    {
+                        Destroy(selectedObject.gameObject);
+                        selectedObject = null;
+                    }
+                }
+                else
+                {
+                    if (Input.GetMouseButtonDown(1)) ToggleBuildingMode(false);
                 }
             }
-
         }
 
         public void SelectBuildingType(string type)//link to button
@@ -102,18 +106,18 @@ namespace SCP.Building
                 case "NONE":
                     break;
                 case "HOUSING":
-                    selectedObject = GetBuilding(housePrefab, BuildingType.HOUSING, new House());
+                    selectedObject = GetBuilding(housePrefab, BuildingType.HOUSING, new House(housePrefab.GetComponent<Building>()));
                     break;
                 case "POWERPLANT":
                     break;
                 case "SCP2_1":
-                    selectedObject = GetBuilding(housePrefab, BuildingType.SCP2_1, new ScpContainer(new Vector2(2, 1), 100));
+                    selectedObject = GetBuilding(SCP2_1Prefab, BuildingType.SCP2_1, new ScpContainer(new Vector2(2, 1), 100, SCP2_1Prefab.GetComponent<Building>()));
                     break;
                 case "SCP2_2":
-                    selectedObject = GetBuilding(housePrefab, BuildingType.SCP2_2, new ScpContainer(new Vector2(2, 2), 200));
+                    selectedObject = GetBuilding(SCP2_2Prefab, BuildingType.SCP2_2, new ScpContainer(new Vector2(2, 2), 200, SCP2_2Prefab.GetComponent<Building>()));
                     break;
                 case "SCP4_2":
-                    selectedObject = GetBuilding(housePrefab, BuildingType.SCP4_2, new ScpContainer(new Vector2(4, 2), 400));
+                    selectedObject = GetBuilding(SCP4_2Prefab, BuildingType.SCP4_2, new ScpContainer(new Vector2(4, 2), 400, SCP4_2Prefab.GetComponent<Building>()));
                     break;
                 default:
                     break;

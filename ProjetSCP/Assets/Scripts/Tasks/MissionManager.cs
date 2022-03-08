@@ -219,7 +219,7 @@ public class MissionManager : MonoBehaviour
 
             //Placer le scp dans la salle de stockage
             Warehouse w = Registry.Get<BuildingManager>().warehouseRoom.room as Warehouse;
-            //w.Populate();
+            w.Populate(chosenSCP);
         }   
     }
 

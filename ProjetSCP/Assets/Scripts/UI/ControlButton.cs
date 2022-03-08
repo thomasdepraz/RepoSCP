@@ -1,3 +1,4 @@
+using SCP.Building;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class ControlButton : MonoBehaviour
 
     public void GoBuildMode()
     {
+        Registry.Get<BuildingManager>().ToggleBuildingMode(true);
         wheel.SetActive(false);
     }
 
@@ -30,13 +32,10 @@ public class ControlButton : MonoBehaviour
         wheel.SetActive(false);
     }
 
-    public void OpenWheel()
+    public void ToggleWheel()
     {
-        wheel.SetActive(true);
+        wheel.SetActive(!wheel.activeSelf);
     }
 
-    public void CloseWheel()
-    {
-        wheel.SetActive(false);
-    }
+    
 }

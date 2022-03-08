@@ -1,20 +1,16 @@
+using SCP.Data;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SCPObject : MonoBehaviour
 {
-    MeshRenderer renderer;
+    public MeshFilter meshFilter;
+    public MeshRenderer rend;
 
-    // Start is called before the first frame update
-    void Start()
+    public void UpdateRenderer(SCPData data)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        meshFilter.mesh = data.mesh;
+        rend.material = data.material;      
     }
 }
