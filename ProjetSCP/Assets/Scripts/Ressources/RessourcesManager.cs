@@ -13,7 +13,7 @@ namespace SCP.Ressources
 
         public RessourcesDisplay display;
 
-        public SCPModel selectedSCP;
+        public SCPData selectedSCP;
 
         public RessourcesManager(int defaultWorkersCount, int defaultMoneyQuantity)
         {
@@ -40,7 +40,7 @@ namespace SCP.Ressources
         {
             if (HumanRessources.Count == 0) return;
 
-            if (toRemove == null) HumanRessources.Remove(toRemove);
+            if (toRemove != null) HumanRessources.Remove(toRemove);
             else HumanRessources.RemoveAt(0);
 
             RessourcesDisplay.UpdateHumanRessourcesDisplay();

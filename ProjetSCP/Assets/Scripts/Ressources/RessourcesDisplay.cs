@@ -23,7 +23,6 @@ namespace SCP.Ressources.Display
 
         public void Start()
         {
-            var ressourcesManager = new RessourcesManager(2,2);
             //Get Manager and inject
             manager = Registry.Get<RessourcesManager>();
             turnManager = Registry.Get<TurnManager>();

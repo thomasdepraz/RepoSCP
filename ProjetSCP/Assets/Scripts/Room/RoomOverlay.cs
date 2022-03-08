@@ -84,7 +84,6 @@ public abstract class Room
     {
         Position = position;
         //calculate focus position
-        
     }
 
 }
@@ -152,9 +151,10 @@ public class Warehouse : Room
         //Select Scp if any + feedback
         if (IsEmpty()) return;
 
-        Registry.Get<RessourcesManager>().selectedSCP = occupant;
+        Registry.Get<RessourcesManager>().selectedSCP = occupant.Data;
         //Todo feedback
 
+        GameObject.Destroy(occupant.Object.gameObject);
         occupant = null;
         //feedback
     }
@@ -173,9 +173,10 @@ public class Warehouse : Room
 
     public bool IsEmpty() => occupant == null;
 
-    public void Populate(SCPModel ocupant)
+    public void Populate(SCPData ocupantData)
     {
-        this.occupant = occupant; 
+        //SCPObject obj;
+        //this.occupant = new SCPModel(occupant.Data, obj); 
         //feedback
     }
 }
@@ -192,10 +193,6 @@ public class ScpContainer : Room
 
     public void PopulateRoom()
     {
-
-
-
-
 
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using SCP.Building;
 
 public class MissionManager : MonoBehaviour
 {
@@ -214,7 +215,12 @@ public class MissionManager : MonoBehaviour
             WorkersLossUpdateDescription();
             SCPSelectionPanel.SetActive(false);
             workersLossPanel.SetActive(true);
-        }
+
+
+            //Placer le scp dans la salle de stockage
+            Warehouse w = Registry.Get<BuildingManager>().warehouseRoom.room as Warehouse;
+            //w.Populate();
+        }   
     }
 
     int WorkersLoss(Mission mission)
@@ -254,5 +260,6 @@ public class MissionManager : MonoBehaviour
     {
         workersLossPanel.SetActive(false);
         numberOfDeadWorkers = 0;
+
     }
 }
