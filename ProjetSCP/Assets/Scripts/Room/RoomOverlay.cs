@@ -69,7 +69,7 @@ public abstract class Room
     public Vector2 Size { get; protected set; }
     public int MoneyCost { get; protected set; }
 
-    public readonly RoomOverlay overlay;
+    private readonly RoomOverlay overlay;
 
     public Action OnSelectCallback;
 

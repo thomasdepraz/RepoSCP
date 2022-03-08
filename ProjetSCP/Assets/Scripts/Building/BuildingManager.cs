@@ -68,8 +68,6 @@ namespace SCP.Building
 
             grid.Build(Vector2.zero, warehouse.Size);
             grid.Build(new Vector2(3, 0), commandPost.Size);
-            
-
         }
 
         public void Update()
@@ -105,6 +103,7 @@ namespace SCP.Building
                     selectedObject = go.GetComponent<Building>();
                     selectedObject.type = BuildingType.HOUSING;
                     selectedObject.room = new House();
+                    selectedObject.overlay.linkedRoom = selectedObject.room;
                     break;
                 case "POWERPLANT":
                     break;
@@ -113,18 +112,21 @@ namespace SCP.Building
                     selectedObject = room2x1.GetComponent<Building>();
                     selectedObject.type = BuildingType.SCP2_1;
                     selectedObject.room = new ScpContainer(new Vector2(2, 1), 100);
+                    selectedObject.overlay.linkedRoom = selectedObject.room;
                     break;
                 case "SCP2_2":
                     GameObject room2x2 = Instantiate(SCP2_2Prefab, Vector3.zero, SCP2_2Prefab.transform.rotation);
                     selectedObject = room2x2.GetComponent<Building>();
                     selectedObject.type = BuildingType.SCP2_1;
                     selectedObject.room = new ScpContainer(new Vector2(2, 2), 200);
+                    selectedObject.overlay.linkedRoom = selectedObject.room;
                     break;
                 case "SCP4_2":
                     GameObject room4x2 = Instantiate(SCP4_2Prefab, Vector3.zero, SCP4_2Prefab.transform.rotation);
                     selectedObject = room4x2.GetComponent<Building>();
                     selectedObject.type = BuildingType.SCP2_1;
                     selectedObject.room = new ScpContainer(new Vector2(4, 2), 400);
+                    selectedObject.overlay.linkedRoom = selectedObject.room;
                     break;
                 default:
                     break;
