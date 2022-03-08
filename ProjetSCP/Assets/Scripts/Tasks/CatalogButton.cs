@@ -33,10 +33,10 @@ public class CatalogButton : MonoBehaviour
     {
         catalog.SCPDangerosity.text = "Danger " + mySCP.dangerLevel.ToString(); 
         catalog.SCPBigDescription.text = mySCP.fullDescription;
-        catalog.SCPClass.text = "Class " + mySCP.type.ToString();
-        catalog.SCPSize.text = "Size " + mySCP.size.ToString();
+        catalog.SCPClass.text = "Classe " + mySCP.type.ToString();
+        catalog.SCPSize.text = "Taille " + mySCP.size.ToString();
         catalog.fullOverviewPanel.SetActive(true);
-        catalog.ScollViewPanel.SetActive(false);
+        catalog.scrollViewPanel.SetActive(false);
     }
 
     public void ShowBigSCP()

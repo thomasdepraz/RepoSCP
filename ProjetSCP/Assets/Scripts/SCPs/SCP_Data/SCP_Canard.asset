@@ -26,3 +26,26 @@ MonoBehaviour:
     une piscine, l\u2019eau autour de lui dispara\xEEtra dans un certain rayon autour
     du corps.\r"
   incident: {fileID: 11400000, guid: 1c9138596e5a2e042a3a07490bd4b4e7, type: 2}
+  fullDescription: "SCP-1356 est un petit jouet de bain, ressemblant aux \"canards
+    en caoutchouc\" classiques. Les tests indiquent que l'objet est fait en polychlorure
+    de vinyle plastifi\xE9. Il est con\xE7u pour \xE9mettre un \"couinement\" aigu
+    lorsqu'il est press\xE9.\r\nLorsqu'il est tenu par un sujet humain, l'objet semble
+    d\xE9placer l'eau liquide. Si un sujet tenant l'objet tente d'entrer dans un
+    lac ou une piscine, celui-ci remarquera que tous les liquides se trouvant dans
+    une zone s'\xE9tendant approximativement \xE0 152,4 x 81,3 x 45,7 cm du corps
+    disparaissent.\r\nLes tests r\xE9alis\xE9s dans une petite piscine couverte ont
+    r\xE9v\xE9l\xE9 que le volume approximatif d'eau avant et apr\xE8s exposition
+    \xE0 SCP-1356 reste constant. N\xE9anmoins, m\xEAme en pr\xE9sence d'un sujet
+    tenant le canard anormal, les niveaux d'eau n'ont jamais \xE9t\xE9 observ\xE9s
+    monter. Il est suppos\xE9 que l'objet d\xE9place le liquide jusqu'\xE0 un emplacement
+    inconnu, \xE0 partir duquel il finit par \"revenir\". Aucune substance inhabituelle
+    ou \xE9trang\xE8re n'a encore \xE9t\xE9 d\xE9tect\xE9e dans les eaux \"d\xE9plac\xE9es\",
+    bien que le niveau de pH indique une l\xE9g\xE8re augmentation de l'acidit\xE9.\r\nComme
+    la profondeur de l'eau d\xE9plac\xE9e ne d\xE9passe jamais une moyenne de 46
+    cm, un sujet se dirigeant vers une piscine profonde finira par trouver ses pieds
+    et ses jambes submerg\xE9s, alors que le reste du corps reste sec. M\xEAme des
+    mouvements et des plongeons dynamiques, toutefois, ne suffisent jamais \xE0 mettre
+    le haut du corps au contact de l'eau\u2014 \"l'espace sec\" rectangulaire se
+    d\xE9place sans probl\xE8me pour s'adapter m\xEAme aux mouvements les plus brusques.
+    Des tests pour d\xE9couvrir les param\xE8tres de ce ph\xE9nom\xE8ne, ainsi que
+    d'\xE9ventuelles applications, sont en cours.\r\n"
