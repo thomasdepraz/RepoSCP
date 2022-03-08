@@ -44,18 +44,11 @@ public class SoundManager : MonoBehaviour
 
     void Update()
     {
-        /*audioSourcesTab = gameObject.GetComponents<AudioSource>();
 
-        foreach (var source in audioSourcesTab)
-        {
-            if (source.isPlaying == false)
-            {
-                Destroy(source);
-            }
-        }*/
     }
 
-    public void PlaySound(string name)
+    //Le Script a lancer pour jouer un son. Renvoi le son pour pouvoir le modifier plus tard.
+    public Sound PlaySound(string name)
     {
         Sound tempSound;
 
@@ -76,11 +69,13 @@ public class SoundManager : MonoBehaviour
                 break;
             default:
                 break;
-        }
+        }       
 
         tempSound.AssignSound();
-
+        
         StartCoroutine(Play(tempSound));
+
+        return tempSound;
     }
 
     public IEnumerator Play(Sound sound)
@@ -94,11 +89,12 @@ public class SoundManager : MonoBehaviour
             yield return null;
         }
 
-        Destroy(sound.source.gameObject);
+        sound.destroyScript.isUsed = false;
 
         playingSounds.Remove(sound);
     }
-
+    
+    //La fonction a appeler pour changer le volume global. J'utilise l'enum Sound.soundType !
     public void SetVolume(Sound.soundType type, float number)
     {
         switch (type)
@@ -120,7 +116,19 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    //Fonction pour aller retrouver un son dans la liste en fonction de son nom
+    public Sound GetPlayingSoundByName(string name)
+    {
+        foreach (var sound in playingSounds)
+        {
+            if (sound.name == name)
+            {
+                return sound;
+            }
+        }
 
+        return null;
+    }
 
     public void TestSound()
     {
