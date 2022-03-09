@@ -25,12 +25,10 @@ public class TurnReport : MonoBehaviour
         
     }
 
-    public void UpdateReport()
+    public void UpdateReport(int income)
     {
-        //Récupérer l'argent gagner et l'afficher.
-
+        moneyGainedText.text = "Revenu : " + income + " k";
         dayCountText.text = "Jour : " + turnManager.dayCount;
-        Debug.Log(turnManager.incidents.Count);
 
         for (int i = 0; i < turnManager.incidents.Count; i++)
         {
@@ -48,9 +46,12 @@ public class TurnReport : MonoBehaviour
     {
         Debug.Log("GoButton");
 
-        /*GameObject currentIncident = Instantiate(incidentButton, incidentsContent);
+        GameObject currentIncident = Instantiate(incidentButton, incidentsContent);
 
-        if (incidentsContent.childCount == 1)
+        currentIncident.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
+        currentIncident.GetComponent<IncidentButton>().SetupButton(incidentType);
+
+        /*if (incidentsContent.childCount == 1)
         {
             currentIncident.GetComponent<RectTransform>().position = new Vector3(0, 125, 0);
         }
@@ -60,11 +61,11 @@ public class TurnReport : MonoBehaviour
         }
 
         currentIncident.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
-        currentIncident.GetComponent<IncidentButton>().SetupButton(incidentType);*/
+        currentIncident.GetComponent<IncidentButton>().SetupButton(incidentType);
 
         Debug.Log("Bouton");
         incidentButton.SetActive(true);
         incidentButton.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
-        incidentButton.GetComponent<IncidentButton>().SetupButton(incidentType);
+        incidentButton.GetComponent<IncidentButton>().SetupButton(incidentType);*/
     }
 }
