@@ -223,6 +223,8 @@ public class ScpContainer : Room
         MoneyCost = moneyCost;
         Building = building;
         OnSelectCallback += OnSelect;
+
+        Registry.Get<RessourcesManager>().scpRooms.Add(this);
     }
 
     public void OnSelect()

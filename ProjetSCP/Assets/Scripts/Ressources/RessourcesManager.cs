@@ -15,6 +15,8 @@ namespace SCP.Ressources
 
         public SCPData selectedSCP;
 
+        public List<ScpContainer> scpRooms = new List<ScpContainer>();
+
         public RessourcesManager(int defaultWorkersCount, int defaultMoneyQuantity)
         {
             new Registry().Register<RessourcesManager>(this);
