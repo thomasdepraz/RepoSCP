@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: SCP-150-FR-J
   Name: Le S.W.A.T de VilleMoirieu
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b20984b4124fb134a8b18d3aee0851b6, type: 3}
   mesh: {fileID: 7336593455629622563, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
   material: {fileID: 251690379181277972, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
   dangerLevel: 3
