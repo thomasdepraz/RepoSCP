@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public GameState gameState = GameState.GAME;
     private RessourcesManager ressourcesManager;
+    public GameObject scpObjectPrefab;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+
     }
 
 

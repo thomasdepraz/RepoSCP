@@ -60,36 +60,41 @@ namespace SCP.Building
             grid = new Grid(new Vector2(13,6));
 
             //Create pre built rooms
-            var warehouse = new Warehouse();
-            var commandPost = new CommandPost();
+            var warehouse = new Warehouse(warehouseRoom);
+            var commandPost = new CommandPost(commandRoom);
+
+            warehouseRoom.room = warehouse;
+            commandRoom.room = commandPost;
 
             warehouse.SetPosition(new Vector2(0,0));
             commandPost.SetPosition(new Vector2(3,0));
 
             grid.Build(Vector2.zero, warehouse.Size);
             grid.Build(new Vector2(3, 0), commandPost.Size);
-            
 
+            commandRoom.overlay.linkedRoom = commandPost;
+            warehouseRoom.overlay.linkedRoom = warehouse;
         }
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.B))
+            if (gameManager.gameState==GameState.BUILDING)
             {
-                ToggleBuildingMode(gameManager.gameState != GameState.BUILDING ? true : false);
-            }
-
-            if(gameManager.gameState==GameState.BUILDING && selectedObject != null)
-            {
-                if (Input.GetMouseButtonDown(0))
-                    PlaceObject();
-                else if (Input.GetMouseButtonDown(1))
+                if(selectedObject != null)
                 {
-                    Destroy(selectedObject.gameObject);
-                    ToggleBuildingMode(false);
+                    if (Input.GetMouseButtonDown(0))
+                        PlaceObject();
+                    else if (Input.GetMouseButtonDown(1))
+                    {
+                        Destroy(selectedObject.gameObject);
+                        selectedObject = null;
+                    }
+                }
+                else
+                {
+                    if (Input.GetMouseButtonDown(1)) ToggleBuildingMode(false);
                 }
             }
-
         }
 
         public void SelectBuildingType(string type)//link to button
@@ -101,34 +106,35 @@ namespace SCP.Building
                 case "NONE":
                     break;
                 case "HOUSING":
-                    GameObject go = Instantiate(housePrefab, Vector3.zero, housePrefab.transform.rotation);
-                    selectedObject = go.GetComponent<Building>();
-                    selectedObject.type = BuildingType.HOUSING;
-                    selectedObject.room = new House();
+                    selectedObject = GetBuilding(housePrefab, BuildingType.HOUSING, new House(null));
                     break;
                 case "POWERPLANT":
                     break;
                 case "SCP2_1":
-                    GameObject room2x1 = Instantiate(SCP2_1Prefab, Vector3.zero, SCP2_1Prefab.transform.rotation);
-                    selectedObject = room2x1.GetComponent<Building>();
-                    selectedObject.type = BuildingType.SCP2_1;
-                    selectedObject.room = new ScpContainer(new Vector2(2, 1), 100);
+                    selectedObject = GetBuilding(SCP2_1Prefab, BuildingType.SCP2_1, new ScpContainer(new Vector2(2, 1), 400, null));
                     break;
                 case "SCP2_2":
-                    GameObject room2x2 = Instantiate(SCP2_2Prefab, Vector3.zero, SCP2_2Prefab.transform.rotation);
-                    selectedObject = room2x2.GetComponent<Building>();
-                    selectedObject.type = BuildingType.SCP2_1;
-                    selectedObject.room = new ScpContainer(new Vector2(2, 2), 200);
+                    selectedObject = GetBuilding(SCP2_2Prefab, BuildingType.SCP2_2, new ScpContainer(new Vector2(2, 2), 800, null));
                     break;
                 case "SCP4_2":
-                    GameObject room4x2 = Instantiate(SCP4_2Prefab, Vector3.zero, SCP4_2Prefab.transform.rotation);
-                    selectedObject = room4x2.GetComponent<Building>();
-                    selectedObject.type = BuildingType.SCP2_1;
-                    selectedObject.room = new ScpContainer(new Vector2(4, 2), 400);
+                    selectedObject = GetBuilding(SCP4_2Prefab, BuildingType.SCP4_2, new ScpContainer(new Vector2(4, 2), 1600, null));
                     break;
                 default:
                     break;
             }
+        }
+
+        public Building GetBuilding(GameObject prefab, BuildingType type, Room room)
+        {
+            GameObject roomObject = Instantiate(prefab, Vector3.zero, prefab.transform.rotation);
+            Building b = roomObject.GetComponent<Building>();
+            b.type = type;
+            b.room = room;
+            b.overlay.linkedRoom = room;
+            room.Building = b;
+            b.room = room;
+            if (room.GetType() == typeof(ScpContainer)) (room as ScpContainer).InitBuidingOverlay();
+            return b;
         }
 
         public void ToggleBuildingMode(bool on)

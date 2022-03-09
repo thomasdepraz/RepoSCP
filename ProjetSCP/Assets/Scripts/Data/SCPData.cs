@@ -7,15 +7,20 @@ namespace SCP.Data
     {
         public string ID;
         public string Name;
-        public Sprite sprite; //TEMP ?
+        public Sprite sprite;
+        public Mesh mesh;
+        public Material material;
         public DangerLevel dangerLevel;
         public SCPType type;
         public Rarity rarity;
         public int size;
+        public Vector2 requiredSize;
         public SCPMissionIncident missionIncident;
         [TextArea(2, 6)]
         public string descriptionShort;
         public SCPIncident incident;
+        [TextArea(2, 20)]
+        public string fullDescription;
     }
 
 }

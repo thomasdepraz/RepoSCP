@@ -13,7 +13,9 @@ namespace SCP.Ressources
 
         public RessourcesDisplay display;
 
-        public SCPModel selectedSCP;
+        public SCPData selectedSCP;
+
+        public List<ScpContainer> scpRooms = new List<ScpContainer>();
 
         public RessourcesManager(int defaultWorkersCount, int defaultMoneyQuantity)
         {
@@ -28,20 +30,36 @@ namespace SCP.Ressources
             Money = defaultMoneyQuantity;
         }
 
-        public void AddWorker()
+        public void AddWorker(House house = null)
         {
-            HumanRessources.Add(new Worker());
+            HumanRessources.Add(new Worker(house));
             RessourcesDisplay.UpdateHumanRessourcesDisplay();
+            display.StartCoroutine(display.IndicateValueChange(1, 0, false));
+            display.StartCoroutine(display.IndicateValueChange(1, 1, false));
         }
 
         public void RemoveWorker(Worker toRemove = null)
         {
             if (HumanRessources.Count == 0) return;
 
-            if (toRemove == null) HumanRessources.Remove(toRemove);
-            else HumanRessources.RemoveAt(0);
+
+
+            if (toRemove != null)
+            {
+                HumanRessources.Remove(toRemove);
+                if(toRemove.House!= null) toRemove.House.SetState(House.HouseState.EMPTY);
+            }
+            else
+            {
+                if(HumanRessources[0].House!=null) HumanRessources[0].House.SetState(House.HouseState.EMPTY);
+
+                HumanRessources.RemoveAt(0);
+            }
+
 
             RessourcesDisplay.UpdateHumanRessourcesDisplay();
+            display.StartCoroutine(display.IndicateValueChange(1, 0, true));
+            display.StartCoroutine(display.IndicateValueChange(1, 1, true));
         }
 
 
@@ -49,12 +67,14 @@ namespace SCP.Ressources
         {
             Money += quantity;
             RessourcesDisplay.UpdateMoneyDisplay();
+            display.StartCoroutine(display.IndicateValueChange(quantity, 2, false));
         }
 
         public void RemoveMoney(int quantity)
         {
             Money -= quantity;
             RessourcesDisplay.UpdateMoneyDisplay();
+            display.StartCoroutine(display.IndicateValueChange(quantity, 2, true));
         }
     }
 }

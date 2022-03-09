@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e7cdbf91b53444d89100c72be3ece8, type: 3}
+  m_Name: SoundParams
+  m_EditorClassIdentifier: 
+  globalVolume: 0.5
+  masterMixer: {fileID: 24300002, guid: 9cc9d17d6c7e3cf4ba2fde6018814082, type: 2}
+  gameMixer: {fileID: 5735768767632692061, guid: 9cc9d17d6c7e3cf4ba2fde6018814082, type: 2}
+  uiMixer: {fileID: 7715978871183179470, guid: 9cc9d17d6c7e3cf4ba2fde6018814082, type: 2}
+  musicMixer: {fileID: 5307966513667128960, guid: 9cc9d17d6c7e3cf4ba2fde6018814082, type: 2}

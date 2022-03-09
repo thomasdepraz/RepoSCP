@@ -10,6 +10,9 @@ namespace SCP.Building
         public RoomOverlay overlay;
         public Room room;
 
+        public Transform occupantOriginTransform;
+        public GameObject roomContent;
+
 
         public void Start()
         {

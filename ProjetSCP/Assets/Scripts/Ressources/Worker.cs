@@ -12,9 +12,17 @@ namespace SCP.Ressources
 
         public WorkerState State { get; private set; }
 
+        public House House { get; private set; }
+
         public Worker()
         {
             State = WorkerState.IDLE;
+        }
+
+        public Worker(House house)
+        {
+            State = WorkerState.IDLE;
+            House = house;
         }
 
         public void Engage()
