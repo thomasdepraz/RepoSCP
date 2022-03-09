@@ -1,7 +1,9 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using SCP.Ressources.Helper;
+using SCP.Data;
 
 namespace SCP.Ressources.Display
 {
@@ -16,6 +18,7 @@ namespace SCP.Ressources.Display
         private static TextMeshProUGUI workerDisplay;
         public TextMeshProUGUI[] modifTexts;
         public float feedbackDuration;
+        public List<ScpContainer> scpRooms;
 
         [Header("Testing")]
         private TurnManager turnManager;
@@ -28,6 +31,8 @@ namespace SCP.Ressources.Display
             turnManager = Registry.Get<TurnManager>();
 
             manager.display = this;
+
+            scpRooms = manager.scpRooms;
 
             moneyDisplay = moneyDisplayObject;
             workerDisplay = workerDisplayObject;
@@ -79,10 +84,92 @@ namespace SCP.Ressources.Display
 
         private void TurnIncomeTrigger()
         {
+            int income = 0;
+
             reportPlaceholder.SetActive(true);
-            reportPlaceholder.GetComponent<TurnReport>().UpdateReport();  
-            manager.AddMoney(10);
+
+            scpRooms = manager.scpRooms;
+
+            for (int x = 0; x < scpRooms.Count; x++)
+            {
+                if (!scpRooms[x].IsEmpty())
+                {
+                    income += CountSCPIncome(scpRooms[x].occupant.Data);
+                }
+            }
+
+            income = income * 100;
+
+            manager.AddMoney(income);
+
+            reportPlaceholder.GetComponent<TurnReport>().UpdateReport(income);
         }
+
+        private int CountSCPIncome(SCPData data)
+        {
+            int rarityValue = 0;
+            int typeValue = 0;
+            int dangerValue = 0;
+
+            switch (data.rarity)
+            {
+                case Rarity.COMMON:
+                    rarityValue = 1;
+                    break;
+                case Rarity.RARE:
+                    rarityValue = 2;
+                    break;
+                case Rarity.EPIC:
+                    rarityValue = 3;
+                    break;
+                case Rarity.UNIQUE:
+                    rarityValue = 5;
+                    break;
+            }
+
+            switch (data.type)
+            {
+                case SCPType.SAFE:
+                    typeValue = 1;
+                    break;
+
+                case SCPType.EUCLIDE:
+                    typeValue = 2;
+                    break;
+
+                case SCPType.KETER:
+                    typeValue = 4;
+                    break;
+            }
+
+            switch (data.dangerLevel)
+            {
+                case DangerLevel.GREEN:
+                    dangerValue = 1;
+                    break;
+
+                case DangerLevel.YELLOW:
+                    dangerValue = 2;
+                    break;
+
+                case DangerLevel.ORANGE:
+                    dangerValue = 3;
+                    break;
+
+                case DangerLevel.RED:
+                    dangerValue = 4;
+                    break;
+
+                case DangerLevel.BLACK:
+                    dangerValue = 5;
+                    break;
+            }
+
+            int result = rarityValue + typeValue + dangerValue;
+
+            return (result);
+        }
+
 
         public IEnumerator IndicateValueChange(int modificationValue, int modifType, bool negative)
         {
