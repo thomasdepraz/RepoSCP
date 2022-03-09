@@ -230,12 +230,14 @@ public class ScpContainer : Room
     public void OnSelect()
     {
         var ressourcesManager = Registry.Get<RessourcesManager>();
+        var buildingManager = Registry.Get<BuildingManager>();
         //Select Scp if any + feedback
         if (IsEmpty() && ressourcesManager.selectedSCP != null)
         {
             Populate(ressourcesManager.selectedSCP);
             ressourcesManager.selectedSCP = null;
 
+            buildingManager.SetSCPOptimalState();
         }
         else if (!IsEmpty())
         {
@@ -245,7 +247,11 @@ public class ScpContainer : Room
             GameObject.Destroy(occupant.Object.gameObject);
             occupant = null;
             //feedback
+
+            buildingManager.SetSCPOptimalState();
         }
+
+
     }
 
     public void InitBuidingOverlay()

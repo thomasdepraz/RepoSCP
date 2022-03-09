@@ -21,6 +21,8 @@ namespace SCP.Data
         public SCPIncident incident;
         [TextArea(2, 20)]
         public string fullDescription;
+
+        public bool optimalState;
     }
 
 }

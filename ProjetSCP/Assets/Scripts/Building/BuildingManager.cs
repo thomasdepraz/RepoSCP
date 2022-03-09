@@ -193,6 +193,96 @@ namespace SCP.Building
         {
             return new Vector2(currentGridPos.x - 2, currentGridPos.y);
         }
+
+        public void SetSCPOptimalState()
+        {
+            var scpRooms = Registry.Get<RessourcesManager>().scpRooms;
+            List<ScpContainer> occupiedRooms = new List<ScpContainer>();
+
+            foreach(var room in scpRooms)
+            {
+                if (!room.IsEmpty()) 
+                    occupiedRooms.Add(room);
+            }
+
+            for (int i = 0; i < occupiedRooms.Count; i++)
+            {
+                switch (occupiedRooms[i].occupant.Data.type)
+                {
+                    case Data.SCPType.SAFE:
+                        occupiedRooms[i].occupant.Data.optimalState = false;
+                        break;
+                    case Data.SCPType.EUCLIDE:
+                        occupiedRooms[i].occupant.Data.optimalState = false;
+                        break;
+                    case Data.SCPType.KETER:
+                        occupiedRooms[i].occupant.Data.optimalState = true;
+                        break;
+                    default:
+                        occupiedRooms[i].occupant.Data.optimalState = false;
+                        break;
+                }
+
+                
+
+                for (int j = 0; j < occupiedRooms.Count; j++)
+                {
+                    if (j == i) continue;
+                    if(InContact(occupiedRooms[i], occupiedRooms[j]))
+                    {
+                        //determine the preferences
+                        var scpA = occupiedRooms[i].occupant;
+                        var scpB = occupiedRooms[j].occupant; 
+                        print($"{i} in contact with {j}");
+
+                        if(scpA.Data.type == Data.SCPType.SAFE && scpB.Data.type == Data.SCPType.SAFE)
+                        {
+                            occupiedRooms[i].occupant.Data.optimalState = true;
+                            break;
+                        }
+                        else if(scpA.Data.type == Data.SCPType.KETER && scpB.Data.type == Data.SCPType.KETER)
+                        {
+                            occupiedRooms[i].occupant.Data.optimalState = false;
+                        }
+
+                     
+                    }
+                }
+            }
+        }
+
+        public bool InContact(Room roomA, Room roomB)
+        {
+            var posA = roomA.Position;
+            for (int x = 0; x < roomA.Size.x; x++)
+            {
+                for (int y = 0; y < roomA.Size.y; y++)
+                {
+
+                    if (CheckContact(posA + new Vector2(x, y), roomB))
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool CheckContact(Vector2 point, Room other)
+        {
+            var pos = other.Position;
+            for (int x = 0; x < other.Size.x; x++)
+            {
+                for (int y = 0; y < other.Size.y; y++)
+                {
+                    Vector2 v = point - (pos + new Vector2(x, y));
+                    if (v.magnitude == 1.0f)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
 
 }
