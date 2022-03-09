@@ -6,6 +6,7 @@ using SCP.Data;
 using System;
 using SCP.Building;
 using SCP.Ressources;
+using System.Collections.Generic;
 
 public class RoomOverlay : MonoBehaviour,
     IPointerEnterHandler,
@@ -122,14 +123,39 @@ public class House : Room
     {
         //recenser les maisons qqpart après leur création;
         Size = new Vector2(1, 1);
-        MoneyCost = 50;
+        MoneyCost = 100;
 
         Building = building;
+
+        OnSelectCallback += OnSelect;
     }
 
-    public void PopulateHouse()
+    public void OnSelect()
     {
+        if(state == HouseState.EMPTY)
+        {
+            var ressourceManager = Registry.Get<RessourcesManager>();
+            if(ressourceManager.Money >= 100)
+            {
+                ressourceManager.AddWorker(this);
+                ressourceManager.RemoveMoney(100);
+                SetState(HouseState.OCCUPIED);
+            }
+        }
+    }
 
+    public void SetState(HouseState state)
+    {
+        this.state = state;
+        switch (state)
+        {
+            case HouseState.EMPTY:
+                break;
+            case HouseState.OCCUPIED:
+                break;
+            default:
+                break;
+        }
     }
 
  }
@@ -188,6 +214,7 @@ public class Warehouse : Room
 public class ScpContainer : Room
 {
     public SCPModel occupant { get; private set; }
+    public List<Worker> assignedWorkers = new List<Worker>();
 
     public ScpContainer(Vector2 size, int moneyCost, Building building)
     {
@@ -221,19 +248,32 @@ public class ScpContainer : Room
 
     public bool IsEmpty() => occupant == null;
 
+    public bool CorrectRoomSize(SCPData data)
+    {
+        return data.requiredSize == Size;
+    }
+
     public void Populate(SCPData occupantData)
     {
-        if (!IsEmpty())
-        {
-            GameObject.Destroy(occupant.Object);
-            occupant = null;
-        }
+        if (!CorrectRoomSize(occupantData)) return;
+
+        if (!IsEmpty()) return;
+        
 
         GameObject prefab = Registry.Get<GameManager>().scpObjectPrefab;
         GameObject go = GameObject.Instantiate(prefab, Building.occupantOriginTransform.position, prefab.transform.rotation);
         SCPObject obj = go.GetComponent<SCPObject>();
         obj.UpdateRenderer(occupantData);
         this.occupant = new SCPModel(occupantData, obj);
+    }
+
+    public void AssignWorker()
+    {
+
+    }
+    public void RemoveAssignedWorker()
+    {
+
     }
 }
 

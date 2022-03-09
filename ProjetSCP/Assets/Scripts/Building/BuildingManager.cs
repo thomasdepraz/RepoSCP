@@ -111,13 +111,13 @@ namespace SCP.Building
                 case "POWERPLANT":
                     break;
                 case "SCP2_1":
-                    selectedObject = GetBuilding(SCP2_1Prefab, BuildingType.SCP2_1, new ScpContainer(new Vector2(2, 1), 100, null));
+                    selectedObject = GetBuilding(SCP2_1Prefab, BuildingType.SCP2_1, new ScpContainer(new Vector2(2, 1), 400, null));
                     break;
                 case "SCP2_2":
-                    selectedObject = GetBuilding(SCP2_2Prefab, BuildingType.SCP2_2, new ScpContainer(new Vector2(2, 2), 200, null));
+                    selectedObject = GetBuilding(SCP2_2Prefab, BuildingType.SCP2_2, new ScpContainer(new Vector2(2, 2), 800, null));
                     break;
                 case "SCP4_2":
-                    selectedObject = GetBuilding(SCP4_2Prefab, BuildingType.SCP4_2, new ScpContainer(new Vector2(4, 2), 400, null));
+                    selectedObject = GetBuilding(SCP4_2Prefab, BuildingType.SCP4_2, new ScpContainer(new Vector2(4, 2), 1600, null));
                     break;
                 default:
                     break;

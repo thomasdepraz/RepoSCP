@@ -21,6 +21,7 @@ MonoBehaviour:
   type: 1
   rarity: 0
   size: 2
+  requiredSize: {x: 2, y: 1}
   missionIncident: {fileID: 11400000, guid: d1b98a79689fd1348bb9c94e31f69fd5, type: 2}
   descriptionShort: "Le SCP-015-FR-J est un homme \xE0 l\u2019apparence normale.
     Il est cependant l\u2019homme le plus \u201Cennuyant\u201D au monde. Si un humain

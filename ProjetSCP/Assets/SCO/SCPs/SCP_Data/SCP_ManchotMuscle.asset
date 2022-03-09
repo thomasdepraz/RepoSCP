@@ -21,6 +21,7 @@ MonoBehaviour:
   type: 1
   rarity: 2
   size: 4
+  requiredSize: {x: 2, y: 2}
   missionIncident: {fileID: 11400000, guid: a4ae56a862fa9be47a7f672bf4e734c0, type: 2}
   descriptionShort: " Le SCP-012-FR-J est un Manchot empereur avec une masse musculaire
     sur-d\xE9velopp\xE9e. En effet, fan de musculation, il passe son temps \xE0 s\u2019entra\xEEner
