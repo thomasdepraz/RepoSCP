@@ -59,6 +59,9 @@ public class MissionManager : MonoBehaviour
     public GameObject workersLossPanel;
     public TextMeshProUGUI deadWorkersDescription;
     RessourcesManager ressourceManager;
+    public GameObject glowingShader1;
+    public GameObject glowingShader2;
+    public GameObject glowingShader3;
 
     SCPData temporarySelectedSCP;
     SCPData drawnSCP1;
@@ -100,10 +103,10 @@ public class MissionManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         //debug
-        if(Input.GetKeyDown("a"))
+        if(Input.GetKeyDown("x"))
         {
             OpenMissionPanel();
         }
@@ -154,6 +157,30 @@ public class MissionManager : MonoBehaviour
         SCPStatue2.UpdateData(drawnSCP2);
         SCPStatue3.UpdateData(drawnSCP3);
 
+        if(drawnSCP1.rarity == Rarity.RARE || drawnSCP1.rarity == Rarity.EPIC)
+        {
+            glowingShader1.SetActive(true);
+        }
+        else
+        {
+            glowingShader1.SetActive(false);
+        }
+        if (drawnSCP2.rarity == Rarity.RARE || drawnSCP2.rarity == Rarity.EPIC)
+        {
+            glowingShader2.SetActive(true);
+        }
+        else
+        {
+            glowingShader2.SetActive(false);
+        }
+        if (drawnSCP3.rarity == Rarity.RARE || drawnSCP3.rarity == Rarity.EPIC)
+        {
+            glowingShader3.SetActive(true);
+        }
+        else
+        {
+            glowingShader3.SetActive(false);
+        }
         numberOfDeadWorkers = WorkersLoss(selectedMission);
         numberOfDeadWorkersText.text = numberOfDeadWorkers.ToString();
 
@@ -196,14 +223,17 @@ public class MissionManager : MonoBehaviour
         if(statueNumber == 1)
         {
             temporarySelectedSCP = drawnSCP1;
+            ValidateSelectedSCP();
         }
         else if (statueNumber == 2)
         {
             temporarySelectedSCP = drawnSCP2;
+            ValidateSelectedSCP();
         }
         else
         {
             temporarySelectedSCP = drawnSCP3;
+            ValidateSelectedSCP();
         }
     }
 
@@ -215,7 +245,9 @@ public class MissionManager : MonoBehaviour
             WorkersLossUpdateDescription();
             SCPSelectionPanel.SetActive(false);
             workersLossPanel.SetActive(true);
-
+            glowingShader3.SetActive(false);
+            glowingShader2.SetActive(false);
+            glowingShader1.SetActive(false);
 
             //Placer le scp dans la salle de stockage
             Warehouse w = Registry.Get<BuildingManager>().warehouseRoom.room as Warehouse;
@@ -261,5 +293,10 @@ public class MissionManager : MonoBehaviour
         workersLossPanel.SetActive(false);
         numberOfDeadWorkers = 0;
 
+    }
+
+    public void BackToMainMenu()
+    {
+        missionSelectionPanel.SetActive(false);
     }
 }

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: SCP-012-FR-J
   Name: "Manchot empereur muscl\xE9"
-  sprite: {fileID: 21300000, guid: 5896f60a9c20199439b568e88606704e, type: 3}
+  smallVisual: {fileID: 21300000, guid: 5896f60a9c20199439b568e88606704e, type: 3}
+  bigVisual: {fileID: 21300000, guid: 5694845acc6ef084ab1f7628064fa13b, type: 3}
   mesh: {fileID: 7336593455629622563, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
   material: {fileID: 251690379181277972, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
   dangerLevel: 0
