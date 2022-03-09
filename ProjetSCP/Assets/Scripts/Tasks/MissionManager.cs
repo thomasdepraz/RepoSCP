@@ -100,14 +100,6 @@ public class MissionManager : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        //debug
-        if(Input.GetKeyDown("a"))
-        {
-            OpenMissionPanel();
-        }
-    }
     public void CreateMission()
     {
        mission1 = new Mission(humanNumber1, commonRarity1,rareRarity1,epicRarity1, workerLossProbability1);

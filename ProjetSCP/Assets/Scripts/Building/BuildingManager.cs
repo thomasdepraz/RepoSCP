@@ -133,6 +133,7 @@ namespace SCP.Building
             b.overlay.linkedRoom = room;
             room.Building = b;
             b.room = room;
+            if (room.GetType() == typeof(ScpContainer)) (room as ScpContainer).InitBuidingOverlay();
             return b;
         }
 

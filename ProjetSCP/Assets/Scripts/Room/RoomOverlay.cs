@@ -7,6 +7,7 @@ using System;
 using SCP.Building;
 using SCP.Ressources;
 using System.Collections.Generic;
+using TMPro;
 
 public class RoomOverlay : MonoBehaviour,
     IPointerEnterHandler,
@@ -245,12 +246,35 @@ public class ScpContainer : Room
         }
     }
 
+    public void InitBuidingOverlay()
+    {
+        var container = Building.transform.Find("Canvas").Find("Container");
+        var addObj = container.transform.Find("AddButton");
+        var remObj = container.transform.Find("RemoveButton");
+       
+
+        var addButton = addObj.GetComponent<Button>();
+        var removeButton = remObj.GetComponent<Button>();
+        
+        addButton.onClick.AddListener(AssignWorker);
+        removeButton.onClick.AddListener(RemoveAssignedWorker);
+
+        UpdateCounterText();
+    }
+
 
     public bool IsEmpty() => occupant == null;
 
     public bool CorrectRoomSize(SCPData data)
     {
         return data.requiredSize == Size;
+    }
+
+    public void UpdateCounterText()
+    {
+        var coutObj = Building.transform.Find("Canvas").Find("Container").Find("Counter").Find("CounterText");
+        var counterText = coutObj.GetComponent<TextMeshProUGUI>();
+        counterText.text = $"{assignedWorkers.Count} / {Size.x * Size.y}";
     }
 
     public void Populate(SCPData occupantData)
@@ -269,11 +293,27 @@ public class ScpContainer : Room
 
     public void AssignWorker()
     {
+        if (assignedWorkers.Count == Size.x * Size.y) return;
 
+        var workers = Registry.Get<RessourcesManager>().HumanRessources;
+        foreach (var w in workers)
+        {
+            if(w.State == Worker.WorkerState.IDLE)
+            {
+                assignedWorkers.Add(w);
+                w.Engage();
+                break;
+            }
+        }
+        UpdateCounterText();
     }
     public void RemoveAssignedWorker()
     {
+        if (assignedWorkers.Count == 0) return;
+        assignedWorkers[0].Disengage();
+        assignedWorkers.RemoveAt(0);
 
+        UpdateCounterText();
     }
 }
 
