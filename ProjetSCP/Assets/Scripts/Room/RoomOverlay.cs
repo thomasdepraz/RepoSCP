@@ -74,7 +74,7 @@ public abstract class Room
     public Vector2 Size { get; protected set; }
     public int MoneyCost { get; protected set; }
 
-    public Building Building { get; protected set; }
+    public Building Building { get; set; }
 
     private readonly RoomOverlay overlay;
 
@@ -125,7 +125,6 @@ public class House : Room
         MoneyCost = 50;
 
         Building = building;
-        Building.room = this;
     }
 
     public void PopulateHouse()
@@ -195,7 +194,6 @@ public class ScpContainer : Room
         Size = size;
         MoneyCost = moneyCost;
         Building = building;
-        Building.room = this;
         OnSelectCallback += OnSelect;
     }
 

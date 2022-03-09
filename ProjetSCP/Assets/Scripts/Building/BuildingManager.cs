@@ -106,18 +106,18 @@ namespace SCP.Building
                 case "NONE":
                     break;
                 case "HOUSING":
-                    selectedObject = GetBuilding(housePrefab, BuildingType.HOUSING, new House(housePrefab.GetComponent<Building>()));
+                    selectedObject = GetBuilding(housePrefab, BuildingType.HOUSING, new House(null));
                     break;
                 case "POWERPLANT":
                     break;
                 case "SCP2_1":
-                    selectedObject = GetBuilding(SCP2_1Prefab, BuildingType.SCP2_1, new ScpContainer(new Vector2(2, 1), 100, SCP2_1Prefab.GetComponent<Building>()));
+                    selectedObject = GetBuilding(SCP2_1Prefab, BuildingType.SCP2_1, new ScpContainer(new Vector2(2, 1), 100, null));
                     break;
                 case "SCP2_2":
-                    selectedObject = GetBuilding(SCP2_2Prefab, BuildingType.SCP2_2, new ScpContainer(new Vector2(2, 2), 200, SCP2_2Prefab.GetComponent<Building>()));
+                    selectedObject = GetBuilding(SCP2_2Prefab, BuildingType.SCP2_2, new ScpContainer(new Vector2(2, 2), 200, null));
                     break;
                 case "SCP4_2":
-                    selectedObject = GetBuilding(SCP4_2Prefab, BuildingType.SCP4_2, new ScpContainer(new Vector2(4, 2), 400, SCP4_2Prefab.GetComponent<Building>()));
+                    selectedObject = GetBuilding(SCP4_2Prefab, BuildingType.SCP4_2, new ScpContainer(new Vector2(4, 2), 400, null));
                     break;
                 default:
                     break;
@@ -131,6 +131,8 @@ namespace SCP.Building
             b.type = type;
             b.room = room;
             b.overlay.linkedRoom = room;
+            room.Building = b;
+            b.room = room;
             return b;
         }
 
