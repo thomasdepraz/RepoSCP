@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   overlay: {fileID: 6002719605874137082}
-  occupantOriginTransform: {fileID: 0}
+  occupantOriginTransform: {fileID: 7486566326055407238}
   roomContent: {fileID: 0}
 --- !u!1 &5564763103855420456
 GameObject:
