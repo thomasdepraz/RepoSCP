@@ -15,8 +15,7 @@ MonoBehaviour:
   ID: SCP-1356
   Name: 'Canard en caoutchouc '
   sprite: {fileID: 21300000, guid: 4967ba7bf4603224cbb9629bbce4c1c6, type: 3}
-  mesh: {fileID: 7336593455629622563, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
-  material: {fileID: 251690379181277972, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
+  statue: {fileID: 5053081343775468900, guid: f770fa222c0bb2542a6c285e1140a0b6, type: 3}
   dangerLevel: 0
   type: 0
   rarity: 0
@@ -52,3 +51,4 @@ MonoBehaviour:
     d\xE9place sans probl\xE8me pour s'adapter m\xEAme aux mouvements les plus brusques.
     Des tests pour d\xE9couvrir les param\xE8tres de ce ph\xE9nom\xE8ne, ainsi que
     d'\xE9ventuelles applications, sont en cours.\r\n"
+  optimalState: 1

@@ -8,8 +8,7 @@ namespace SCP.Data
         public string ID;
         public string Name;
         public Sprite sprite;
-        public Mesh mesh;
-        public Material material;
+        public GameObject statue;
         public DangerLevel dangerLevel;
         public SCPType type;
         public Rarity rarity;

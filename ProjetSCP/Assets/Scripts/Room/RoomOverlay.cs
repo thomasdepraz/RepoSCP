@@ -204,11 +204,11 @@ public class Warehouse : Room
             occupant = null;
         }
 
-        GameObject prefab = Registry.Get<GameManager>().scpObjectPrefab;
+        GameObject prefab = occupantData.statue;
         GameObject go = GameObject.Instantiate(prefab, Building.occupantOriginTransform.position, prefab.transform.rotation);
-        SCPObject obj = go.GetComponent<SCPObject>();
-        obj.UpdateRenderer(occupantData);
-        this.occupant = new SCPModel(occupantData, obj); 
+        //SCPObject obj = go.GetComponent<SCPObject>();
+        //obj.UpdateRenderer(occupantData);
+        this.occupant = new SCPModel(occupantData, go); 
     }
 }
 
@@ -292,11 +292,11 @@ public class ScpContainer : Room
         if (!IsEmpty()) return;
         
 
-        GameObject prefab = Registry.Get<GameManager>().scpObjectPrefab;
+        GameObject prefab = occupantData.statue;
         GameObject go = GameObject.Instantiate(prefab, Building.occupantOriginTransform.position, prefab.transform.rotation);
-        SCPObject obj = go.GetComponent<SCPObject>();
-        obj.UpdateRenderer(occupantData);
-        this.occupant = new SCPModel(occupantData, obj);
+        //SCPObject obj = go.GetComponent<SCPObject>();
+        //obj.UpdateRenderer(occupantData);
+        this.occupant = new SCPModel(occupantData, go);
     }
 
     public void AssignWorker()

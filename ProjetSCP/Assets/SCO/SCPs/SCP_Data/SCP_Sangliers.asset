@@ -15,8 +15,7 @@ MonoBehaviour:
   ID: SCP-039-FR-J
   Name: "Sangliers \xE0 V\xE9lo"
   sprite: {fileID: 21300000, guid: ed66a7fffcbfdcf47ab27b440b580369, type: 3}
-  mesh: {fileID: 7336593455629622563, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
-  material: {fileID: 251690379181277972, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
+  statue: {fileID: 1187078949861419084, guid: 0fbecce9758ce5243be1ea5d30cba0e7, type: 3}
   dangerLevel: 3
   type: 1
   rarity: 1
@@ -66,3 +65,4 @@ MonoBehaviour:
     \"\xE9viter que les connards de touristes ne viennent acheter des bagues et chasser
     cette fiert\xE9 r\xE9gionale, sp\xE9cialit\xE9 locale destin\xE9e \xE0 le rester\"
     (J.-R. Beugnard, l\xE0 encore).\r"
+  optimalState: 0
