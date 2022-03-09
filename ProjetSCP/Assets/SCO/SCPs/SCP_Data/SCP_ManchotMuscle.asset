@@ -15,8 +15,7 @@ MonoBehaviour:
   ID: SCP-012-FR-J
   Name: "Manchot empereur muscl\xE9"
   sprite: {fileID: 21300000, guid: 5896f60a9c20199439b568e88606704e, type: 3}
-  mesh: {fileID: 7336593455629622563, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
-  material: {fileID: 251690379181277972, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
+  statue: {fileID: 2104035988587992011, guid: 047fbc4bf8a03eb4d89141ab9d6f4eb9, type: 3}
   dangerLevel: 0
   type: 1
   rarity: 2
@@ -63,3 +62,4 @@ MonoBehaviour:
     train de subir un entra\xEEnement intense avec en fond sonore Eye of the Tiger
     afin de concourir en cat\xE9gorie poids plume lors des prochains matchs de boxe
     inter-sites."
+  optimalState: 0

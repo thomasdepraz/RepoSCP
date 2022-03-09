@@ -1,11 +1,13 @@
-﻿namespace SCP.Data
+﻿using UnityEngine;
+
+namespace SCP.Data
 {
     public class SCPModel
     {
         public SCPData Data;
-        public SCPObject Object;
+        public GameObject Object;
 
-        public SCPModel(SCPData data, SCPObject obj)
+        public SCPModel(SCPData data, GameObject obj)
         {
             Data = data;
             Object = obj;

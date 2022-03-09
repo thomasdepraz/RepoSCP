@@ -15,8 +15,7 @@ MonoBehaviour:
   ID: SCP-015-FR-J
   Name: Monsieur Chiant
   sprite: {fileID: 21300000, guid: 7eb2ab46e9c75264ab2d4b7f8473605f, type: 3}
-  mesh: {fileID: 7336593455629622563, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
-  material: {fileID: 251690379181277972, guid: 857a8797ed3f6f643b1d556a9e63e6dc, type: 3}
+  statue: {fileID: 2369155604156085497, guid: 20be40e89009b5f4f8afb805401c0488, type: 3}
   dangerLevel: 1
   type: 1
   rarity: 0
@@ -42,3 +41,4 @@ MonoBehaviour:
     de continuer \xE0 travailler pour la Fondation. SCP-015-FR-J semble toujours
     \xEAtre dans un \xE9tat de d\xE9ni concernant son anomalie malgr\xE9 de nombreuses
     preuves."
+  optimalState: 0

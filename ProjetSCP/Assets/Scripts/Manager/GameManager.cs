@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         new Registry().Register<GameManager>(this);
-        ressourcesManager = new RessourcesManager(12, 1000);
+        ressourcesManager = new RessourcesManager(12, 10000);
     }
 
     private void Start()

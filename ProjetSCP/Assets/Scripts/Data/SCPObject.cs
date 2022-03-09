@@ -10,7 +10,7 @@ public class SCPObject : MonoBehaviour
 
     public void UpdateRenderer(SCPData data)
     {
-        meshFilter.mesh = data.mesh;
-        rend.material = data.material;      
+        //meshFilter.mesh = data.mesh;
+        //rend.material = data.material;      
     }
 }
