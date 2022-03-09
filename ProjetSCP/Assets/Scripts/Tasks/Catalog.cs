@@ -30,6 +30,7 @@ public class Catalog : MonoBehaviour
     public RectTransform catalogButtonsPanelTransform;
     public CatalogButton catalogButton;
     public GameObject Panel;
+    public Transform scrollViewContentTransform;
 
     private void Start()
     {

@@ -37,6 +37,7 @@ public class CatalogButton : MonoBehaviour
         catalog.SCPSize.text = "Taille " + mySCP.size.ToString();
         catalog.fullOverviewPanel.SetActive(true);
         catalog.scrollViewPanel.SetActive(false);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(catalog.scrollViewContentTransform as RectTransform);
     }
 
     public void ShowBigSCP()
