@@ -289,7 +289,7 @@ public class ScpContainer : Room , IInfo
         var ressourcesManager = Registry.Get<RessourcesManager>();
         var buildingManager = Registry.Get<BuildingManager>();
         //Select Scp if any + feedback
-        if (IsEmpty() && ressourcesManager.selectedSCP != null)
+        if (IsEmpty() && ressourcesManager.selectedSCP != null && CorrectRoomSize(ressourcesManager.selectedSCP))
         {
             Populate(ressourcesManager.selectedSCP);
             ressourcesManager.selectedSCP = null;
@@ -299,7 +299,7 @@ public class ScpContainer : Room , IInfo
             //Resets the cursor to the default  
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
-        else if (!IsEmpty())
+        else if (!IsEmpty() && ressourcesManager.selectedSCP == null)
         {
             ressourcesManager.selectedSCP = occupant.Data;
             //Todo feedback
