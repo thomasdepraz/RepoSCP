@@ -21,6 +21,7 @@ MonoBehaviour:
   type: 1
   rarity: 1
   size: 8
+  sizeSprite: {fileID: 21300000, guid: 95c2c5b0e825de64e99c9cbe1d7f19c3, type: 3}
   requiredSize: {x: 4, y: 2}
   missionIncident: {fileID: 11400000, guid: ae07320d7bd0b3d4f84ecdef1356817a, type: 2}
   descriptionShort: "Le SCP-039-FR-J est un trouble comportemental r\xE9current observ\xE9

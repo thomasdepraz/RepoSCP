@@ -21,6 +21,7 @@ MonoBehaviour:
   type: 0
   rarity: 0
   size: 2
+  sizeSprite: {fileID: 21300000, guid: 4f941a1dc0e863d4fb7b1faa4b082fa9, type: 3}
   requiredSize: {x: 2, y: 1}
   missionIncident: {fileID: 11400000, guid: e3208867506d537409057fc832139fb7, type: 2}
   descriptionShort: "Le SCP-1356 ressemble \xE0 un canard en caoutchouc, semblable
@@ -52,4 +53,4 @@ MonoBehaviour:
     d\xE9place sans probl\xE8me pour s'adapter m\xEAme aux mouvements les plus brusques.
     Des tests pour d\xE9couvrir les param\xE8tres de ce ph\xE9nom\xE8ne, ainsi que
     d'\xE9ventuelles applications, sont en cours.\r\n"
-  optimalState: 1
+  optimalState: 0

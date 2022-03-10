@@ -100,7 +100,7 @@ public class IncidentManager : MonoBehaviour
 
         missingWorkers = ((containedSCP.size / 4) * workerFactor) - activeWorkers;
 
-        incidentChance = (typeValue + (missingWorkers * 5) /*+ requirementValue*/) * 0.01f;
+        incidentChance = (typeValue + (missingWorkers * 5) + requirementValue) * 0.01f;
 
         float random = Random.Range(0, 100) * 0.01f;
 
