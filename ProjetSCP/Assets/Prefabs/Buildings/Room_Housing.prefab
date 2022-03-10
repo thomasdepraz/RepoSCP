@@ -439,6 +439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e46ffc6086a52464c8f167366ed88786, type: 2}
     - target: {fileID: 919132149155446097, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
       propertyPath: m_Name
       value: SM_murale_04 (1)
@@ -509,6 +513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 179.999
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a801ca84fdd67a946b552b822057b06c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc58f92bc4c3fd34fa2c1c13e54b4c1b, type: 2}
     - target: {fileID: 919132149155446097, guid: a801ca84fdd67a946b552b822057b06c, type: 3}
       propertyPath: m_Name
       value: SM_Locker (1)
@@ -579,6 +587,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e46ffc6086a52464c8f167366ed88786, type: 2}
     - target: {fileID: 919132149155446097, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
       propertyPath: m_Name
       value: SM_murale_04
@@ -649,6 +661,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4d08249aad3dd314e8555889391f47f5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c54db82f680e97c409938c53fad88a83, type: 2}
     - target: {fileID: 919132149155446097, guid: 4d08249aad3dd314e8555889391f47f5, type: 3}
       propertyPath: m_Name
       value: SM_murale_03
@@ -719,6 +735,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e46ffc6086a52464c8f167366ed88786, type: 2}
     - target: {fileID: 919132149155446097, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
       propertyPath: m_Name
       value: SM_murale_04 (4)
@@ -789,6 +809,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e46ffc6086a52464c8f167366ed88786, type: 2}
     - target: {fileID: 919132149155446097, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
       propertyPath: m_Name
       value: SM_murale_04 (2)
@@ -929,6 +953,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e46ffc6086a52464c8f167366ed88786, type: 2}
     - target: {fileID: 919132149155446097, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
       propertyPath: m_Name
       value: SM_murale_04 (3)
@@ -995,6 +1023,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 898edeb835e36fc40a530ad7b0f216a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 95c7146b468ad2c4e85a58c8a1ac46ee, type: 2}
     - target: {fileID: 919132149155446097, guid: 898edeb835e36fc40a530ad7b0f216a9, type: 3}
       propertyPath: m_Name
       value: SM_BoringBed
@@ -1065,6 +1097,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 179.999
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a801ca84fdd67a946b552b822057b06c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc58f92bc4c3fd34fa2c1c13e54b4c1b, type: 2}
     - target: {fileID: 919132149155446097, guid: a801ca84fdd67a946b552b822057b06c, type: 3}
       propertyPath: m_Name
       value: SM_Locker
@@ -1097,19 +1133,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff233436248e08749947b5fdc53b31ed, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5710701
+      value: 0.37394813
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff233436248e08749947b5fdc53b31ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.660004
+      value: 13.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff233436248e08749947b5fdc53b31ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.82
+      value: -13.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff233436248e08749947b5fdc53b31ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.020002
+      value: -10.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ff233436248e08749947b5fdc53b31ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1139,6 +1175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ff233436248e08749947b5fdc53b31ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25a75433541ed24488c93417bbd9fdf9, type: 2}
     - target: {fileID: 919132149155446097, guid: ff233436248e08749947b5fdc53b31ed, type: 3}
       propertyPath: m_Name
       value: SM_Lampadaire_01
@@ -1209,6 +1249,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e46ffc6086a52464c8f167366ed88786, type: 2}
     - target: {fileID: 919132149155446097, guid: d78bd2dd5cae69c4493fe3fc5c8bb91f, type: 3}
       propertyPath: m_Name
       value: SM_murale_04 (5)
@@ -1283,6 +1327,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 00e9addab4f975647990b6c046def700, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37581fca94445d145bd185324e9ce3a6, type: 2}
     - target: {fileID: 919132149155446097, guid: 00e9addab4f975647990b6c046def700, type: 3}
       propertyPath: m_Name
       value: SM_Alarme_01
@@ -1427,6 +1475,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 25.089
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 41405736bf473614bb1d6bef40de17c9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b1eec30ec1f9ed439ebe8c979f41bce, type: 2}
     - target: {fileID: 919132149155446097, guid: 41405736bf473614bb1d6bef40de17c9, type: 3}
       propertyPath: m_Name
       value: SM_BoringChair
@@ -1497,6 +1549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 359.965
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2240f4e6558ae4f4a957127a6ae8d841, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be07c1ab51b1f6e42840dc3a9f0c7376, type: 2}
     - target: {fileID: 919132149155446097, guid: 2240f4e6558ae4f4a957127a6ae8d841, type: 3}
       propertyPath: m_Name
       value: SM_BoringDesk
