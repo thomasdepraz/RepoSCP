@@ -5963,7 +5963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d953ae8f2a4940642ad6b15837877f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  humanNumber1: 4
+  humanNumber1: 2
   commonRarity1: 75
   rareRarity1: 25
   epicRarity1: 0
@@ -5971,7 +5971,7 @@ MonoBehaviour:
   humanNumberText1: {fileID: 5996557927615346080}
   launchMissionButton1: {fileID: 5996557926169825770}
   SCPStatue1: {fileID: 5996557926835164851}
-  humanNumber2: 12
+  humanNumber2: 6
   commonRarity2: 60
   rareRarity2: 35
   epicRarity2: 5
@@ -5979,7 +5979,7 @@ MonoBehaviour:
   humanNumberText2: {fileID: 5996557925558036566}
   launchMissionButton2: {fileID: 5996557927574138917}
   SCPStatue2: {fileID: 3984533903377128600}
-  humanNumber3: 24
+  humanNumber3: 12
   commonRarity3: 35
   rareRarity3: 50
   epicRarity3: 15
