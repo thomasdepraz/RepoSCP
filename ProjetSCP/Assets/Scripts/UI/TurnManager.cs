@@ -23,6 +23,7 @@ public class TurnManager : MonoBehaviour
 
     public void NewTurn()
     {
+        SoundManager.instance.PlaySound("NewTurn");
         incidents.Clear();
         dayCount++;
         callNextTurn.Invoke();

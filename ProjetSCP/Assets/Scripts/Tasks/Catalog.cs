@@ -73,6 +73,7 @@ public class Catalog : MonoBehaviour
             catalogButtons.Add(newCatalogButton);
             newCatalogButton.catalog = this;
         }
+        SoundManager.instance.PlaySound("UIMenuButtonOn");
     }
 
     public void Back()
