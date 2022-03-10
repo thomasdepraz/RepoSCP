@@ -167,10 +167,10 @@ public class House : Room
         if(state == HouseState.EMPTY)
         {
             var ressourceManager = Registry.Get<RessourcesManager>();
-            if(ressourceManager.Money >= 100)
+            if(ressourceManager.Money >= 200)
             {
                 ressourceManager.AddWorker(this);
-                ressourceManager.RemoveMoney(100);
+                ressourceManager.RemoveMoney(200);
                 SetState(HouseState.OCCUPIED);
             }
         }
@@ -358,7 +358,7 @@ public class ScpContainer : Room , IInfo
     {
         var coutObj = Building.transform.Find("Canvas").Find("Overlay").Find("Container").Find("Counter").Find("CounterText");
         var counterText = coutObj.GetComponent<TextMeshProUGUI>();
-        counterText.text = $"{assignedWorkers.Count} / {Size.x * Size.y}";
+        counterText.text = $"{assignedWorkers.Count} / {(Size.x * Size.y)/2}";
     }
 
     public void Populate(SCPData occupantData)
@@ -381,7 +381,7 @@ public class ScpContainer : Room , IInfo
 
     public void AssignWorker()
     {
-        if (assignedWorkers.Count == Size.x * Size.y) return;
+        if (assignedWorkers.Count == (Size.x * Size.y)/2) return;
 
         var workers = Registry.Get<RessourcesManager>().HumanRessources;
         foreach (var w in workers)
