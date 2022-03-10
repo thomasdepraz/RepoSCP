@@ -31,6 +31,7 @@ public class CatalogButton : MonoBehaviour
 
     public void OpenSCPCaracteristics()
     {
+        SoundManager.instance.PlaySound("UIMenuButtonClick");
         catalog.SCPDangerosity.text = "Danger " + mySCP.dangerLevel.ToString(); 
         catalog.SCPBigDescription.text = mySCP.fullDescription;
         catalog.SCPClass.text = "Classe " + mySCP.type.ToString();

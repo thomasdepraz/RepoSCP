@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37876e31ec9bfbe40a901d3b0b8fc34a, type: 3}
   m_Name: SCP_SWAT_Incidents
   m_EditorClassIdentifier: 
-  damage: 12
+  damage: 6
   incident1Title: ' Incident 150-FR-J-I-1'
   incident1Description: "L\u2019incident s\u2019est produit hier \xE0 18h28. Le garde
     post\xE9 devant la porte de SCP-150-FR-J a allum\xE9 une cigarette et s\u2019est

@@ -137,6 +137,7 @@ public class MissionManager : MonoBehaviour
     }
     public void PlayMission(int missionNumber)
     {
+        SoundManager.instance.PlaySound("MissionCollectCommon");
         Mission selectedMission;
         if(missionNumber == 1)
         {
@@ -192,6 +193,7 @@ public class MissionManager : MonoBehaviour
 
     public void OpenMissionPanel()
     {
+        SoundManager.instance.PlaySound("UIMenuButton");
         CreateMission();
         IsMissionPerformable();
         missionSelectionPanel.SetActive(true);
@@ -244,6 +246,7 @@ public class MissionManager : MonoBehaviour
         chosenSCP = temporarySelectedSCP;
         if (chosenSCP != null)
         {
+            SoundManager.instance.PlaySound("MissionCollectEpic");
             WorkersLossUpdateDescription();
             SCPSelectionPanel.SetActive(false);
             workersLossPanel.SetActive(true);
@@ -296,11 +299,12 @@ public class MissionManager : MonoBehaviour
     {
         workersLossPanel.SetActive(false);
         numberOfDeadWorkers = 0;
-
+        SoundManager.instance.PlaySound("UIMenuButtonReturn");
     }
 
     public void BackToMainMenu()
     {
         missionSelectionPanel.SetActive(false);
+        SoundManager.instance.PlaySound("UIMenuButtonReturn");
     }
 }

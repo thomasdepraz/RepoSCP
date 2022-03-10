@@ -100,7 +100,7 @@ namespace SCP.Building
         public void SelectBuildingType(string type)//link to button
         {
             if (selectedObject != null) return;
-
+            SoundManager.instance.PlaySound("UIMenuButtonOn");
             switch (type)
             {
                 case "NONE":
@@ -139,7 +139,8 @@ namespace SCP.Building
 
         public void ToggleBuildingMode(bool on)
         {
-            if(on)
+            SoundManager.instance.PlaySound("UIMenuButtonOn");
+            if (on)
             {
                 Registry.Get<TooltipManager>().gameObject.SetActive(false);
 

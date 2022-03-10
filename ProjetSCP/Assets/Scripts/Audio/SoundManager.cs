@@ -77,7 +77,33 @@ public class SoundManager : MonoBehaviour
 
         return tempSound;
     }
+    public void PlaySoundUI(string name)
+    {
+        Sound tempSound;
 
+        tempSound = soundList.FindSoundByName(name);
+
+        switch (tempSound.type)
+        {
+            case Sound.soundType.UI:
+                tempSound.source = Instantiate(audioSource, UISounds.transform).AddComponent<AudioSource>();
+                break;
+            case Sound.soundType.Game:
+                tempSound.source = Instantiate(audioSource, GameSounds.transform).AddComponent<AudioSource>();
+                break;
+            case Sound.soundType.Music:
+                tempSound.source = Instantiate(audioSource, Musics.transform).AddComponent<AudioSource>();
+                break;
+            case Sound.soundType.Master:
+                break;
+            default:
+                break;
+        }
+
+        tempSound.AssignSound();
+
+        StartCoroutine(Play(tempSound));
+    }
     public IEnumerator Play(Sound sound)
     {
         playingSounds.Add(sound);
