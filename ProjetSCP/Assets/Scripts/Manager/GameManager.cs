@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        SoundManager.instance.PlaySound("GameMusic");
     }
 
 

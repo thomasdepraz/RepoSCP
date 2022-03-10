@@ -56,11 +56,11 @@ MonoBehaviour:
     source: {fileID: 0}
     destroyScript: {fileID: 0}
   gameSounds:
-  - name: 
+  - name: HouseConstruct
     clip: {fileID: 8300000, guid: 9e7e7b8250077ad4e852c8051ca832a8, type: 3}
     volume: 0.8
     loop: 0
-    type: 0
+    type: 1
     source: {fileID: 0}
     destroyScript: {fileID: 0}
   - name: 
@@ -84,11 +84,11 @@ MonoBehaviour:
     type: 0
     source: {fileID: 0}
     destroyScript: {fileID: 0}
-  - name: 
+  - name: SCPConstruct
     clip: {fileID: 8300000, guid: 7023eba3f70f89d4299b8253b712515b, type: 3}
     volume: 0.8
     loop: 0
-    type: 0
+    type: 1
     source: {fileID: 0}
     destroyScript: {fileID: 0}
   - name: 
@@ -98,42 +98,42 @@ MonoBehaviour:
     type: 0
     source: {fileID: 0}
     destroyScript: {fileID: 0}
-  - name: 
+  - name: GameStaffApplication
     clip: {fileID: 8300000, guid: 4719e385499d9594898fb82ccbc5346e, type: 3}
     volume: 0.8
     loop: 0
     type: 0
     source: {fileID: 0}
     destroyScript: {fileID: 0}
-  - name: 
+  - name: NewTurn
     clip: {fileID: 8300000, guid: b1ba04e7e1387c245b4f611ac0bee40e, type: 3}
     volume: 0.8
     loop: 0
     type: 0
     source: {fileID: 0}
     destroyScript: {fileID: 0}
-  - name: 
+  - name: MissionCollectCommon
     clip: {fileID: 8300000, guid: 8a850a1d4239b694496c57ab5b73c19b, type: 3}
     volume: 0.8
     loop: 0
     type: 0
     source: {fileID: 0}
     destroyScript: {fileID: 0}
-  - name: 
+  - name: MissionCollectEpic
     clip: {fileID: 8300000, guid: 9219709565083c14dbce8e52569391b8, type: 3}
     volume: 0.8
     loop: 0
     type: 0
     source: {fileID: 0}
     destroyScript: {fileID: 0}
-  - name: 
+  - name: MissionCollectRare
     clip: {fileID: 8300000, guid: 6077095fd3aae9b45a42e6ec3e9272cd, type: 3}
     volume: 0.8
     loop: 0
     type: 0
     source: {fileID: 0}
     destroyScript: {fileID: 0}
-  - name: 
+  - name: MissionVictory
     clip: {fileID: 8300000, guid: d86e858016a48aa45a615cedbb8ab48c, type: 3}
     volume: 0.8
     loop: 0
@@ -145,6 +145,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b9c60409bcc108d48944e7e454477153, type: 3}
     volume: 0.8
     loop: 1
-    type: 0
+    type: 2
     source: {fileID: 0}
     destroyScript: {fileID: 0}

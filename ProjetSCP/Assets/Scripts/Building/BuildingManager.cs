@@ -172,6 +172,16 @@ namespace SCP.Building
                 selectedObject.room.SetPosition(gridPos);
                 grid.Build(gridPos, selectedObject.room.Size);
                 Registry.Get<RessourcesManager>().RemoveMoney(selectedObject.room.MoneyCost);
+
+                if (selectedObject.room.GetType().ToString() == "House")
+                {
+                    SoundManager.instance.PlaySound("HouseConstruct");
+                }
+                else if (selectedObject.room.GetType().ToString() == "ScpContainer")
+                {
+                    SoundManager.instance.PlaySound("SCPConstruct");
+                }
+
                 selectedObject = null;
             }
         }

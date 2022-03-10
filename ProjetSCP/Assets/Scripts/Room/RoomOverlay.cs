@@ -137,7 +137,7 @@ public class CommandPost : Room
 
     public void OnSelect()
     {
-        Registry.Get<ControlButton>().ToggleWheel();
+        //Registry.Get<ControlButton>().ToggleWheel();
     }
 }
 

@@ -19,7 +19,7 @@ public class AutoDestroyAudio : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else
+        else if(!isUsed)
         {
             timeUntilUsed += Time.deltaTime;
         }
