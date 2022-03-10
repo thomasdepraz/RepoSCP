@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SCP_Sangliers_Incidents
   m_EditorClassIdentifier: 
   damage: 6
-  incident1Title: Incident 039-FR-J-I-1
+  incident1Title: ' Incident 039-FR-J-I-1'
   incident1Description: "L\u2019incident s\u2019est produit hier \xE0 15h32, durant
     la course de SCP-039-FR-J. Les agents charg\xE9s du nettoyage n'ont, semble-t-il,
     pas respect\xE9 les horaires impos\xE9s pour l\u2019entretien de la salle. Ils
@@ -26,7 +26,7 @@ MonoBehaviour:
     2 : il faut acheter de nouveaux v\xE9los pour chaque sanglier. L\u2019accident
     a pli\xE9 la fourche et voil\xE9 la roue avant de la plupart des v\xE9los. T\xE2che
     \xE0 faire de toute urgence.\r"
-  incident2Title: Incident 039-FR-J-I-2
+  incident2Title: ' Incident 039-FR-J-I-2'
   incident2Description: "L\u2019incident s\u2019est produit hier \xE0 15h lors d\u2019un
     essai de record du monde du plus long saut \xE0 VTT. Un des sangliers s\u2019est
     \xE9lanc\xE9 sur la piste et tout se d\xE9roulait comme pr\xE9vu. Le saut fut
@@ -35,7 +35,7 @@ MonoBehaviour:
     s\u2019est \xE9cras\xE9, quelques m\xE8tres plus bas, en plein sur nos agents.
     Le sanglier est mort, ainsi que plusieurs de nos agents.\r\n\nNOTE : la discipline
     de saut en VTT est d\xE9sormais interdite dans l\u2019enceinte de la fondation.\r"
-  incident3Title: Incident 039-FR-J-I-3
+  incident3Title: ' Incident 039-FR-J-I-3'
   incident3Description: "L\u2019incident s\u2019est produit hier \xE0 9h02. Plusieurs
     de nos agents sont entr\xE9s dans la salle contenant SCP-039-FR-J afin de fournir
     aux sangliers de nouveaux v\xE9los de la marque Nakamura. Tout se passait bien

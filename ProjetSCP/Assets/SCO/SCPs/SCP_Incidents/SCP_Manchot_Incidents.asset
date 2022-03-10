@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SCP_Manchot_Incidents
   m_EditorClassIdentifier: 
   damage: 1
-  incident1Title: Incident 012-FR-J-I-1
+  incident1Title: ' Incident 012-FR-J-I-1'
   incident1Description: "L\u2019incident s\u2019est produit hier \xE0 19h30, \xE0
     l\u2019heure du repas de SCP-012-FR-J. Le garde charg\xE9 d\u2019apporter la
     nourriture \xE0 ouvert la porte de la salle de sport et un moustique en a profit\xE9
@@ -24,14 +24,14 @@ MonoBehaviour:
     sa lettre de d\xE9mission d\xE8s sa sortie des urgences.\r\n\nNOTE : un dispositif
     anti-moustique doit \xEAtre mis en place au niveau de la porte de la salle de
     sport.\r"
-  incident2Title: Incident 012-FR-J-I-2
+  incident2Title: ' Incident 012-FR-J-I-2'
   incident2Description: "L\u2019incident s\u2019est produit hier \xE0 06h, \xE0 l\u2019heure
     du petit-d\xE9jeuner de SCP-012-FR-J. Le garde charg\xE9 d\u2019apporter la nourriture
     a tr\xE9buch\xE9 et fait tomber l\u2019une des halt\xE8res de SCP-012-FR-J de
     son meuble de rangement. Cette derni\xE8re est venue s\u2019\xE9craser sur le
     visage de ce dernier, le tuant sur le coup. \r\n\nNOTE : il faut croire qu\u2019un
     cr\xE2ne humain a du mal \xE0 encaisser une charge de 150kg.\r"
-  incident3Title: Incident 012-FR-J-I-3
+  incident3Title: ' Incident 012-FR-J-I-3'
   incident3Description: "L\u2019incident s\u2019est produit hier \xE0 14h08, durant
     l'entra\xEEnement de boxe anglaise de SCP-012-FR-J. Un de nos agent sp\xE9cialis\xE9
     dans le combat rapproch\xE9 est entr\xE9 sur le ring afin de servir de sparring
