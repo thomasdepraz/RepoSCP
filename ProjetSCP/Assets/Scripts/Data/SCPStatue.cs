@@ -16,6 +16,7 @@ public class SCPStatue : MonoBehaviour
     public TextMeshProUGUI size;
     public Image sizeSprite;
     public TextMeshProUGUI ID;
+    public Material glowingMaterial;
 
     public void UpdateData(SCPData scpData)
     {
@@ -27,5 +28,14 @@ public class SCPStatue : MonoBehaviour
         description.text = scpData.descriptionShort;
         image.sprite = scpData.smallVisual;
         sizeSprite.sprite = scpData.sizeSprite;
+
+        if (scpData.rarity == Rarity.RARE || scpData.rarity == Rarity.EPIC)
+        {
+            image.material = glowingMaterial;
+        }
+        else
+        {
+            image.material = null;
+        }
     }
 }

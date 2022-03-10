@@ -1653,7 +1653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: baa3aa124bc0c4e4fa53dc86b67da201, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -3999,7 +3999,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5740234112543069790}
   m_HandleRect: {fileID: 5740234112543069789}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 11
   m_OnValueChanged:
@@ -4664,6 +4664,10 @@ PrefabInstance:
     - target: {fileID: 4405317070069520215, guid: 1c3756b49f1071443b0b2caf810007d4, type: 3}
       propertyPath: m_Name
       value: StarsParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405317070069520215, guid: 1c3756b49f1071443b0b2caf810007d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4405317070069520218, guid: 1c3756b49f1071443b0b2caf810007d4, type: 3}
       propertyPath: m_RootOrder
