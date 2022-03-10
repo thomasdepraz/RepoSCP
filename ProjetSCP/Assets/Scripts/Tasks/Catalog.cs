@@ -31,6 +31,8 @@ public class Catalog : MonoBehaviour
     public CatalogButton catalogButton;
     public GameObject Panel;
     public Transform scrollViewContentTransform;
+    public ParticleSystem starsParticles;
+    public GameObject glowingShader;
 
     private void Start()
     {
@@ -46,6 +48,7 @@ public class Catalog : MonoBehaviour
     }
     public void InitializeSCPCatalog()
     {
+        bigOverviewVisual.gameObject.SetActive(false);
         Panel.SetActive(true);
 
         foreach (CatalogButton button in catalogButtons)
@@ -80,11 +83,15 @@ public class Catalog : MonoBehaviour
         else
         {
             Panel.SetActive(false);
+            glowingShader.SetActive(false);
+            starsParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
 
     public void OpenHelpPanel()
     {
+        glowingShader.SetActive(false);
+        starsParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         helpPanel.SetActive(true);
         fullOverviewPanel.SetActive(false);
         scrollViewPanel.SetActive(false);

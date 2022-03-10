@@ -1315,7 +1315,7 @@ MonoBehaviour:
   rarity: {fileID: 5570319195300627412}
   classe: {fileID: 5570319195438176917}
   danger: {fileID: 5570319195453729129}
-  visual: {fileID: 5570319195201131048}
+  smallVisual: {fileID: 5570319195201131048}
   mySCP: {fileID: 0}
   catalog: {fileID: 0}
 --- !u!1 &5570319196861716046

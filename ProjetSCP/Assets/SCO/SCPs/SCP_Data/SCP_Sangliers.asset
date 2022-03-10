@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: SCP-039-FR-J
   Name: "Sangliers \xE0 V\xE9lo"
-  sprite: {fileID: 21300000, guid: ed66a7fffcbfdcf47ab27b440b580369, type: 3}
+  smallVisual: {fileID: 21300000, guid: ed66a7fffcbfdcf47ab27b440b580369, type: 3}
+  bigVisual: {fileID: 21300000, guid: db9ae7af861292745a48a3292f8534e5, type: 3}
   statue: {fileID: 1187078949861419084, guid: 0fbecce9758ce5243be1ea5d30cba0e7, type: 3}
   dangerLevel: 3
   type: 1

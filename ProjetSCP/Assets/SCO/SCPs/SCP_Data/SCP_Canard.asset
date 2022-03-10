@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: SCP-1356
   Name: 'Canard en caoutchouc '
-  sprite: {fileID: 21300000, guid: 4967ba7bf4603224cbb9629bbce4c1c6, type: 3}
+  smallVisual: {fileID: 21300000, guid: 4967ba7bf4603224cbb9629bbce4c1c6, type: 3}
+  bigVisual: {fileID: 21300000, guid: 88503849155101f40b82c93a9fe20967, type: 3}
   statue: {fileID: 5053081343775468900, guid: f770fa222c0bb2542a6c285e1140a0b6, type: 3}
   dangerLevel: 0
   type: 0

@@ -13,7 +13,7 @@ public class CatalogButton : MonoBehaviour
     public TextMeshProUGUI rarity;
     public TextMeshProUGUI classe;
     public TextMeshProUGUI danger;
-    public Image visual;
+    public Image smallVisual;
 
     public SCPData mySCP;
     public Catalog catalog;
@@ -26,7 +26,7 @@ public class CatalogButton : MonoBehaviour
         rarity.text = mySCP.rarity.ToString();
         classe.text = mySCP.type.ToString();
         danger.text = mySCP.dangerLevel.ToString();
-        visual.sprite = mySCP.sprite;
+        smallVisual.sprite = mySCP.smallVisual;
     }
 
     public void OpenSCPCaracteristics()
@@ -42,10 +42,28 @@ public class CatalogButton : MonoBehaviour
 
     public void ShowBigSCP()
     {
+
         catalog.bigOverviewName.text = mySCP.Name;
         catalog.bigOverviewID.text = mySCP.ID.ToString();
         catalog.bigOverviewRarity.text = mySCP.rarity.ToString();
-        catalog.bigOverviewVisual.sprite = mySCP.sprite;
+        catalog.bigOverviewVisual.sprite = mySCP.bigVisual;
+        catalog.bigOverviewVisual.gameObject.SetActive(true);
+        if(mySCP.rarity == Rarity.RARE || mySCP.rarity == Rarity.EPIC)
+        {
+            catalog.starsParticles.Play();
+        }
+        else
+        {
+            catalog.starsParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
+        if (mySCP.rarity == Rarity.EPIC)
+        {
+            catalog.glowingShader.SetActive(true);
+        }
+        else
+        {
+            catalog.glowingShader.SetActive(false);
+        }
     }
 
 }
