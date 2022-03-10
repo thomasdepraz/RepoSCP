@@ -4,6 +4,7 @@ using UnityEngine;
 using SCP.Data;
 using TMPro;
 using UnityEngine.UI;
+using SCP.Ressources;
 
 public class Catalog : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class Catalog : MonoBehaviour
 
     [Header("Other")]
     public GameObject helpPanel;
-    public List<SCPData> allSCPS;
+    private List<SCPData> allSCPS;
     public RectTransform catalogButtonsPanelTransform;
     public CatalogButton catalogButton;
     public GameObject Panel;
@@ -48,6 +49,21 @@ public class Catalog : MonoBehaviour
     }
     public void InitializeSCPCatalog()
     {
+        if (Panel.activeSelf)
+        {
+            Back();
+            return;
+        } 
+
+        allSCPS = new List<SCPData>();
+        var rooms = Registry.Get<RessourcesManager>().scpRooms;
+        foreach (var room in rooms)
+        {
+            if (!room.IsEmpty())
+                allSCPS.Add(room.occupant.Data);
+        }
+
+
         bigOverviewVisual.gameObject.SetActive(false);
         Panel.SetActive(true);
 

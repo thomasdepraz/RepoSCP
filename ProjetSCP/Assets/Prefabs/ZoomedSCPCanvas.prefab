@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2718833535308295268
 Transform:
   m_ObjectHideFlags: 0
@@ -160,6 +160,7 @@ MonoBehaviour:
   dangerText: {fileID: 9084507794829372335}
   sizeText: {fileID: 9084507795218339171}
   descriptionText: {fileID: 9084507794282513564}
+  scpData: {fileID: 0}
 --- !u!1 &9084507794282513566
 GameObject:
   m_ObjectHideFlags: 0

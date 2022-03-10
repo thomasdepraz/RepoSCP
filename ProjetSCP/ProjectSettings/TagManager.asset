@@ -44,3 +44,6 @@ TagManager:
   - name: MissionLayer
     uniqueID: 2985153205
     locked: 0
+  - name: CatalogLayer
+    uniqueID: 904454395
+    locked: 0

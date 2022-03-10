@@ -17,12 +17,17 @@ public class RoomOverlay : MonoBehaviour,
     private Image overlay;
     public Room linkedRoom { private get; set; }
 
+    private CanvasGroup canvasGroup;
+
     float lastClickTime = 1;
     private CameraController camController;
+
+
 
     private void Start()
     {
         overlay = GetComponent<Image>();
+        canvasGroup = GetComponent<CanvasGroup>();
         camController = Registry.Get<CameraController>();
     }
 
@@ -44,11 +49,11 @@ public class RoomOverlay : MonoBehaviour,
         {
             if (camController.camState != CameraState.TWEENING)
             {
-                camController.ChangeState(transform.position);
-            }
-            else if (camController.camState == CameraState.FOCUSED && (Vector2)transform.position != (Vector2)camController.transform.position)
-            {
-                camController.FocusTarget(transform.position);
+                if (linkedRoom is IInfo)
+                    (linkedRoom as IInfo).SetInfo(camController.camState != CameraState.FOCUSED);
+
+                camController.ChangeState(linkedRoom.Building.occupantOriginTransform.position, canvasGroup);
+
             }
         }
         else if( Input.GetMouseButtonUp(0))
@@ -124,7 +129,7 @@ public class House : Room
     {
         //recenser les maisons qqpart après leur création;
         Size = new Vector2(1, 1);
-        MoneyCost = 100;
+        MoneyCost = 200;
 
         Building = building;
 
@@ -151,8 +156,10 @@ public class House : Room
         switch (state)
         {
             case HouseState.EMPTY:
+                Building.roomContent.SetActive(false);
                 break;
             case HouseState.OCCUPIED:
+                Building.roomContent.SetActive(true);
                 break;
             default:
                 break;
@@ -161,7 +168,7 @@ public class House : Room
 
  }
 
-public class Warehouse : Room
+public class Warehouse : Room, IInfo
 {
     public SCPModel occupant { get; private set; }
 
@@ -194,6 +201,21 @@ public class Warehouse : Room
         }
     }
 
+    public void SetInfo(bool on)
+    {
+        if (!IsEmpty())
+        {
+            if (on)
+            {
+                Registry.Get<SCPInfoSpawn>().SpawnSCPInfo(occupant.Data);
+            }
+            else
+            {
+                Registry.Get<SCPInfoSpawn>().SCPInfoWindow.SetActive(false);
+            }
+        }
+    }
+
     public bool IsEmpty() => occupant == null;
 
     public void Populate(SCPData occupantData)
@@ -212,7 +234,12 @@ public class Warehouse : Room
     }
 }
 
-public class ScpContainer : Room
+public interface IInfo
+{
+    public void SetInfo(bool on);
+}
+
+public class ScpContainer : Room , IInfo
 {
     public SCPModel occupant { get; private set; }
     public List<Worker> assignedWorkers = new List<Worker>();
@@ -250,13 +277,11 @@ public class ScpContainer : Room
 
             buildingManager.SetSCPOptimalState();
         }
-
-
     }
 
     public void InitBuidingOverlay()
     {
-        var container = Building.transform.Find("Canvas").Find("Container");
+        var container = Building.transform.Find("Canvas").Find("Overlay").Find("Container");
         var addObj = container.transform.Find("AddButton");
         var remObj = container.transform.Find("RemoveButton");
        
@@ -270,6 +295,21 @@ public class ScpContainer : Room
         UpdateCounterText();
     }
 
+    public void SetInfo(bool on)
+    {
+        if(!IsEmpty())
+        {
+            if(on)
+            {
+                Registry.Get<SCPInfoSpawn>().SpawnSCPInfo(occupant.Data);
+            }
+            else
+            {
+                Registry.Get<SCPInfoSpawn>().SCPInfoWindow.SetActive(false);
+            }
+        }
+    }
+
 
     public bool IsEmpty() => occupant == null;
 
@@ -280,7 +320,7 @@ public class ScpContainer : Room
 
     public void UpdateCounterText()
     {
-        var coutObj = Building.transform.Find("Canvas").Find("Container").Find("Counter").Find("CounterText");
+        var coutObj = Building.transform.Find("Canvas").Find("Overlay").Find("Container").Find("Counter").Find("CounterText");
         var counterText = coutObj.GetComponent<TextMeshProUGUI>();
         counterText.text = $"{assignedWorkers.Count} / {Size.x * Size.y}";
     }

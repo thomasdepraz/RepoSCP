@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406158311371946931}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: -15, z: -10}
+  m_LocalPosition: {x: 10, y: -10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8258047511868693636}
@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2787964662996443498
 Transform:
   m_ObjectHideFlags: 0
@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 8435456544630600333}
   - component: {fileID: 8435456544630600332}
   - component: {fileID: 8435456544630600334}
+  - component: {fileID: 2621948443631717960}
   m_Layer: 5
   m_Name: Overlay
   m_TagString: Untagged
@@ -264,6 +265,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b21c1fbb4bed54bb894bd8a54aa3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 0}
+--- !u!225 &2621948443631717960
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435456544630600322}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8777984998134974014
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +380,7 @@ MonoBehaviour:
   type: 0
   overlay: {fileID: 8435456544630600334}
   occupantOriginTransform: {fileID: 6230453533683175782}
-  roomContent: {fileID: 0}
+  roomContent: {fileID: 5727118973382073804}
 --- !u!1001 &442277954629708647
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ namespace SCP.Camera
     }
     public class CameraController : MonoBehaviour
     {
-        public CameraState camState { get; private set; }
+        public CameraState camState { get; private set; } = CameraState.UNFOCUSED;
         public CameraProfile profile;
         private Vector3 originPosition;
 
@@ -29,15 +29,17 @@ namespace SCP.Camera
             originPosition = transform.position;
         }
 
-        public void ChangeState(Vector2 target)
+        public void ChangeState(Vector2 target, CanvasGroup group)
         {
             switch (camState)
             {
                 case CameraState.FOCUSED:
                     UnfocusTarget();
+                    group.alpha = 1;
                     break;
                 case CameraState.UNFOCUSED:
                     FocusTarget(target);
+                    group.alpha = 0;
                     break;
 
                 default:
