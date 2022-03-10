@@ -48,25 +48,7 @@ namespace SCP.Ressources.Display
         //For Testing Only
         public void Update()
         {
-           if (Input.GetKeyDown(KeyCode.T))
-           {
-                manager.AddMoney(10);
-           } 
 
-           if (Input.GetKeyDown(KeyCode.Y))
-           {
-                manager.AddWorker();
-           }
-
-           if (Input.GetKeyDown(KeyCode.G))
-           {
-                manager.RemoveMoney(10);
-           }
-
-           if (Input.GetKeyDown(KeyCode.H))
-           {
-                manager.RemoveWorker();
-           }
         }
 
 
