@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SCP_SWAT_Incidents
   m_EditorClassIdentifier: 
   damage: 12
-  incident1Title: Incident 150-FR-J-I-1
+  incident1Title: ' Incident 150-FR-J-I-1'
   incident1Description: "L\u2019incident s\u2019est produit hier \xE0 18h28. Le garde
     post\xE9 devant la porte de SCP-150-FR-J a allum\xE9 une cigarette et s\u2019est
     mis \xE0 fumer en int\xE9rieur (ce qui constitue une infraction au code de la
@@ -30,7 +30,7 @@ MonoBehaviour:
     de d\xE9tention comme lieu o\xF9 exercer son autorit\xE9. Il faudra donc \xE9viter
     toutes infractions au r\xE8glement \xE0 proximit\xE9 de la salle o\xF9 il est
     contenu.\r"
-  incident2Title: Incident 150-FR-J-I-2
+  incident2Title: ' Incident 150-FR-J-I-2'
   incident2Description: "L\u2019incident s\u2019est produit hier \xE0 19h51. La salle
     d\u2019isolement de SCP-150-FR-J a rencontr\xE9 un dysfonctionnement d\u2019origine
     inconnue. SCP-150-FR-J en a profit\xE9 pour se d\xE9placer instantan\xE9ment
@@ -41,7 +41,7 @@ MonoBehaviour:
     de pertes sont \xE0 d\xE9plorer.\r\n\nNOTE : un test sur la port\xE9e de d\xE9placement
     de SCP-150-FR-J vers Villemoirieu doit \xEAtre effectu\xE9 dans les plus brefs
     d\xE9lais.\r"
-  incident3Title: Incident 150-FR-J-I-3
+  incident3Title: ' Incident 150-FR-J-I-3'
   incident3Description: "L\u2019incident s\u2019est produit hier \xE0 10h45 lors
     du test de port\xE9e de d\xE9placement de SCP-150-FR-J. Pour ce faire, nous avons
     emmen\xE9 SCP-150-FR-J \xE0 un point g\xE9ographiquement oppos\xE9 \xE0 Villemoirieu.

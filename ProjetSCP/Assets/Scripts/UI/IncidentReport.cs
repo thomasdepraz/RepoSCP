@@ -12,7 +12,7 @@ public class IncidentReport : MonoBehaviour
     public void SetupIncidentReport(string title, string text, int damage)
     {
         titleText.text = title;
-        damageText.text = "Membre(s) du personnel perdu : " + damage;
+        damageText.text = "Employé(s) perdu(s) : " + damage;
         descriptionText.text = text;
     }
 }

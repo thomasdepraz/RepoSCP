@@ -62,6 +62,8 @@ public class MissionManager : MonoBehaviour
     public GameObject glowingShader1;
     public GameObject glowingShader2;
     public GameObject glowingShader3;
+    public Image selectedSCPSPriteSize;
+    public Image selectedSCPSpriteImage;
 
     SCPData temporarySelectedSCP;
     SCPData drawnSCP1;
@@ -286,6 +288,8 @@ public class MissionManager : MonoBehaviour
             deadWorkersDescription.text = chosenSCP.missionIncident.highWorkersDeathIncident;
         }
 
+        selectedSCPSpriteImage.sprite = chosenSCP.smallVisual;
+        selectedSCPSPriteSize.sprite = chosenSCP.sizeSprite;
     }
 
     public void MissionOver()

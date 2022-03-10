@@ -58,8 +58,6 @@ namespace SCP.Ressources
 
 
             RessourcesDisplay.UpdateHumanRessourcesDisplay();
-            display.StartCoroutine(display.IndicateValueChange(1, 0, true));
-            display.StartCoroutine(display.IndicateValueChange(1, 1, true));
         }
 
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SCP_MonsieurChiant_Incidents
   m_EditorClassIdentifier: 
   damage: 1
-  incident1Title: Incident 015-FR-J-I-1
+  incident1Title: ' Incident 015-FR-J-I-1'
   incident1Description: "L\u2019incident s\u2019est produit hier \xE0 14h03. Une
     l\xE9g\xE8re baisse de tension \xE9lectrique a fait d\xE9faillir l\u2019isolation
     sonore de la salle de SCP-015-FR-J. Le garde qui se trouvait post\xE9 \xE0 l'entr\xE9e
@@ -26,7 +26,7 @@ MonoBehaviour:
     en sorte que l\u2019aile o\xF9 se trouve SCP-015-FR-J soit vide de tout objet,
     structure et autres \xE9l\xE9ments pouvant provoquer la mort ou de graves l\xE9sions
     \xE0 nos agents.\r"
-  incident2Title: Incident 015-FR-J-I-2
+  incident2Title: ' Incident 015-FR-J-I-2'
   incident2Description: "L\u2019incident s\u2019est produit hier \xE0 15h02 lors
     d\u2019un nouveau test sur la capacit\xE9 ennuyante de SCP-015-FR-J. Pour ce
     test, un de nos agents \xE9tait \xE9quip\xE9 d\u2019un casque audio diffusant
@@ -38,7 +38,7 @@ MonoBehaviour:
     capacit\xE9 ennuyeuse de SCP-015-FR-J semble pouvoir \xEAtre contenu seulement
     par le silence total. Il faudrait peut-\xEAtre songer \xE0 concevoir un dispositif
     emp\xEAchant le Dr Boss de parler, d\xE9finitivement.\r"
-  incident3Title: Incident 015-FR-J-I-3
+  incident3Title: ' Incident 015-FR-J-I-3'
   incident3Description: "L\u2019incident s\u2019est produit hier \xE0 17h37. Un agent
     avait pour mission de regarder une vid\xE9o o\xF9 SCP-015-FR-J prenait la parole
     afin de voir si sa voix \xE9tait aussi ennuyante \xE0 travers un enregistrement

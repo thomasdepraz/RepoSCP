@@ -623,7 +623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7796896925716475563}
   m_Layer: 0
-  m_Name: Habillage
+  m_Name: SCP-012-FR-J_Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,7 +855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b21c1fbb4bed54bb894bd8a54aa3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
 --- !u!225 &5785017380130555647
 CanvasGroup:
   m_ObjectHideFlags: 0

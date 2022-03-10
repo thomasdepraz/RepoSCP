@@ -33,7 +33,20 @@ public class TooltipManager : MonoBehaviour
     [TextArea(2, 15)]
     public string marketDescription;
     [TextArea(2, 15)]
-    public string visitDescription; 
+    public string visitDescription;
+
+    [TextArea(2, 15)]
+    public string overlayDescription;
+
+    public void Awake()
+    {
+        new Registry().Register<TooltipManager>(this);
+    }
+
+    public void Start()
+    {
+        gameObject.SetActive(false);
+    }
 
     public void UpdateTooltip (string UIElement)
     {
@@ -90,6 +103,15 @@ public class TooltipManager : MonoBehaviour
             case "Visit":
                 tooltipText.text = visitDescription;
                 break;
+
+            case "Overlay":
+                tooltipText.text = overlayDescription;
+                break;
         }
+    }
+
+    public void AppendText(string text)
+    {
+        tooltipText.text += "<br>" + text;
     }
 }

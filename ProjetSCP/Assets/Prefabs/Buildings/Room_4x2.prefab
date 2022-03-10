@@ -144,12 +144,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7287216485711324474}
   m_Layer: 0
-  m_Name: Habillage Sanglier
+  m_Name: SCP-039-FR-J_Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7287216485711324474
 Transform:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163861539747151258}
   m_Layer: 0
-  m_Name: Habillage SWAT
+  m_Name: SCP-150-FR-J_Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

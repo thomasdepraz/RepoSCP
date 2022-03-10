@@ -21,6 +21,7 @@ MonoBehaviour:
   type: 2
   rarity: 1
   size: 8
+  sizeSprite: {fileID: 21300000, guid: 95c2c5b0e825de64e99c9cbe1d7f19c3, type: 3}
   requiredSize: {x: 4, y: 2}
   missionIncident: {fileID: 11400000, guid: cdb3385bfe80c0749afe127118b83c6f, type: 2}
   descriptionShort: "SCP-150-FR-J est une escouade compos\xE9e de dix membres du
@@ -68,4 +69,4 @@ MonoBehaviour:
     La cible de l'intervention y est aussi attach\xE9e. Lors du d\xE9part de l'h\xE9licopt\xE8re,
     de multiples explosions ont lieu, d\xE9truisant g\xE9n\xE9ralement le b\xE2timent
     o\xF9 a eu lieu l'intervention dans le cas d'une mission en int\xE9rieur. "
-  optimalState: 0
+  optimalState: 1

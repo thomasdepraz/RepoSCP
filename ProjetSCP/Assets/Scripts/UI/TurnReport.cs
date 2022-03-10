@@ -50,22 +50,13 @@ public class TurnReport : MonoBehaviour
 
         currentIncident.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
         currentIncident.GetComponent<IncidentButton>().SetupButton(incidentType);
+    }
 
-        /*if (incidentsContent.childCount == 1)
+    public void ClearIncidentButtons()
+    {
+        for (int g = 0; g < incidentsContent.childCount; g++)
         {
-            currentIncident.GetComponent<RectTransform>().position = new Vector3(0, 125, 0);
+            Destroy(incidentsContent.GetChild(0).gameObject);
         }
-        else
-        {
-            //currentIncident.GetComponent<RectTransform>().position = new Vector3(0, incidentsContent.GetChild(incidentsContent.transform.GetChildCount).position.y - 35, 0);
-        }
-
-        currentIncident.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
-        currentIncident.GetComponent<IncidentButton>().SetupButton(incidentType);
-
-        Debug.Log("Bouton");
-        incidentButton.SetActive(true);
-        incidentButton.GetComponent<IncidentButton>().descriptionScreen = incidentDetails;
-        incidentButton.GetComponent<IncidentButton>().SetupButton(incidentType);*/
     }
 }
