@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37876e31ec9bfbe40a901d3b0b8fc34a, type: 3}
   m_Name: SCP_Sangliers_Incidents
   m_EditorClassIdentifier: 
-  damage: 6
+  damage: 3
   incident1Title: ' Incident 039-FR-J-I-1'
   incident1Description: "L\u2019incident s\u2019est produit hier \xE0 15h32, durant
     la course de SCP-039-FR-J. Les agents charg\xE9s du nettoyage n'ont, semble-t-il,
