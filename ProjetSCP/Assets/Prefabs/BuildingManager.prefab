@@ -199,7 +199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.00000011920929, y: -0.063604355}
   m_AnchorMax: {x: 1.0000001, y: 0.9363959}
-  m_AnchoredPosition: {x: -1.3403015, y: -5.1938}
+  m_AnchoredPosition: {x: -1.3403015, y: -5.193802}
   m_SizeDelta: {x: -2.6807, y: -10.3876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2205548073465855508
@@ -888,7 +888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1.0316656, y: 0.7479818}
-  m_AnchoredPosition: {x: 5.444, y: -5.048}
+  m_AnchoredPosition: {x: 5.4440002, y: -5.0479946}
   m_SizeDelta: {x: 10.8879, y: -10.0959}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2205548074817342178
@@ -1370,7 +1370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.82898355, y: 0.7771793}
-  m_AnchoredPosition: {x: 44.3, y: 3.699997}
+  m_AnchoredPosition: {x: 44.30002, y: 3.699997}
   m_SizeDelta: {x: 0.5348015, y: 0.000015259}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7503709614142590237
@@ -1470,7 +1470,8 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1035225483163505950, guid: 77041683649b5e74ab233ac8a19e0f86, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77041683649b5e74ab233ac8a19e0f86, type: 3}
 --- !u!4 &1806250440293818150 stripped
 Transform:

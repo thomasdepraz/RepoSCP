@@ -310,6 +310,8 @@ public class ScpContainer : Room , IInfo
             //feedback
 
             buildingManager.SetSCPOptimalState();
+
+            Building.roomContent.SetActive(false);
         }
     }
 
@@ -371,6 +373,10 @@ public class ScpContainer : Room , IInfo
         //SCPObject obj = go.GetComponent<SCPObject>();
         //obj.UpdateRenderer(occupantData);
         this.occupant = new SCPModel(occupantData, go);
+
+        var props = Building.transform.Find($"{occupant.Data.ID}_Props");
+        Building.roomContent = props.gameObject;
+        Building.roomContent.SetActive(true);
     }
 
     public void AssignWorker()

@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6895338879119247199}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460581454725067881
 GameObject:
@@ -656,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136000561509811019}
   m_Layer: 0
-  m_Name: Habillage Base
+  m_Name: SCP-1356_Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -670,8 +670,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4181907809142450749}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.5382, y: -16.946962, z: -19.87544}
-  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
+  m_LocalPosition: {x: 16.538208, y: -16.946964, z: -19.875458}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 549600289563813354}
   - {fileID: 2139388151409776677}
@@ -682,7 +682,7 @@ Transform:
   - {fileID: 3615065740222383402}
   - {fileID: 4874603218653246229}
   m_Father: {fileID: 6895338879119247199}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4875859026851903594
 GameObject:
@@ -962,12 +962,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3552921821009091021}
   m_Layer: 0
-  m_Name: Habillage Monsieur Chiant
+  m_Name: SCP-015-FR-J_Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3552921821009091021
 Transform:
   m_ObjectHideFlags: 0
@@ -1022,8 +1022,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1640162895373573302}
-  - {fileID: 2136000561509811019}
   - {fileID: 3197852101909235423}
+  - {fileID: 2136000561509811019}
   - {fileID: 3552921821009091021}
   m_Father: {fileID: 0}
   m_RootOrder: 0
