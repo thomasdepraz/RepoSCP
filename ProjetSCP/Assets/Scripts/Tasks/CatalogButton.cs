@@ -34,7 +34,7 @@ public class CatalogButton : MonoBehaviour
         catalog.SCPDangerosity.text = "Danger " + mySCP.dangerLevel.ToString(); 
         catalog.SCPBigDescription.text = mySCP.fullDescription;
         catalog.SCPClass.text = "Classe " + mySCP.type.ToString();
-        catalog.SCPSize.text = "Taille " + mySCP.size.ToString();
+        catalog.SCPSize.sprite = mySCP.sizeSprite;
         catalog.fullOverviewPanel.SetActive(true);
         catalog.scrollViewPanel.SetActive(false);
         LayoutRebuilder.ForceRebuildLayoutImmediate(catalog.scrollViewContentTransform as RectTransform);

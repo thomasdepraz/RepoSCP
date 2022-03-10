@@ -4102,8 +4102,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -181.00003, y: -35.000015}
-  m_SizeDelta: {x: 368, y: 120}
+  m_AnchoredPosition: {x: -181.00003, y: -28.4}
+  m_SizeDelta: {x: 368, y: 69.6065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8618143399970951357
 CanvasRenderer:
@@ -4389,6 +4389,8 @@ MonoBehaviour:
   visitDescription: "La visite vous permet d\u2019aller voir les centres des autres
     joueurs. En allant les voir, vous pourrez potentiellement n\xE9gocier avec eux
     pour obtenir certains SCP \xE0 moindre co\xFBt.\r"
+  overlayDescription: "Clique droit : Zoomer / D\xE9zoomer sur la salle\nClic Gauche
+    : Interagir avec la salle ou son contenu."
 --- !u!1 &8401272095876312495
 GameObject:
   m_ObjectHideFlags: 0
