@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using SCP.Data;
 using TMPro;
 
@@ -13,7 +14,9 @@ public class SCPInfoSpawn : MonoBehaviour
     public TextMeshProUGUI rarityText;
     public TextMeshProUGUI classText;
     public TextMeshProUGUI dangerText;
-    public TextMeshProUGUI sizeText;
+    public TextMeshProUGUI workerText;
+    public Image sizeImage;
+    public Image scpPhoto;
     public TextMeshProUGUI descriptionText;
 
     [Header("Testing")]
@@ -22,15 +25,14 @@ public class SCPInfoSpawn : MonoBehaviour
     public void Awake()
     {
         new Registry().Register<SCPInfoSpawn>(this);
-
     }
 
 
     public void SpawnSCPInfo(SCPData data)
     {
         SCPInfoWindow.SetActive(true);
-        codeText.text = "Code : " + data.ID;
-        nameText.text = "Nom : " + data.Name;
+        codeText.text = data.ID;
+        nameText.text = data.Name;
         if (data.rarity == Rarity.COMMON)
         {
             rarityText.text = "Rareté : Commun";
@@ -78,7 +80,23 @@ public class SCPInfoSpawn : MonoBehaviour
             dangerText.text = "Dangerosité : Noir";
         }
         //dangerText.text = "Dangerosité : " + data.dangerLevel.ToString();
-        sizeText.text = "Taille : " + data.size.ToString();
+        switch (data.size)
+        {
+            case 2:
+                workerText.text = "1";
+                break;
+
+            case 4:
+                workerText.text = "2";
+                break;
+
+            case 8:
+                workerText.text = "4";
+                break;
+        }
+        scpPhoto.sprite = data.smallVisual;
+        sizeImage.sprite = data.sizeSprite;
+
         descriptionText.text = data.descriptionShort;
     }
 
