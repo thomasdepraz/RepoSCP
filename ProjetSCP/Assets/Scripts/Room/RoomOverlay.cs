@@ -390,6 +390,7 @@ public class ScpContainer : Room , IInfo
             {
                 assignedWorkers.Add(w);
                 w.Engage();
+                SoundManager.instance.PlaySound("GameStaffApplication");
                 break;
             }
         }
