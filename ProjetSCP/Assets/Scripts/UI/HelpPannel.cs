@@ -24,6 +24,7 @@ public class HelpPannel : MonoBehaviour
 
     public void OpenDescription(int number)
     {
+        SoundManager.instance.PlaySound("UIMenuButtonOn");
         switch (number)
         {
             case 0:

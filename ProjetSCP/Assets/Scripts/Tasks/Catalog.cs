@@ -39,14 +39,6 @@ public class Catalog : MonoBehaviour
     {
         catalogButtons = new List<CatalogButton>();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("b") == true)
-        {
-            InitializeSCPCatalog();
-        }
-    }
     public void InitializeSCPCatalog()
     {
         if (Panel.activeSelf)
@@ -87,17 +79,20 @@ public class Catalog : MonoBehaviour
     {
         if(fullOverviewPanel.activeInHierarchy == true)
         {
+            SoundManager.instance.PlaySound("UIMenuButtonReturn");
             fullOverviewPanel.SetActive(false);
             scrollViewPanel.SetActive(true);
         }
         else if(helpPanel.activeInHierarchy == true)
         {
+            SoundManager.instance.PlaySound("UIMenuButtonReturn");
             helpPanel.SetActive(false);
             scrollViewPanel.SetActive(true);
             bigOverviewPanel.SetActive(true);
         }
         else
         {
+            SoundManager.instance.PlaySound("UIMenuButtonReturn");
             Panel.SetActive(false);
             glowingShader.SetActive(false);
             starsParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
@@ -106,6 +101,7 @@ public class Catalog : MonoBehaviour
 
     public void OpenHelpPanel()
     {
+        SoundManager.instance.PlaySound("UIMenuButtonClick");
         glowingShader.SetActive(false);
         starsParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         helpPanel.SetActive(true);
