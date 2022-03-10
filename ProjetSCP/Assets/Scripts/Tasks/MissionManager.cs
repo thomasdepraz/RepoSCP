@@ -59,12 +59,15 @@ public class MissionManager : MonoBehaviour
     public GameObject workersLossPanel;
     public TextMeshProUGUI deadWorkersDescription;
     RessourcesManager ressourceManager;
+    public GameObject glowingShader1;
+    public GameObject glowingShader2;
+    public GameObject glowingShader3;
 
     SCPData temporarySelectedSCP;
     SCPData drawnSCP1;
     SCPData drawnSCP2;
     SCPData drawnSCP3;
-    SCPData chosenSCP; //SCP à récupérer pour placer dans le stockage
+    SCPData chosenSCP; //SCP ï¿½ rï¿½cupï¿½rer pour placer dans le stockage
     int numberOfDeadWorkers;
 
     public SCPData[] allSCP;
@@ -100,6 +103,14 @@ public class MissionManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        //debug
+        if(Input.GetKeyDown("x"))
+        {
+            OpenMissionPanel();
+        }
+    }
     public void CreateMission()
     {
        mission1 = new Mission(humanNumber1, commonRarity1,rareRarity1,epicRarity1, workerLossProbability1);
@@ -146,6 +157,30 @@ public class MissionManager : MonoBehaviour
         SCPStatue2.UpdateData(drawnSCP2);
         SCPStatue3.UpdateData(drawnSCP3);
 
+        if(drawnSCP1.rarity == Rarity.RARE || drawnSCP1.rarity == Rarity.EPIC)
+        {
+            glowingShader1.SetActive(true);
+        }
+        else
+        {
+            glowingShader1.SetActive(false);
+        }
+        if (drawnSCP2.rarity == Rarity.RARE || drawnSCP2.rarity == Rarity.EPIC)
+        {
+            glowingShader2.SetActive(true);
+        }
+        else
+        {
+            glowingShader2.SetActive(false);
+        }
+        if (drawnSCP3.rarity == Rarity.RARE || drawnSCP3.rarity == Rarity.EPIC)
+        {
+            glowingShader3.SetActive(true);
+        }
+        else
+        {
+            glowingShader3.SetActive(false);
+        }
         numberOfDeadWorkers = WorkersLoss(selectedMission);
         numberOfDeadWorkersText.text = numberOfDeadWorkers.ToString();
 
@@ -188,14 +223,17 @@ public class MissionManager : MonoBehaviour
         if(statueNumber == 1)
         {
             temporarySelectedSCP = drawnSCP1;
+            ValidateSelectedSCP();
         }
         else if (statueNumber == 2)
         {
             temporarySelectedSCP = drawnSCP2;
+            ValidateSelectedSCP();
         }
         else
         {
             temporarySelectedSCP = drawnSCP3;
+            ValidateSelectedSCP();
         }
     }
 
@@ -207,7 +245,9 @@ public class MissionManager : MonoBehaviour
             WorkersLossUpdateDescription();
             SCPSelectionPanel.SetActive(false);
             workersLossPanel.SetActive(true);
-
+            glowingShader3.SetActive(false);
+            glowingShader2.SetActive(false);
+            glowingShader1.SetActive(false);
 
             //Placer le scp dans la salle de stockage
             Warehouse w = Registry.Get<BuildingManager>().warehouseRoom.room as Warehouse;
@@ -253,5 +293,10 @@ public class MissionManager : MonoBehaviour
         workersLossPanel.SetActive(false);
         numberOfDeadWorkers = 0;
 
+    }
+
+    public void BackToMainMenu()
+    {
+        missionSelectionPanel.SetActive(false);
     }
 }

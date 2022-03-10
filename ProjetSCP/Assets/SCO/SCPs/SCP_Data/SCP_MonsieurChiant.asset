@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: SCP-015-FR-J
   Name: Monsieur Chiant
-  sprite: {fileID: 21300000, guid: 7eb2ab46e9c75264ab2d4b7f8473605f, type: 3}
+  smallVisual: {fileID: 21300000, guid: 7eb2ab46e9c75264ab2d4b7f8473605f, type: 3}
+  bigVisual: {fileID: 21300000, guid: 2c9f10968d5770e42b15feb7e08d8554, type: 3}
   statue: {fileID: 2369155604156085497, guid: 20be40e89009b5f4f8afb805401c0488, type: 3}
   dangerLevel: 1
   type: 1

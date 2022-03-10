@@ -7,7 +7,8 @@ namespace SCP.Data
     {
         public string ID;
         public string Name;
-        public Sprite sprite;
+        public Sprite smallVisual;
+        public Sprite bigVisual;
         public GameObject statue;
         public DangerLevel dangerLevel;
         public SCPType type;

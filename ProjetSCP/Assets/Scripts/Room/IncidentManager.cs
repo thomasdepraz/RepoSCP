@@ -11,6 +11,7 @@ public class IncidentManager : MonoBehaviour
     public List<ScpContainer> scpRooms;
     private List<SCPData> scpDatas;
     private List<int> assignedWorkersList;
+    private List<ScpContainer> damagedScpRooms;
 
     void Start()
     {
@@ -19,12 +20,14 @@ public class IncidentManager : MonoBehaviour
 
         scpDatas = new List<SCPData>();
         assignedWorkersList = new List<int>();
+        damagedScpRooms = new List<ScpContainer>();
     }
 
     private void GetAllSCPIncidents()
     {
         scpDatas.Clear();
         assignedWorkersList.Clear();
+        damagedScpRooms.Clear();
         scpRooms = ressourceManager.scpRooms;
 
         for (int a = 0; a < scpRooms.Count; a++)
@@ -33,16 +36,17 @@ public class IncidentManager : MonoBehaviour
             {
                 scpDatas.Add(scpRooms[a].occupant.Data);
                 assignedWorkersList.Add(scpRooms[a].assignedWorkers.Count);
+                damagedScpRooms.Add(scpRooms[a]);
             }
         }
 
         for (int b = 0; b < scpDatas.Count; b++)
         {
-            VerifySCPIncident(scpDatas[b], assignedWorkersList[b]);
+            VerifySCPIncident(scpDatas[b], assignedWorkersList[b], damagedScpRooms[b]);
         }
     }
 
-    private void VerifySCPIncident(SCPData containedSCP, int activeWorkers) // Ajouter la préférence de classe;
+    private void VerifySCPIncident(SCPData containedSCP, int activeWorkers, ScpContainer damagedRoom) // Ajouter la préférence de classe;
     {
         // ((ClassValue)+(EmptySlots*5)+(MissingWorkers*5)+(ClassRequirementFailed))/100
 
@@ -94,13 +98,44 @@ public class IncidentManager : MonoBehaviour
 
         if (random <= incidentChance)
         {
-            TriggerIncident(containedSCP);
+            TriggerIncident(containedSCP, damagedRoom);
         }
     }
 
-    public void TriggerIncident(SCPData scpData)
+    public void TriggerIncident(SCPData scpData, ScpContainer damagedRoom)
     {
         //Put here Incident effects.
+        //Get Assigned worker 0.
+        //Remove assigned worker 0.
+        //Remove Worker.
+
+        int damage = scpData.incident.damage;
+
+        if (damage <= damagedRoom.assignedWorkers.Count)
+        {
+            for (int c = 0; c < damage; c++)
+            {
+                Worker workerMemory = damagedRoom.assignedWorkers[0];
+                damagedRoom.assignedWorkers.RemoveAt(0);
+                ressourceManager.RemoveWorker(workerMemory);
+            }
+        }
+        else if (damage > damagedRoom.assignedWorkers.Count)
+        {
+            int differenceToKill = damage - damagedRoom.assignedWorkers.Count;
+
+            for (int d = 0; d < damagedRoom.assignedWorkers.Count; d++)
+            {
+                Worker workerMemory = damagedRoom.assignedWorkers[0];
+                damagedRoom.assignedWorkers.RemoveAt(0);
+                ressourceManager.RemoveWorker(workerMemory);
+            }
+            
+            for (int e = 0; e < differenceToKill; e++)
+            {
+                ressourceManager.RemoveWorker();
+            }
+        }
 
         turnManager.CreateIncident(scpData.incident);
     }

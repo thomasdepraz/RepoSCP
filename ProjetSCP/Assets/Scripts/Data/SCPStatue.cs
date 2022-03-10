@@ -25,6 +25,6 @@ public class SCPStatue : MonoBehaviour
         danger.text = scpData.dangerLevel.ToString();
         size.text = scpData.size.ToString();
         description.text = scpData.descriptionShort;
-        image.sprite = scpData.sprite;
+        image.sprite = scpData.smallVisual;
     }
 }

@@ -19,7 +19,14 @@ public class SCPInfoSpawn : MonoBehaviour
     [Header("Testing")]
     public SCPData scpData;
 
-    private void SpawnSCPInfo(SCPData data)
+    public void Awake()
+    {
+        new Registry().Register<SCPInfoSpawn>(this);
+
+    }
+
+
+    public void SpawnSCPInfo(SCPData data)
     {
         SCPInfoWindow.SetActive(true);
         codeText.text = "Code : " + data.ID;
@@ -78,10 +85,10 @@ public class SCPInfoSpawn : MonoBehaviour
     //For Testing only 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SpawnSCPInfo(scpData);
-        }
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    SpawnSCPInfo(scpData);
+        //}
     }
 
 
