@@ -18,6 +18,8 @@ public class CatalogButton : MonoBehaviour
     public SCPData mySCP;
     public Catalog catalog;
 
+    public Material glowingMaterial;
+
     public void UpdateDisplay(SCPData SCP)
     {
         mySCP = SCP;
@@ -51,19 +53,11 @@ public class CatalogButton : MonoBehaviour
         catalog.bigOverviewVisual.gameObject.SetActive(true);
         if(mySCP.rarity == Rarity.RARE || mySCP.rarity == Rarity.EPIC)
         {
-            catalog.starsParticles.Play();
+            catalog.bigOverviewVisual.material = glowingMaterial;
         }
         else
         {
-            catalog.starsParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-        }
-        if (mySCP.rarity == Rarity.EPIC)
-        {
-            catalog.glowingShader.SetActive(true);
-        }
-        else
-        {
-            catalog.glowingShader.SetActive(false);
+            catalog.bigOverviewVisual.material = null;
         }
     }
 

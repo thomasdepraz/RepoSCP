@@ -3241,6 +3241,7 @@ MonoBehaviour:
   size: {fileID: 4905469175398431516}
   sizeSprite: {fileID: 7177365193420749044}
   ID: {fileID: 7503500819735249421}
+  glowingMaterial: {fileID: 2100000, guid: baa3aa124bc0c4e4fa53dc86b67da201, type: 2}
 --- !u!1 &5084618082674549284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5709,6 +5710,7 @@ MonoBehaviour:
   size: {fileID: 3616613714855349876}
   sizeSprite: {fileID: 3386334766373623416}
   ID: {fileID: 5996557927350189958}
+  glowingMaterial: {fileID: 2100000, guid: baa3aa124bc0c4e4fa53dc86b67da201, type: 2}
 --- !u!1 &5996557926867844912
 GameObject:
   m_ObjectHideFlags: 0
@@ -8062,6 +8064,7 @@ MonoBehaviour:
   size: {fileID: 4689027226203987616}
   sizeSprite: {fileID: 4921910444252897812}
   ID: {fileID: 5020550132394242233}
+  glowingMaterial: {fileID: 2100000, guid: baa3aa124bc0c4e4fa53dc86b67da201, type: 2}
 --- !u!1 &6256436412128565626
 GameObject:
   m_ObjectHideFlags: 0

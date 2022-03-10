@@ -1318,6 +1318,7 @@ MonoBehaviour:
   smallVisual: {fileID: 5570319195201131048}
   mySCP: {fileID: 0}
   catalog: {fileID: 0}
+  glowingMaterial: {fileID: 2100000, guid: baa3aa124bc0c4e4fa53dc86b67da201, type: 2}
 --- !u!1 &5570319196861716046
 GameObject:
   m_ObjectHideFlags: 0

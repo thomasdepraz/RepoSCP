@@ -160,30 +160,7 @@ public class MissionManager : MonoBehaviour
         SCPStatue2.UpdateData(drawnSCP2);
         SCPStatue3.UpdateData(drawnSCP3);
 
-        if(drawnSCP1.rarity == Rarity.RARE || drawnSCP1.rarity == Rarity.EPIC)
-        {
-            glowingShader1.SetActive(true);
-        }
-        else
-        {
-            glowingShader1.SetActive(false);
-        }
-        if (drawnSCP2.rarity == Rarity.RARE || drawnSCP2.rarity == Rarity.EPIC)
-        {
-            glowingShader2.SetActive(true);
-        }
-        else
-        {
-            glowingShader2.SetActive(false);
-        }
-        if (drawnSCP3.rarity == Rarity.RARE || drawnSCP3.rarity == Rarity.EPIC)
-        {
-            glowingShader3.SetActive(true);
-        }
-        else
-        {
-            glowingShader3.SetActive(false);
-        }
+       
         numberOfDeadWorkers = WorkersLoss(selectedMission);
         numberOfDeadWorkersText.text = numberOfDeadWorkers.ToString();
 
