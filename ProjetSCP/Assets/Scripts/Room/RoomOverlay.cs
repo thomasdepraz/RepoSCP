@@ -33,12 +33,38 @@ public class RoomOverlay : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (Registry.Get<GameManager>().gameState == GameState.BUILDING) return;
         //throw new System.NotImplementedException();
+        print(linkedRoom.GetType().ToString());
+        var tooltip = Registry.Get<TooltipManager>();
+        tooltip.gameObject.SetActive(true);
+        switch (linkedRoom.GetType().ToString())
+        {
+            case "CommandPost":
+                tooltip.UpdateTooltip("PC");
+                break;
+                
+            case "Warehouse":
+                tooltip.UpdateTooltip("Stock Room");
+                break;
+            case "House":
+                tooltip.UpdateTooltip("House");
+                break;
+            case "ScpContainer":
+                tooltip.UpdateTooltip("SCP Room");
+                break;
+
+        }
+
+
+        tooltip.AppendText(tooltip.overlayDescription);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         //throw new System.NotImplementedException();
+        Registry.Get<TooltipManager>().gameObject.SetActive(false);
+
     }
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -53,7 +79,7 @@ public class RoomOverlay : MonoBehaviour,
                     (linkedRoom as IInfo).SetInfo(camController.camState != CameraState.FOCUSED);
 
                 camController.ChangeState(linkedRoom.Building.occupantOriginTransform.position, canvasGroup);
-
+                Registry.Get<TooltipManager>().gameObject.SetActive(false);
             }
         }
         else if( Input.GetMouseButtonUp(0))
@@ -189,11 +215,15 @@ public class Warehouse : Room, IInfo
             Populate(ressourcesManager.selectedSCP);
             ressourcesManager.selectedSCP = null;
 
+            //Resets the cursor to the default  
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
         }
         else if(!IsEmpty())
         {
-            ressourcesManager.selectedSCP = occupant.Data;  
+            ressourcesManager.selectedSCP = occupant.Data;
             //Todo feedback
+            Cursor.SetCursor(occupant.Data.smallVisual.texture, Vector3.zero, CursorMode.Auto);
 
             GameObject.Destroy(occupant.Object.gameObject);
             occupant = null;
@@ -265,11 +295,15 @@ public class ScpContainer : Room , IInfo
             ressourcesManager.selectedSCP = null;
 
             buildingManager.SetSCPOptimalState();
+
+            //Resets the cursor to the default  
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
         else if (!IsEmpty())
         {
             ressourcesManager.selectedSCP = occupant.Data;
             //Todo feedback
+            Cursor.SetCursor(occupant.Data.smallVisual.texture, Vector3.zero, CursorMode.Auto);
 
             GameObject.Destroy(occupant.Object.gameObject);
             occupant = null;
