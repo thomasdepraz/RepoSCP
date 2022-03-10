@@ -23,13 +23,11 @@ public class ControlButton : MonoBehaviour
     public void GoBuildMode()
     {
         Registry.Get<BuildingManager>().ToggleBuildingMode(true);
-        wheel.SetActive(false);
     }
 
     public void GoMission()
     {
         missionManager.OpenMissionPanel();
-        wheel.SetActive(false);
     }
 
     public void ToggleWheel()
