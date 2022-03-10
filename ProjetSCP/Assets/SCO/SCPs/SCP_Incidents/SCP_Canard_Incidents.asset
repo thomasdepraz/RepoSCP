@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: SCP_Canard_Incidents
   m_EditorClassIdentifier: 
   damage: 1
-  incident1Title: Incident 1356-I-1
+  incident1Title: ' Incident 1356-I-1'
   incident1Description: "L\u2019incident s\u2019est produit hier \xE0 16h02. L\u2019agent
     charg\xE9 de la surveillance de SCP-1356 n\u2019a rien trouv\xE9 de mieux que
     de scotcher l\u2019objet \xE0 son corps afin de \u201Cservir d'anti-transpirant\u201D.
     Il a \xE9t\xE9 retrouv\xE9 4 heures plus tard, au moment de la rel\xE8ve de la
     garde, d\xE9shydrat\xE9 \xE0 mort. \r\n\nNOTE : \xE0 l'avenir, accentuer les
     tests psychologiques sur les nouvelles recrues.\r"
-  incident2Title: Incident 1356-I-2
+  incident2Title: ' Incident 1356-I-2'
   incident2Description: "L\u2019incident s\u2019est produit hier \xE0 18h00, lors
     d\u2019une exp\xE9rimentation avec le SCP-1356. Monsieur Owen \xE9tait de garde
     hors de la pi\xE8ce avec son poisson rouge, comme \xE0 son habitude. Il n\u2019a
@@ -32,7 +32,7 @@ MonoBehaviour:
     \xE9t\xE9 boulevers\xE9 par cette perte, et a \xE9t\xE9 d\xE9clar\xE9 inapte
     \xE0 assurer ses fonctions de garde.\r\n\nNOTE : d\xE9sormais, aucun animal n\u2019est
     tol\xE9r\xE9 dans le complexe (sauf ceux destin\xE9s aux diff\xE9rents tests).\r"
-  incident3Title: Incident 1356-I-3
+  incident3Title: ' Incident 1356-I-3'
   incident3Description: "L\u2019incident s\u2019est produit hier \xE0 15h41, lors
     du test de l\u2019oxyg\xE8ne. Le but de ce test \xE9tait de voir \xE0 quel point
     \u201Cl\u2019espace sec\u201D cr\xE9\xE9 par SCP-1356 est riche en oxyg\xE8ne
