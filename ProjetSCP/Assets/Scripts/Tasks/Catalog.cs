@@ -22,7 +22,7 @@ public class Catalog : MonoBehaviour
     public TextMeshProUGUI SCPDangerosity;
     public TextMeshProUGUI SCPClass;
     public TextMeshProUGUI SCPBigDescription;
-    public TextMeshProUGUI SCPSize;
+    public Image SCPSize;
     public GameObject fullOverviewPanel;
 
     [Header("Other")]

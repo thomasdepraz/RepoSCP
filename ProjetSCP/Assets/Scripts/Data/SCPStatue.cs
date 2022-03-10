@@ -14,6 +14,7 @@ public class SCPStatue : MonoBehaviour
     public TextMeshProUGUI danger;
     public TextMeshProUGUI description;
     public TextMeshProUGUI size;
+    public Image sizeSprite;
     public TextMeshProUGUI ID;
 
     public void UpdateData(SCPData scpData)
@@ -23,8 +24,8 @@ public class SCPStatue : MonoBehaviour
         classe.text = scpData.type.ToString();
         rarity.text = scpData.rarity.ToString();
         danger.text = scpData.dangerLevel.ToString();
-        size.text = scpData.size.ToString();
         description.text = scpData.descriptionShort;
         image.sprite = scpData.smallVisual;
+        sizeSprite.sprite = scpData.sizeSprite;
     }
 }
