@@ -78,7 +78,7 @@ public class RoomOverlay : MonoBehaviour,
                 if (linkedRoom is IInfo)
                     (linkedRoom as IInfo).SetInfo(camController.camState != CameraState.FOCUSED);
 
-                camController.ChangeState(linkedRoom.Building.occupantOriginTransform.position, canvasGroup);
+                camController.ChangeState((Vector2)linkedRoom.Building.occupantOriginTransform.position + (linkedRoom.GetType().ToString() =="ScpContainer" || linkedRoom.GetType().ToString() == "Warehouse" ? Vector2.up * 5 : Vector2.zero), canvasGroup);
                 Registry.Get<TooltipManager>().gameObject.SetActive(false);
             }
         }

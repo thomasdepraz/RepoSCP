@@ -141,6 +141,8 @@ namespace SCP.Building
         {
             if(on)
             {
+                Registry.Get<TooltipManager>().gameObject.SetActive(false);
+
                 gameManager.gameState = GameState.BUILDING;
                 pointer.checkPosition = true;
 
